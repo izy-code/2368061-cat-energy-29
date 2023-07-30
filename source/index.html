@@ -6,14 +6,13 @@
     <title>Cat Energy</title>
   </head>
   <body class="page__body">
-    <header class="header">
+    <header class="header container">
       <a class="header__logo-icon logo" href="index.html" aria-current="page">
         <img class="logo__image" src="img/logo-cat-icon-mobile.svg" width="33" height="38"
           alt="Логотип-иконка Cat Energy.">
       </a>
       <a class="header__logo-name logo" href="index.html" aria-current="page">
-        <img class="logo__image" src="img/logo-cat-name.svg" width="101" height="18"
-          alt="Логотип-название Cat Energy.">
+        <img class="logo__image" src="img/logo-cat-name.svg" width="101" height="18" alt="Логотип-название Cat Energy.">
       </a>
       <nav class="nav">
         <button class="nav__toggle" type="button">
@@ -33,10 +32,10 @@
       </nav>
     </header>
 
-    <main class="main-index">
+    <main class="main-index container">
       <section class="hero">
         <h1 class="hero__title">
-          Функциональное питание для котов<span class="visually-hidden"> Cat Energy</span>
+          Функциональное питание для котов<span class="visually-hidden" lang="en"> Cat Energy</span>
         </h1>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
         <img class="hero__image" src="img/product-promo.png" width="280" height="270"
@@ -90,8 +89,8 @@
             alt="Пухлый кот до диеты.">
           <img class="compare-slider__image-right" src="img/compare-right.png" width="280" height="256"
             alt="Похудевший кот после диеты.">
-          <div class="compare-slider__border">
-            <div class="compare-slider__curtain"></div>
+          <div class="compare-slider__curtain">
+            <div class="compare-slider__bar"></div>
             <button class="compare-slider__thumb" type="button">
               <span class="visually-hidden">Ползунок сравнения картинок</span>
             </button>
@@ -107,12 +106,17 @@
             <p class="contacts__item">Санкт-Петербург</p>
           </address>
         </header>
-        <img class="contacts__location" src="img/map.png" width="320" height="362"
-          alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург.">
+        <div class="contacts__map map">
+          <iframe class="map__responsive"></iframe>
+          <a class="map__link" href="#">
+            <img class="map__fallback" src="img/map.png" width="320" height="362"
+              alt="Наше местоположение, переход на карту.">
+          </a>
+        </div>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer container">
       <img class="footer__logo-name" src="img/logo-cat-name.svg" width="128" height="24"
         alt="Логотип-название Cat Energy.">
       <ul class="socials">
