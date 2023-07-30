@@ -40,47 +40,59 @@
         </h1>
         <b class="plan__subhead">Заполните анкету, и мы подберем программу питания для вашего кота</b>
         <form class="plan__form" action="https://echo.htmlacademy.ru/" method="post">
-          <ul class="plan__list">
-            <li class="plan__item">
-              <label class="field">
-                Имя:*<input class="field__control" name="name" type="text" placeholder="Кекс" value="Барсик" required>
-              </label>
-            </li>
-            <li class="plan__item">
-              <label class="field">
-                Вес&nbsp;(кг):*<input class="field__control" name="weight" type="number" placeholder="5" min="0"
-                  value="7" required>
-              </label>
-            </li>
-            <li class="plan__item">
-              <label class="field">
-                Возраст&nbsp;(лет):<input class="field__control" name="age" type="number" placeholder="3" min="0"
-                  value="7">
-              </label>
-            </li>
-          </ul>
-          <ul class="plan__list">
-            <li class="plan__item">
-              <label class="radio">
-                <input class="radio__input" name="product-type" type="radio" value="weight-loss" checked>
-                <span class="radio__text">Похудение</span>
-              </label>
-            </li>
-            <li class="plan__item">
-              <label class="radio">
-                <input class="radio__input" name="product-type" type="radio" value="weight-gain">
-                <span class="radio__text">Набор массы</span>
-              </label>
-            </li>
-            <li class="plan__item">
-              <label class="radio">
-                <input class="radio__input" name="product-type" type="radio" value="need-advice">
-                <span class="radio__text">Не знаю (нужен ваш совет)</span>
-              </label>
-            </li>
-          </ul>
           <fieldset class="plan__field-group">
-            <legend class="plan__legend subhead">Контактные данные (владельца кота)</legend>
+            <legend class="plan__legend">
+              <h2 class="visually-hidden">Информация о коте</h2>
+            </legend>
+            <ul class="plan__list">
+              <li class="plan__item">
+                <label class="field">
+                  Имя:*<input class="field__control" name="name" type="text" placeholder="Кекс" value="Барсик" required>
+                </label>
+              </li>
+              <li class="plan__item">
+                <label class="field">
+                  Вес&nbsp;(кг):*<input class="field__control" name="weight" type="number" placeholder="5" min="0"
+                    value="7" required>
+                </label>
+              </li>
+              <li class="plan__item">
+                <label class="field">
+                  Возраст&nbsp;(лет):<input class="field__control" name="age" type="number" placeholder="3" min="0"
+                    value="7">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="plan__field-group">
+            <legend class="plan__legend">
+              <h2 class="visually-hidden">Цель диеты</h2>
+            </legend>
+            <ul class="plan__list">
+              <li class="plan__item">
+                <label class="radio">
+                  <input class="radio__input" name="product-type" type="radio" value="weight-loss" checked>
+                  <span class="radio__text">Похудение</span>
+                </label>
+              </li>
+              <li class="plan__item">
+                <label class="radio">
+                  <input class="radio__input" name="product-type" type="radio" value="weight-gain">
+                  <span class="radio__text">Набор массы</span>
+                </label>
+              </li>
+              <li class="plan__item">
+                <label class="radio">
+                  <input class="radio__input" name="product-type" type="radio" value="need-advice">
+                  <span class="radio__text">Не знаю (нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="plan__field-group">
+            <legend class="plan__legend">
+              <h2 class="subhead">Контактные данные (владельца кота)</h2>
+            </legend>
             <ul class="plan__list">
               <li class="plan__item">
                 <label class="field field--icon">
@@ -97,7 +109,9 @@
             </ul>
           </fieldset>
           <fieldset class="plan__field-group">
-            <legend class="plan__legend subhead">Комментарий</legend>
+            <legend class="plan__legend">
+              <h2 class="subhead">Комментарий</h2>
+            </legend>
             <label class="field">
               <span class="visually-hidden">О коте:</span>
               <textarea class="field__control" name="comment" placeholder="Расскажите обо всех повадках кота"
@@ -105,7 +119,9 @@
             </label>
           </fieldset>
           <fieldset class="plan__field-group">
-            <legend class="plan__legend subhead">Дополнительно</legend>
+            <legend class="plan__legend">
+              <h2 class="subhead">Дополнительно</h2>
+            </legend>
             <ul class="plan__list">
               <li class="plan__item">
                 <label class="checkbox">
@@ -140,7 +156,7 @@
         </form>
       </section>
       <section class="contacts">
-        <h2 class="visually-hidden">Контактные данные</h2>
+        <h2 class="visually-hidden">Наши контактные данные</h2>
         <header class="contacts__header">
           <b class="contacts__subhead">Приглашаем к сотрудничеству дилеров!</b>
           <address class="contacts__address">
@@ -163,23 +179,26 @@
         <img class="logo__image" src="img/logo-cat-name.svg" width="128" height="24"
           alt="Логотип-название Cat Energy, переход на главную.">
       </a>
-      <ul class="socials">
-        <li class="socials__item">
-          <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">ВКонтакте</span>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden" lang="en">YouTube</span>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Телеграм</span>
-          </a>
-        </li>
-      </ul>
+      <section class="socials">
+        <h2 class="visually-hidden">Наши профили в соцсетях</h2>
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden" lang="en">YouTube</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Телеграм</span>
+            </a>
+          </li>
+        </ul>
+      </section>
       <a class="footer__academy-title logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="logo-academy__title" lang="en">HTML Academy</span>
       </a>
