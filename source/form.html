@@ -33,10 +33,10 @@
       </nav>
     </header>
 
-    <main class="main-form container">
+    <main class="page-content container">
       <section class="plan">
         <h1 class="plan__title">
-          Подбор программы<span class="visually-hidden" lang="en"> Cat Energy</span>
+          Подбор программы <span class="visually-hidden" lang="en">Cat Energy</span>
         </h1>
         <b class="plan__subhead">Заполните анкету, и мы подберем программу питания для вашего кота</b>
         <form class="plan__form" action="https://echo.htmlacademy.ru/" method="post">
@@ -86,16 +86,16 @@
             </ul>
           </fieldset>
           <fieldset class="plan__field-group">
-            <legend class="plan__legend subhead">Контактные данные (владельца кота)</legend>
+            <legend class="plan__legend heading">Контактные данные (владельца кота)</legend>
             <ul class="plan__list">
               <li class="plan__item">
-                <label class="field field--icon">
+                <label class="field field--icon_mail">
                   E-mail:*<input class="field__control" name="e-mail" type="email" placeholder="cat_owner@domain.com"
                     value="kuklachev@gmail.com" required>
                 </label>
               </li>
               <li class="plan__item">
-                <label class="field field--icon">
+                <label class="field field--icon_phone">
                   Телефон:*<input class="field__control" name="phone" type="tel" placeholder="8 (900) 123-45-67"
                     value="8 (960) 900-60-90" required>
                 </label>
@@ -103,7 +103,7 @@
             </ul>
           </fieldset>
           <fieldset class="plan__field-group">
-            <legend class="plan__legend subhead">Комментарий</legend>
+            <legend class="plan__legend heading">Комментарий</legend>
             <label class="field">
               <span class="visually-hidden">О коте:</span>
               <textarea class="field__control" name="comment" placeholder="Расскажите обо всех повадках кота"
@@ -111,7 +111,7 @@
             </label>
           </fieldset>
           <fieldset class="plan__field-group">
-            <legend class="plan__legend subhead">Дополнительно</legend>
+            <legend class="plan__legend heading">Дополнительно</legend>
             <ul class="plan__list">
               <li class="plan__item">
                 <label class="checkbox">
@@ -149,9 +149,11 @@
         <h2 class="visually-hidden">Контактные данные</h2>
         <header class="contacts__header">
           <b class="contacts__subhead">Приглашаем к сотрудничеству дилеров!</b>
-          <address class="contacts__address">
-            <p class="contacts__item">ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8</p>
-            <p class="contacts__item">Санкт-Петербург</p>
+          <address class="contacts__list">
+            <p class="contacts__item">
+              <span class="contacts__text">ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8</span>
+              <span class="contacts__text">Санкт-Петербург</span>
+            </p>
           </address>
         </header>
         <div class="contacts__map map">
@@ -173,17 +175,17 @@
         <h2 class="visually-hidden">Профили в соцсетях</h2>
         <ul class="socials__list">
           <li class="socials__item">
-            <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy">
+            <a class="socials__link socials__link--icon_vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="socials__link socials__link--icon_yt" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden" lang="en">YouTube</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy">
+            <a class="socials__link socials__link--icon_tg" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
@@ -191,10 +193,8 @@
       </section>
       <a class="footer__academy-title logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="logo-academy__title" lang="en">HTML Academy</span>
-      </a>
-      <a class="footer__academy-icon logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
         <svg class="logo-academy__icon" width="27" height="34" role="img" aria-labelledby="academy-logo-title">
-          <desc id="academy-logo-title">Логотип HTML Academy</desc>
+          <desc id="academy-logo-title">Логотип HTML Academy, гербовый щит с академической шапочкой</desc>
           <use xlink:href="img/logo-htmlacademy.svg#icon"></use>
         </svg>
       </a>
