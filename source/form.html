@@ -9,11 +9,11 @@
     <header class="header container">
       <a class="header__logo-icon logo" href="index.html">
         <img class="logo__image" src="img/logo-cat-icon.svg" width="33" height="38"
-          alt="Логотип-иконка Cat Energy, переход на главную.">
+          alt="Фирменный знак Cat Energy, бело-оранжевый кот-супергерой на фоне жёлтого круга.">
       </a>
-      <a class="header__logo-name logo" href="index.html">
-        <img class="logo__image" src="img/logo-cat-name.svg" width="101" height="18"
-          alt="Логотип-название Cat Energy, переход на главную.">
+      <a class="header__logo-wordmark logo" href="index.html">
+        <img class="logo__image" src="img/logo-cat-wordmark.svg" width="101" height="18"
+          alt="Шрифтовое начертание логотипа Cat Energy.">
       </a>
       <nav class="nav">
         <button class="nav__toggle" type="button">
@@ -39,22 +39,22 @@
           Подбор программы <span class="visually-hidden" lang="en">Cat Energy</span>
         </h1>
         <b class="plan__subhead">Заполните анкету, и мы подберем программу питания для вашего кота</b>
-        <form class="plan__form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="plan__field-group">
+        <form class="plan__form form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="form__field-group">
             <legend class="visually-hidden">Информация о коте</legend>
-            <ul class="plan__list">
-              <li class="plan__item">
+            <ul class="form__list">
+              <li class="form__item">
                 <label class="field">
                   Имя:*<input class="field__control" name="name" type="text" placeholder="Кекс" value="Барсик" required>
                 </label>
               </li>
-              <li class="plan__item">
+              <li class="form__item">
                 <label class="field">
                   Вес&nbsp;(кг):*<input class="field__control" name="weight" type="number" placeholder="5" min="0"
                     value="7" required>
                 </label>
               </li>
-              <li class="plan__item">
+              <li class="form__item">
                 <label class="field">
                   Возраст&nbsp;(лет):<input class="field__control" name="age" type="number" placeholder="3" min="0"
                     value="7">
@@ -62,22 +62,22 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="plan__field-group">
+          <fieldset class="form__field-group">
             <legend class="visually-hidden">Цель диеты</legend>
-            <ul class="plan__list">
-              <li class="plan__item">
+            <ul class="form__list">
+              <li class="form__item">
                 <label class="radio">
                   <input class="radio__input" name="product-type" type="radio" value="weight-loss" checked>
                   <span class="radio__text">Похудение</span>
                 </label>
               </li>
-              <li class="plan__item">
+              <li class="form__item">
                 <label class="radio">
                   <input class="radio__input" name="product-type" type="radio" value="weight-gain">
                   <span class="radio__text">Набор массы</span>
                 </label>
               </li>
-              <li class="plan__item">
+              <li class="form__item">
                 <label class="radio">
                   <input class="radio__input" name="product-type" type="radio" value="need-advice">
                   <span class="radio__text">Не знаю (нужен ваш совет)</span>
@@ -85,53 +85,53 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="plan__field-group">
-            <legend class="plan__legend heading">Контактные данные (владельца кота)</legend>
-            <ul class="plan__list">
-              <li class="plan__item">
+          <fieldset class="form__field-group">
+            <legend class="form__legend heading">Контактные данные (владельца кота)</legend>
+            <ul class="form__list">
+              <li class="form__item">
                 <label class="field field--icon_mail">
-                  E-mail:*<input class="field__control" name="e-mail" type="email" placeholder="cat_owner@domain.com"
-                    value="kuklachev@gmail.com" required>
+                  E-mail:*<input class="field__control" name="e-mail" type="email" autocomplete="email"
+                    placeholder="cat_owner@domain.com" value="kuklachev@gmail.com" required>
                 </label>
               </li>
-              <li class="plan__item">
+              <li class="form__item">
                 <label class="field field--icon_phone">
-                  Телефон:*<input class="field__control" name="phone" type="tel" placeholder="8 (900) 123-45-67"
-                    value="8 (960) 900-60-90" required>
+                  Телефон:*<input class="field__control" name="phone" type="tel" autocomplete="tel"
+                    placeholder="8 (900) 123-45-67" value="8 (960) 900-60-90" required>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="plan__field-group">
-            <legend class="plan__legend heading">Комментарий</legend>
+          <fieldset class="form__field-group">
+            <legend class="form__legend heading">Комментарий</legend>
             <label class="field">
               <span class="visually-hidden">О коте:</span>
               <textarea class="field__control" name="comment" placeholder="Расскажите обо всех повадках кота"
                 rows="7"></textarea>
             </label>
           </fieldset>
-          <fieldset class="plan__field-group">
-            <legend class="plan__legend heading">Дополнительно</legend>
-            <ul class="plan__list">
-              <li class="plan__item">
+          <fieldset class="form__field-group">
+            <legend class="form__legend heading">Дополнительно</legend>
+            <ul class="form__list">
+              <li class="form__item">
                 <label class="checkbox">
                   <input class="checkbox__input" name="sweetener" type="checkbox" checked>
                   <span class="checkbox__text">Сахарозаменитель</span>
                 </label>
               </li>
-              <li class="plan__item">
+              <li class="form__item">
                 <label class="checkbox">
                   <input class="checkbox__input" name="drinking-water" type="checkbox">
                   <span class="checkbox__text">Питьевая вода</span>
                 </label>
               </li>
-              <li class="plan__item">
+              <li class="form__item">
                 <label class="checkbox">
                   <input class="checkbox__input" name="milk" type="checkbox">
                   <span class="checkbox__text">Молоко</span>
                 </label>
               </li>
-              <li class="plan__item">
+              <li class="form__item">
                 <label class="checkbox">
                   <input class="checkbox__input" name="vitamins" type="checkbox">
                   <span class="checkbox__text">Витамины</span>
@@ -139,12 +139,13 @@
               </li>
             </ul>
           </fieldset>
-          <div class="plan__field-group">
+          <div class="form__field-group">
             <button class="button" type="submit">Отправить заявку</button>
           </div>
-          <p class="plan__notify">* — Обязательные поля</p>
+          <p class="form__notify">* — Обязательные поля</p>
         </form>
       </section>
+
       <section class="contacts">
         <h2 class="visually-hidden">Контактные данные</h2>
         <header class="contacts__header">
@@ -168,8 +169,8 @@
 
     <footer class="footer container">
       <a class="logo" href="index.html">
-        <img class="logo__image" src="img/logo-cat-name.svg" width="128" height="24"
-          alt="Логотип-название Cat Energy, переход на главную.">
+        <img class="logo__image" src="img/logo-cat-wordmark.svg" width="128" height="24"
+          alt="Шрифтовое начертание логотипа Cat Energy.">
       </a>
       <section class="socials">
         <h2 class="visually-hidden">Профили в соцсетях</h2>
