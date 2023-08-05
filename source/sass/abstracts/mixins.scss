@@ -1,0 +1,34 @@
+@use "sass:string";
+@use "variables" as *;
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-style: #{$style};
+    font-weight: #{$weight};
+    src: url("../fonts/#{to-lower-case($font_name)}/#{$file_name}.woff2") format("woff2"),
+      url("../fonts/#{to-lower-case($font_name)}/#{$file_name}.woff") format("woff");
+    font-display: swap;
+  }
+}
+
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin hover-non-touch {
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      @content;
+    }
+  }
+}
+

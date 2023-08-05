@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-font-bgnd);
+  background-color: var(--color-btn-basic);
+  border: none;
+  cursor: pointer;
+
+  &--font_small {
+    padding: 11px 10px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &--more {
+    color: var(--color-font-basic);
+    background-color: var(--color-btn-more);
+  }
+}

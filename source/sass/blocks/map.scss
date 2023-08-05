@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+.map {
+  display: grid;
+  justify-content: center;
+}
+
+.map__responsive {
+  display: none;
+}
+
+.map__link {
+  max-width: max-content;
+}
+
+.map__fallback {
+  display: block;
+  max-width: 100%;
+  min-width: var(--bpoint-phone);
+  width: 100vw;
+  object-fit: cover;
+}

@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+.academy {
+  text-decoration: none;
+}
+
+.academy__title {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-font-basic);
+}
+
+.academy__icon {
+  fill: var(--color-academy-basic);
+}

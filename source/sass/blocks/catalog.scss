@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+.catalog--extra {
+  padding-top: 25px;
+  padding-bottom: 35px;
+
+  & .catalog__list {
+    margin-bottom: 35px;
+  }
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.catalog__list {
+  @include list-reset;
+}
+
+.catalog__extra {
+  width: calc(var(--bpoint-phone) - 2 * $padding-page);
+  min-height: 290px;
+  margin: 0 auto;
+  padding: 43px 61px 43px 58px;
+
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--color-font-bgnd);
+
+  background-color: var(--color-bgnd-image);
+  background-image: url("../img/gift.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

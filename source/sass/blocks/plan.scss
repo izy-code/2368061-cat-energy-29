@@ -1,0 +1,21 @@
+@use "../abstracts" as *;
+
+.plan {
+  padding-top: 27px;
+  padding-bottom: 32px;
+}
+
+.plan__title {
+  margin: 0;
+  margin-bottom: 37px;
+}
+
+.plan__desc {
+  width: calc(226 / 280 * 100%);
+  margin: 0;
+  margin-bottom: 39px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--color-font-second);
+}
