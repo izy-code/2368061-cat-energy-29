@@ -1,0 +1,61 @@
+@use "../common/mixins" as *;
+
+.example {
+  padding-top: 25px;
+  padding-bottom: 40px;
+  background-color: var(--color-bgnd-example);
+  border-bottom: 1px solid transparent;
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.example__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.example__item {
+  min-width: 124px;
+  min-height: 56px;
+  border: 1px solid var(--color-brdr-example);
+  border-radius: 3px;
+}
+
+.example__number {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-font-second);
+}
+
+.example__desc {
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+}
+
+.example__cost {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-font-second);
+}

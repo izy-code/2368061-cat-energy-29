@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
-    <header class="header container">
-      <a class="header__logo-icon logo" href="index.html" aria-current="page">
-        <img class="logo__image" src="img/logo-cat-icon.svg" width="33" height="38"
-          alt="Фирменный знак Cat Energy, бело-оранжевый кот-супергерой на фоне жёлтого круга.">
-      </a>
-      <a class="header__logo-wordmark logo" href="index.html" aria-current="page" tabindex="-1">
-        <img class="logo__image" src="img/logo-cat-wordmark.svg" width="101" height="18"
+  <body>
+    <header class="page-header container">
+      <a class="page-header__logo logo" href="index.html" aria-current="page">
+        <img class="logo__icon" src="img/logo-cat-icon.svg" width="33" height="38"
+          alt="Фирменный знак Cat Energy, бело-оранжевый кот-супергерой.">
+        <img class="page-header__wordmark logo__wordmark" src="img/logo-cat-wordmark.svg" width="101" height="18"
           alt="Шрифтовое начертание логотипа Cat Energy.">
       </a>
-      <nav class="nav">
+      <nav class="page-header__nav nav">
         <button class="nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -33,18 +32,18 @@
       </nav>
     </header>
 
-    <main class="page-content container">
-      <section class="hero">
+    <main class="main-index">
+      <section class="hero container">
         <h1 class="hero__title heading heading--background">
           Функциональное питание для котов <span class="visually-hidden" lang="en">Cat Energy</span>
         </h1>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
         <img class="hero__image" src="img/product-promo.png" width="280" height="270"
           alt="Cat Energy PRO со вкусом курицы.">
-        <a class="hero__link button" href="form.html">Подобрать программу</a>
+        <a class="hero__link button button--font_small" href="form.html">Подобрать программу</a>
       </section>
 
-      <section class="product-series">
+      <section class="product-series container">
         <h2 class="visually-hidden">Серии кормов</h2>
         <ul class="product-series__list">
           <li class="product-series__item product-series__item--icon_slim">
@@ -62,7 +61,7 @@
         </ul>
       </section>
 
-      <section class="details">
+      <section class="main-index__details details container">
         <h2 class="details__title heading">Как это работает</h2>
         <ul class="details__list">
           <li class="details__item details__item--icon_leaf">Функциональное питание содержит только полезные питательные
@@ -76,7 +75,7 @@
         </ul>
       </section>
 
-      <section class="example">
+      <section class="example container">
         <h2 class="example__title heading">Живой пример</h2>
         <p class="example__text">Борис сбросил 5&nbsp;кг за 2&nbsp;месяца, просто заменив свой обычный корм на Cat
           Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему
@@ -105,29 +104,31 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контактные данные</h2>
-        <header class="contacts__header contacts__header--light">
-          <b class="contacts__intro">Приглашаем к сотрудничеству дилеров!</b>
+        <header class="contacts__header contacts__header--light container">
+          <p class="contacts__intro">Приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__list">
             <p class="contacts__item">
               <span class="contacts__text">ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8</span>
-              <span class="contacts__text">Санкт-Петербург</span>
+              <span class="contacts__text">Санкт&#8209;Петербург</span>
             </p>
           </address>
         </header>
         <div class="contacts__map map">
           <iframe class="map__responsive" aria-hidden="true"></iframe>
           <a class="map__link" href="#">
-            <img class="map__fallback" src="img/map.png" width="320" height="362"
+            <img class="map__fallback" src="img/map.png" width="362" height="362"
               alt="Наше местоположение, переход на карту.">
           </a>
         </div>
       </section>
     </main>
 
-    <footer class="footer container">
-      <img class="footer__logo-wordmark" src="img/logo-cat-wordmark.svg" width="128" height="24"
-        alt="Шрифтовое начертание логотипа Cat Energy.">
-      <section class="socials">
+    <footer class="page-footer container">
+      <a class="page-footer__logo logo" href="index.html" aria-current="page">
+        <img class="logo__wordmark" src="img/logo-cat-wordmark.svg" width="128" height="24"
+          alt="Шрифтовое начертание логотипа Cat Energy.">
+      </a>
+      <section class="page-footer__socials socials">
         <h2 class="visually-hidden">Профили в соцсетях</h2>
         <ul class="socials__list">
           <li class="socials__item">
@@ -147,11 +148,11 @@
           </li>
         </ul>
       </section>
-      <a class="footer__academy-title logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="logo-academy__title" lang="en">HTML Academy</span>
-        <svg class="logo-academy__icon" width="27" height="34" role="img" aria-labelledby="academy-logo-title">
-          <desc id="academy-logo-title">Логотип HTML Academy, гербовый щит с академической шапочкой</desc>
-          <use xlink:href="img/logo-htmlacademy.svg#icon"></use>
+      <a class="page-footer__dev academy" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="academy__title" lang="en">HTML Academy</span>
+        <svg class="academy__icon" width="27" height="34" role="img"
+          aria-label="Логотип HTML Academy, гербовый щит с академической шапочкой">
+          <use href="img/logo-htmlacademy.svg#icon" aria-hidden="true" />
         </svg>
       </a>
     </footer>

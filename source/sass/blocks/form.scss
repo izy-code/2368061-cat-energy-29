@@ -1,0 +1,27 @@
+@use "../common/mixins" as *;
+
+.form__field-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+.form__legend {
+  padding: 0;
+}
+
+.form__button {
+  width: 100%;
+}
+
+.form__notify {
+  margin: 0;
+  text-align: center;
+}

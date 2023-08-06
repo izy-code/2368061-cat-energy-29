@@ -1,0 +1,24 @@
+@use "../common/mixins" as *;
+
+.details {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.details__title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.details__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.details__item {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 18px;
+}

@@ -1,0 +1,13 @@
+@use "../common/mixins" as *;
+
+.page-header {
+  display: block;
+  border-bottom: 1px solid var(--color-brdr-header);
+}
+
+.page-header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0 14px;
+}

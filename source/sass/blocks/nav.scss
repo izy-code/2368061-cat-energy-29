@@ -1,0 +1,21 @@
+@use "../common/mixins" as *;
+
+.nav__toggle {
+  display: none;
+}
+
+.nav__list {
+  @include list-reset;
+  justify-self: center;
+}
+
+.nav__item {
+  text-align: center;
+}
+
+.nav__link {
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-font-basic);
+}

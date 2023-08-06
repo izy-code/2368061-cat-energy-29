@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Каталог продукции Cat Energy</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
-    <header class="header container">
-      <a class="header__logo-icon logo" href="index.html">
-        <img class="logo__image" src="img/logo-cat-icon.svg" width="33" height="38"
-          alt="Фирменный знак Cat Energy, бело-оранжевый кот-супергерой на фоне жёлтого круга.">
-      </a>
-      <a class="header__logo-wordmark logo" href="index.html" tabindex="-1">
-        <img class="logo__image" src="img/logo-cat-wordmark.svg" width="101" height="18"
+  <body>
+    <header class="page-header container">
+      <a class="page-header__logo logo" href="index.html">
+        <img class="logo__icon" src="img/logo-cat-icon.svg" width="33" height="38"
+          alt="Фирменный знак Cat Energy, бело-оранжевый кот-супергерой.">
+        <img class="page-header__wordmark logo__wordmark" src="img/logo-cat-wordmark.svg" width="101" height="18"
           alt="Шрифтовое начертание логотипа Cat Energy.">
       </a>
-      <nav class="nav">
+      <nav class="page-header__nav nav">
         <button class="nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -33,13 +32,13 @@
       </nav>
     </header>
 
-    <main class="page-content container">
-      <h1 class="page-content__title heading">
+    <main class="main-catalog">
+      <h1 class="main-catalog__title heading container">
         Каталог продукции <span class="visually-hidden" lang="en">Cat Energy</span>
       </h1>
-      <section class="catalog">
+      <section class="catalog container">
         <h2 class="visually-hidden">Основные товары</h2>
-        <ul class="catalog__list list-layout">
+        <ul class="catalog__list products-layout">
           <li class="card">
             <a class="card__title-link" href="#">
               <h3 class="card__title">Cat Energy Pro 500&nbsp;г</h3>
@@ -49,20 +48,14 @@
                 alt="Оранжевый стаканчик малого размера.">
             </a>
             <dl class="card__list">
-              <div class="card__item">
-                <dt class="card__property">Масса</dt>
-                <dd class="card__value">500&nbsp;г</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Вкус</dt>
-                <dd class="card__value">Курица</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Цена</dt>
-                <dd class="card__value">700&nbsp;₽</dd>
-              </div>
+              <dt class="card__property">Масса</dt>
+              <dd class="card__value">500&nbsp;г</dd>
+              <dt class="card__property">Вкус</dt>
+              <dd class="card__value">Курица</dd>
+              <dt class="card__property">Цена</dt>
+              <dd class="card__value">700&nbsp;₽</dd>
             </dl>
-            <a class="button" href="#">Заказать</a>
+            <a class="card__button button" href="#">Заказать</a>
           </li>
           <li class="card">
             <a class="card__title-link" href="#">
@@ -73,20 +66,14 @@
                 alt="Оранжевый стаканчик большого размера.">
             </a>
             <dl class="card__list">
-              <div class="card__item">
-                <dt class="card__property">Масса</dt>
-                <dd class="card__value">1000&nbsp;г</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Вкус</dt>
-                <dd class="card__value">Курица</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Цена</dt>
-                <dd class="card__value">1000&nbsp;₽</dd>
-              </div>
+              <dt class="card__property">Масса</dt>
+              <dd class="card__value">1000&nbsp;г</dd>
+              <dt class="card__property">Вкус</dt>
+              <dd class="card__value">Курица</dd>
+              <dt class="card__property">Цена</dt>
+              <dd class="card__value">1000&nbsp;₽</dd>
             </dl>
-            <a class="button" href="#">Заказать</a>
+            <a class="card__button button" href="#">Заказать</a>
           </li>
           <li class="card">
             <a class="card__title-link" href="#">
@@ -97,20 +84,14 @@
                 alt="Зелёный стаканчик малого размера.">
             </a>
             <dl class="card__list">
-              <div class="card__item">
-                <dt class="card__property">Масса</dt>
-                <dd class="card__value">500&nbsp;г</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Вкус</dt>
-                <dd class="card__value">Рыба</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Цена</dt>
-                <dd class="card__value">700&nbsp;₽</dd>
-              </div>
+              <dt class="card__property">Масса</dt>
+              <dd class="card__value">500&nbsp;г</dd>
+              <dt class="card__property">Вкус</dt>
+              <dd class="card__value">Рыба</dd>
+              <dt class="card__property">Цена</dt>
+              <dd class="card__value">700&nbsp;₽</dd>
             </dl>
-            <a class="button" href="#">Заказать</a>
+            <a class="card__button button" href="#">Заказать</a>
           </li>
           <li class="card">
             <a class="card__title-link" href="#">
@@ -121,20 +102,14 @@
                 alt="Зелёный стаканчик большого размера.">
             </a>
             <dl class="card__list">
-              <div class="card__item">
-                <dt class="card__property">Масса</dt>
-                <dd class="card__value">1000&nbsp;г</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Вкус</dt>
-                <dd class="card__value">Рыба</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Цена</dt>
-                <dd class="card__value">1000&nbsp;₽</dd>
-              </div>
+              <dt class="card__property">Масса</dt>
+              <dd class="card__value">1000&nbsp;г</dd>
+              <dt class="card__property">Вкус</dt>
+              <dd class="card__value">Рыба</dd>
+              <dt class="card__property">Цена</dt>
+              <dd class="card__value">1000&nbsp;₽</dd>
             </dl>
-            <a class="button" href="#">Заказать</a>
+            <a class="card__button button" href="#">Заказать</a>
           </li>
           <li class="card">
             <a class="card__title-link" href="#">
@@ -145,20 +120,14 @@
                 alt="Синий стаканчик малого размера.">
             </a>
             <dl class="card__list">
-              <div class="card__item">
-                <dt class="card__property">Масса</dt>
-                <dd class="card__value">500&nbsp;г</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Вкус</dt>
-                <dd class="card__value">Гречка</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Цена</dt>
-                <dd class="card__value">400&nbsp;₽</dd>
-              </div>
+              <dt class="card__property">Масса</dt>
+              <dd class="card__value">500&nbsp;г</dd>
+              <dt class="card__property">Вкус</dt>
+              <dd class="card__value">Гречка</dd>
+              <dt class="card__property">Цена</dt>
+              <dd class="card__value">400&nbsp;₽</dd>
             </dl>
-            <a class="button" href="#">Заказать</a>
+            <a class="card__button button" href="#">Заказать</a>
           </li>
           <li class="card">
             <a class="card__title-link" href="#">
@@ -169,20 +138,14 @@
                 alt="Синий стаканчик большого размера.">
             </a>
             <dl class="card__list">
-              <div class="card__item">
-                <dt class="card__property">Масса</dt>
-                <dd class="card__value">1000&nbsp;г</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Вкус</dt>
-                <dd class="card__value">Гречка</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Цена</dt>
-                <dd class="card__value">700&nbsp;₽</dd>
-              </div>
+              <dt class="card__property">Масса</dt>
+              <dd class="card__value">1000&nbsp;г</dd>
+              <dt class="card__property">Вкус</dt>
+              <dd class="card__value">Гречка</dd>
+              <dt class="card__property">Цена</dt>
+              <dd class="card__value">700&nbsp;₽</dd>
             </dl>
-            <a class="button" href="#">Заказать</a>
+            <a class="card__button button" href="#">Заказать</a>
           </li>
           <li class="card">
             <a class="card__title-link" href="#">
@@ -193,81 +156,67 @@
                 alt="Фиолетовый стаканчик малого размера.">
             </a>
             <dl class="card__list">
-              <div class="card__item">
-                <dt class="card__property">Масса</dt>
-                <dd class="card__value">500&nbsp;г</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Вкус</dt>
-                <dd class="card__value">Рис</dd>
-              </div>
-              <div class="card__item">
-                <dt class="card__property">Цена</dt>
-                <dd class="card__value">500&nbsp;₽</dd>
-              </div>
+              <dt class="card__property">Масса</dt>
+              <dd class="card__value">500&nbsp;г</dd>
+              <dt class="card__property">Вкус</dt>
+              <dd class="card__value">Рис</dd>
+              <dt class="card__property">Цена</dt>
+              <dd class="card__value">500&nbsp;₽</dd>
             </dl>
-            <a class="button" href="#">Заказать</a>
+            <a class="card__button button" href="#">Заказать</a>
           </li>
           <li class="card card--more">
             <a class="card__title-link card__title-link--icon_plus" href="#" tabindex="-1">
               <h3 class="card__title">Показать еще 100500 товаров</h3>
             </a>
             <p class="card__text">На самом деле вкусов гораздо больше!</p>
-            <a class="button button--more" href="#">Показать все</a>
+            <a class="card__button button button--more" href="#">Показать все</a>
           </li>
         </ul>
       </section>
 
-      <section class="catalog catalog--extra">
+      <section class="catalog catalog--extra container">
         <h2 class="catalog__title heading heading--subhead">Дополнительные товары</h2>
-        <ul class="catalog__list list-layout list-layout--wide">
+        <ul class="catalog__list products-layout products-layout--wide">
           <li class="card card--compact">
             <a class="card__title-link" href="#">
               <h3 class="card__title">Сахарозаменитель</h3>
             </a>
             <dl class="card__list">
-              <div class="card__item">
-                <dt class="card__property">1&nbsp;упаковка (100&nbsp;г)</dt>
-                <dd class="card__value">200&nbsp;₽</dd>
-              </div>
+              <dt class="card__property">1&nbsp;упаковка (100&nbsp;г)</dt>
+              <dd class="card__value">200&nbsp;₽</dd>
             </dl>
-            <a class="button" href="#">Заказать</a>
+            <a class="card__button button" href="#">Заказать</a>
           </li>
           <li class="card card--compact">
             <a class="card__title-link" href="#">
               <h3 class="card__title">Питьевая вода</h3>
             </a>
             <dl class="card__list">
-              <div class="card__item">
-                <dt class="card__property">5&nbsp;литров</dt>
-                <dd class="card__value">50&nbsp;₽</dd>
-              </div>
+              <dt class="card__property">5&nbsp;литров</dt>
+              <dd class="card__value">50&nbsp;₽</dd>
             </dl>
-            <a class="button" href="#">Заказать</a>
+            <a class="card__button button" href="#">Заказать</a>
           </li>
           <li class="card card--compact">
             <a class="card__title-link" href="#">
               <h3 class="card__title">Молоко</h3>
             </a>
             <dl class="card__list">
-              <div class="card__item">
-                <dt class="card__property">1&nbsp;литр</dt>
-                <dd class="card__value">100&nbsp;₽</dd>
-              </div>
+              <dt class="card__property">1&nbsp;литр</dt>
+              <dd class="card__value">100&nbsp;₽</dd>
             </dl>
-            <a class="button" href="#">Заказать</a>
+            <a class="card__button button" href="#">Заказать</a>
           </li>
           <li class="card card--compact">
             <a class="card__title-link" href="#">
               <h3 class="card__title">Витамины</h3>
             </a>
             <dl class="card__list">
-              <div class="card__item">
-                <dt class="card__property">1&nbsp;упаковка (30&nbsp;г)</dt>
-                <dd class="card__value">300&nbsp;₽</dd>
-              </div>
+              <dt class="card__property">1&nbsp;упаковка (30&nbsp;г)</dt>
+              <dd class="card__value">300&nbsp;₽</dd>
             </dl>
-            <a class="button" href="#">Заказать</a>
+            <a class="card__button button" href="#">Заказать</a>
           </li>
         </ul>
         <p class="catalog__extra">Закажите все и получите чехол для кота в подарок!</p>
@@ -275,31 +224,31 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контактные данные</h2>
-        <header class="contacts__header">
-          <b class="contacts__intro">Приглашаем к сотрудничеству дилеров!</b>
+        <header class="contacts__header container">
+          <p class="contacts__intro">Приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__list">
             <p class="contacts__item">
               <span class="contacts__text">ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8</span>
-              <span class="contacts__text">Санкт-Петербург</span>
+              <span class="contacts__text">Санкт&#8209;Петербург</span>
             </p>
           </address>
         </header>
         <div class="contacts__map map">
           <iframe class="map__responsive" aria-hidden="true"></iframe>
           <a class="map__link" href="#">
-            <img class="map__fallback" src="img/map.png" width="320" height="362"
+            <img class="map__fallback" src="img/map.png" width="362" height="362"
               alt="Наше местоположение, переход на карту.">
           </a>
         </div>
       </section>
     </main>
 
-    <footer class="footer container">
-      <a class="logo" href="index.html">
-        <img class="logo__image" src="img/logo-cat-wordmark.svg" width="128" height="24"
+    <footer class="page-footer container">
+      <a class="page-footer__logo logo" href="index.html">
+        <img class="logo__wordmark" src="img/logo-cat-wordmark.svg" width="128" height="24"
           alt="Шрифтовое начертание логотипа Cat Energy.">
       </a>
-      <section class="socials">
+      <section class="page-footer__socials socials">
         <h2 class="visually-hidden">Профили в соцсетях</h2>
         <ul class="socials__list">
           <li class="socials__item">
@@ -319,11 +268,11 @@
           </li>
         </ul>
       </section>
-      <a class="footer__academy-title logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="logo-academy__title" lang="en">HTML Academy</span>
-        <svg class="logo-academy__icon" width="27" height="34" role="img" aria-labelledby="academy-logo-title">
-          <desc id="academy-logo-title">Логотип HTML Academy, гербовый щит с академической шапочкой</desc>
-          <use xlink:href="img/logo-htmlacademy.svg#icon"></use>
+      <a class="page-footer__dev academy" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="academy__title" lang="en">HTML Academy</span>
+        <svg class="academy__icon" width="27" height="34" role="img"
+          aria-label="Логотип HTML Academy, гербовый щит с академической шапочкой">
+          <use href="img/logo-htmlacademy.svg#icon" aria-hidden="true" />
         </svg>
       </a>
     </footer>

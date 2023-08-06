@@ -1,0 +1,22 @@
+@use "../common/mixins" as *;
+
+.map {
+  display: grid;
+  justify-content: center;
+}
+
+.map__responsive {
+  display: none;
+}
+
+.map__link {
+  max-width: max-content;
+}
+
+.map__fallback {
+  display: block;
+  object-fit: cover;
+  width: 100vw;
+  min-width: var(--width-phone);
+  max-width: 100%;
+}

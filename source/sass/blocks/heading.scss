@@ -1,0 +1,17 @@
+@use "../common/mixins" as *;
+
+.heading {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: normal;
+  color: var(--color-font-second);
+
+  &--background {
+    color: var(--color-font-bgnd);
+  }
+
+  &--subhead {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}

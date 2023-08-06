@@ -1,0 +1,45 @@
+@use "../common/mixins" as *;
+
+$height-bgnd: 302px;
+$color-bgnd-left: #64a73c;
+$color-bgnd-right: #62a53a;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 27px;
+  padding-bottom: 20px;
+
+  text-align: center;
+
+  background-image: url("../img/background-hero.jpg"),
+    linear-gradient(to right, $color-bgnd-left 50%, $color-bgnd-right 50%);
+  background-position: top;
+  background-size: auto $height-bgnd;
+  background-repeat: no-repeat;
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.hero__slogan {
+  margin: 0;
+  margin-bottom: 29px;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: var(--color-font-bgnd);
+}
+
+.hero__image {
+  margin-bottom: 3px;
+}
+
+.hero__link {
+  width: 100%;
+  max-width: 400px;
+}
