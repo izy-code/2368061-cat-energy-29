@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use "../common/mixins" as *;
 
 .catalog--extra {
   padding-top: 25px;
@@ -19,7 +19,7 @@
 }
 
 .catalog__extra {
-  width: calc(var(--bpoint-phone) - 2 * $padding-page);
+  width: calc(var(--width-phone) - 2 * var(--padding-page));
   min-height: 290px;
   margin: 0 auto;
   padding: 43px 61px 43px 58px;

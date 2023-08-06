@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use "../common/mixins" as *;
 
 .contacts__header {
   display: flex;
@@ -19,7 +19,7 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  color: var(--color-font-third);
+  color: var(--color-font-contacts);
 }
 
 .contacts__list {

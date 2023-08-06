@@ -1,6 +1,6 @@
-@use "../abstracts" as *;
+@use "../common/mixins" as *;
 
 .container {
-  padding-right: $padding-page;
-  padding-left: $padding-page;
+  padding-right: var(--padding-page);
+  padding-left: var(--padding-page);
 }

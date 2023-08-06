@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use "../common/mixins" as *;
 
 $height-bgnd: 302px;
 $color-bgnd-left: #64a73c;
@@ -17,7 +17,7 @@ $color-bgnd-right: #62a53a;
   background-image: url("../img/background-hero.jpg"),
     linear-gradient(to right, $color-bgnd-left 50%, $color-bgnd-right 50%);
   background-position: top;
-  background-size: var(--bpoint-phone) $height-bgnd, 100% $height-bgnd;
+  background-size: auto $height-bgnd;
   background-repeat: no-repeat;
 }
 

@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use "../common/mixins" as *;
 
 .map {
   display: grid;
@@ -17,6 +17,6 @@
   display: block;
   object-fit: cover;
   width: 100vw;
-  min-width: var(--bpoint-phone);
+  min-width: var(--width-phone);
   max-width: 100%;
 }

@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use "../common/mixins" as *;
 
 .card {
   display: grid;
@@ -37,7 +37,7 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  color: var(--color-font-fourth);
+  color: var(--color-font-card);
 }
 
 .card__image-link {

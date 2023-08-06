@@ -6,26 +6,27 @@
   --font-primary: "Oswald", "Arial", sans-serif;
   --font-secondary: "Lato", "Arial", sans-serif;
 
-  --bpoint-phone: 320px;
-  --bpoint-tablet: 768px;
-  --bpoint-desktop: 1440px;
+  --width-phone: 320px;
+  --width-tablet: 768px;
+  --width-desktop: 1440px;
+  --padding-page: 20px;
 
   --color-font-basic: #444444;
   --color-font-second: #000000;
-  --color-font-third: #111111;
-  --color-font-fourth: #222222;
+  --color-font-contacts: #111111;
+  --color-font-card: #222222;
   --color-font-bgnd: #ffffff;
 
   --color-bgnd-basic: #ffffff;
   --color-bgnd-second: #f2f2f2;
-  --color-bgnd-third: #eaeaea;
   --color-bgnd-image: #68b738;
+  --color-bgnd-example: #eaeaea;
 
   --color-btn-basic: #68b738;
   --color-btn-more: #f2f2f2;
 
   --color-brdr-basic: #d9d9d9;
-  --color-brdr-second: #cdcdcd;
+  --color-brdr-example: #cdcdcd;
   --color-brdr-input: #e7e7e7;
   --color-brdr-header: #e6e6e6;
 

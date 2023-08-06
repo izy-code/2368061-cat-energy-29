@@ -5,7 +5,7 @@ html {
 body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  min-width: 320px;
+  min-width: var(--width-phone);
   min-height: 100%;
   margin: 0;
   font-family: var(--font-primary);

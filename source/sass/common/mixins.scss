@@ -1,5 +1,4 @@
 @use "sass:string";
-@use "variables" as *;
 
 @mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
