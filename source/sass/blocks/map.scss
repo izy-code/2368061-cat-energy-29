@@ -15,8 +15,8 @@
 
 .map__fallback {
   display: block;
-  max-width: 100%;
-  min-width: var(--bpoint-phone);
-  width: 100vw;
   object-fit: cover;
+  width: 100vw;
+  min-width: var(--bpoint-phone);
+  max-width: 100%;
 }
