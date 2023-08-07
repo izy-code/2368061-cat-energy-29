@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header container">
+    <header class="page-header">
       <a class="page-header__logo logo" href="index.html">
         <img class="logo__icon" src="img/logo-cat-icon.svg" width="33" height="38"
           alt="Фирменный знак Cat Energy, бело-оранжевый кот-супергерой.">
@@ -33,15 +33,15 @@
     </header>
 
     <main class="main-form">
-      <section class="plan container">
-        <h1 class="plan__title heading">
+      <section class="plan">
+        <h1 class="plan__title heading container">
           Подбор программы <span class="visually-hidden" lang="en">Cat Energy</span>
         </h1>
-        <p class="plan__desc">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <p class="plan__desc container">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="form__field-group">
             <legend class="visually-hidden">Информация о коте</legend>
-            <ul class="form__list">
+            <ul class="form__list container">
               <li class="form__item">
                 <label class="field">
                   Имя:*<input class="field__control" name="name" type="text" placeholder="Кекс" value="Барсик" required>
@@ -63,7 +63,7 @@
           </fieldset>
           <fieldset class="form__field-group">
             <legend class="visually-hidden">Цель диеты</legend>
-            <ul class="form__list">
+            <ul class="form__list container">
               <li class="form__item">
                 <label class="radio">
                   <input class="radio__input" name="product-type" type="radio" value="weight-loss" checked>
@@ -86,7 +86,7 @@
           </fieldset>
           <fieldset class="form__field-group">
             <legend class="form__legend heading heading--subhead">Контактные данные (владельца кота)</legend>
-            <ul class="form__list">
+            <ul class="form__list container">
               <li class="form__item">
                 <label class="field field--icon_mail">
                   E-mail:*<input class="field__control" name="e-mail" type="email" placeholder="cat_owner@domain.com"
@@ -104,12 +104,12 @@
           <fieldset class="form__field-group">
             <legend class="form__legend heading heading--subhead">Комментарий</legend>
             <label class="visually-hidden" for="textarea-plan">О повадках кота</label>
-            <textarea class="form__textarea field field--textarea" id="textarea-plan" name="comment"
+            <textarea class="form__textarea field field--textarea container" id="textarea-plan" name="comment"
               placeholder="Расскажите обо всех повадках кота" rows="7"></textarea>
           </fieldset>
           <fieldset class="form__field-group">
             <legend class="form__legend heading heading--subhead">Дополнительно</legend>
-            <ul class="form__list">
+            <ul class="form__list container">
               <li class="form__item">
                 <label class="checkbox">
                   <input class="checkbox__input" name="sweetener" type="checkbox" checked>
@@ -136,16 +136,16 @@
               </li>
             </ul>
           </fieldset>
-          <div class="form__field-group">
+          <div class="form__field-group container">
             <button class="form__button button" type="submit">Отправить заявку</button>
           </div>
-          <p class="form__notify">* — Обязательные поля</p>
+          <p class="form__notify container">* — Обязательные поля</p>
         </form>
       </section>
 
       <section class="contacts">
         <h2 class="visually-hidden">Контактные данные</h2>
-        <header class="contacts__header container">
+        <header class="contacts__header">
           <p class="contacts__intro">Приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__list">
             <p class="contacts__item">

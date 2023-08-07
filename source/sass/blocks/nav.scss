@@ -1,4 +1,5 @@
 @use "../common/mixins" as *;
+@use "../common/variables" as *;
 
 .nav__toggle {
   display: none;
@@ -18,4 +19,12 @@
   text-decoration: none;
   text-transform: uppercase;
   color: var(--color-font-basic);
+}
+
+@media (min-width: $width-tablet) {
+  .nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33px;
+  }
 }

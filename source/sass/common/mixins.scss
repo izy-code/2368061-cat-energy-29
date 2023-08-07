@@ -17,6 +17,16 @@
   list-style: none;
 }
 
+@mixin page-content-paddings {
+  padding-right: var(--padding-page);
+  padding-left: var(--padding-page);
+}
+
+@mixin page-content-width {
+  width: calc(100% - 2 * var(--padding-page));
+  margin: 0 auto;
+}
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;

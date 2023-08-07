@@ -1,11 +1,16 @@
 @use "../common/mixins" as *;
+@use "../common/variables" as *;
+
+.contacts {
+  background-color: var(--color-bgnd-second);
+}
 
 .contacts__header {
+  @include page-content-paddings;
   display: flex;
   align-items: center;
   padding-top: 26px;
   padding-bottom: 26px;
-  background-color: var(--color-bgnd-second);
 
   &--light {
     background-color: var(--color-bgnd-basic);
@@ -24,6 +29,10 @@
 
 .contacts__list {
   min-width: 50%;
+
+  @media (min-width: 400px) and (max-width: $width-tablet - 1px) {
+    text-align: end;
+  }
 }
 
 .contacts__item {

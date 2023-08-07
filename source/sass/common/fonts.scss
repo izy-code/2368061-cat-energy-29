@@ -1,3 +1,4 @@
 @use "../common/mixins" as *;
+@use "../common/variables" as *;
 @include font("Lato", Lato-Regular, 400, normal);
 @include font("Oswald", oswaldregular, 400, normal);

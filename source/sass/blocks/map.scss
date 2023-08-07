@@ -1,4 +1,5 @@
 @use "../common/mixins" as *;
+@use "../common/variables" as *;
 
 .map {
   display: grid;
@@ -16,7 +17,5 @@
 .map__fallback {
   display: block;
   object-fit: cover;
-  width: 100vw;
-  min-width: var(--width-phone);
-  max-width: 100%;
+  width: 100%;
 }

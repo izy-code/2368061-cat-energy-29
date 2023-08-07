@@ -1,25 +1,26 @@
 @use "../common/mixins" as *;
+@use "../common/variables" as *;
 
-.catalog--extra {
+.products--with-extra {
   padding-top: 25px;
   padding-bottom: 35px;
 
-  & .catalog__list {
+  & .products__list {
     margin-bottom: 35px;
   }
 }
 
-.catalog__title {
+.products__title {
   margin: 0;
   margin-bottom: 35px;
 }
 
-.catalog__list {
+.products__list {
   @include list-reset;
 }
 
-.catalog__extra {
-  width: calc(var(--width-phone) - 2 * var(--padding-page));
+.products__extra {
+  width: calc($width-phone - 2 * $padding-page-phone);
   min-height: 290px;
   margin: 0 auto;
   padding: 43px 61px 43px 58px;

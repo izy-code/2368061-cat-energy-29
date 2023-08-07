@@ -1,15 +1,16 @@
 @use "sass:color";
 
-:root {
-  --color-delete-later: #{transparentize(#68b738, 0.15)};
+$width-phone: 320px;
+$width-tablet: 768px;
+$width-desktop: 1440px;
 
+$padding-page-phone: 20px;
+$padding-page-tablet: 30px;
+$padding-page-desktop: 110px;
+
+:root {
   --font-primary: "Oswald", "Arial", sans-serif;
   --font-secondary: "Lato", "Arial", sans-serif;
-
-  --width-phone: 320px;
-  --width-tablet: 768px;
-  --width-desktop: 1440px;
-  --padding-page: 20px;
 
   --color-font-basic: #444444;
   --color-font-second: #000000;
@@ -26,9 +27,20 @@
   --color-btn-more: #f2f2f2;
 
   --color-brdr-basic: #d9d9d9;
-  --color-brdr-example: #cdcdcd;
+  --color-brdr-second: #cdcdcd;
   --color-brdr-input: #e7e7e7;
   --color-brdr-header: #e6e6e6;
+  --color-brdr-card: #ebebeb;
 
   --color-academy-basic: #666666;
+
+  --padding-page: #{$padding-page-phone};
+
+  @media (min-width: $width-tablet) {
+    --padding-page: #{$padding-page-tablet};
+  }
+
+  @media (min-width: $width-desktop) {
+    --padding-page: #{$padding-page-desktop};
+  }
 }
