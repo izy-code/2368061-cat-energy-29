@@ -1,4 +1,5 @@
-@use "page-header";
+@use "page-index";
+@use "header";
 @use "container";
 @use "logo";
 @use "nav";
@@ -12,7 +13,7 @@
 @use "compare-slider";
 @use "contacts";
 @use "map";
-@use "page-footer";
+@use "footer";
 @use "socials";
 @use "academy";
 @use "main-form";

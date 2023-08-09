@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page-index" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="page-header">
-      <a class="page-header__logo logo" href="index.html" aria-current="page">
-        <img class="logo__icon" src="img/logo-cat-icon.svg" width="33" height="38"
+  <body class="page-index__body">
+    <header class="header">
+      <a class="header__logo logo" href="index.html" aria-current="page">
+        <img class="header__icon logo__icon" src="img/logo-cat-icon.svg" width="33" height="38"
           alt="Фирменный знак Cat Energy, бело-оранжевый кот-супергерой.">
-        <img class="page-header__wordmark logo__wordmark" src="img/logo-cat-wordmark.svg" width="101" height="18"
+        <img class="header__wordmark logo__wordmark" src="img/logo-cat-wordmark.svg" width="101" height="18"
           alt="Шрифтовое начертание логотипа Cat Energy.">
       </a>
-      <nav class="page-header__nav nav">
-        <button class="nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="nav__list">
+      <button class="header__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <nav class="header__nav nav">
+        <ul class="header__list nav__list">
           <li class="nav__item">
             <span class="nav__link nav__link--current">Главная</span>
           </li>
@@ -33,14 +33,14 @@
     </header>
 
     <main class="main-index">
-      <section class="hero container">
-        <h1 class="hero__title heading heading--background">
-          Функциональное питание для котов <span class="visually-hidden" lang="en">Cat Energy</span>
+      <section class="hero">
+        <h1 class="hero__title heading">
+          Функциональное питание для&nbsp;котов <span class="visually-hidden" lang="en">Cat Energy</span>
         </h1>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
         <img class="hero__image" src="img/product-promo.png" width="280" height="270"
           alt="Cat Energy PRO со вкусом курицы.">
-        <a class="hero__link button button--font_small" href="form.html">Подобрать программу</a>
+        <a class="hero__link button button--font_hero" href="form.html">Подобрать программу</a>
       </section>
 
       <section class="product-series container">
@@ -102,9 +102,9 @@
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts contacts--light">
         <h2 class="visually-hidden">Контактные данные</h2>
-        <header class="contacts__header contacts__header--light">
+        <header class="contacts__header">
           <p class="contacts__intro">Приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__list">
             <p class="contacts__item">
@@ -123,12 +123,12 @@
       </section>
     </main>
 
-    <footer class="page-footer container">
-      <a class="page-footer__logo logo" href="index.html" aria-current="page">
+    <footer class="footer container">
+      <a class="footer__logo logo" href="index.html" aria-current="page">
         <img class="logo__wordmark" src="img/logo-cat-wordmark.svg" width="128" height="24"
           alt="Шрифтовое начертание логотипа Cat Energy.">
       </a>
-      <section class="page-footer__socials socials">
+      <section class="footer__socials socials">
         <h2 class="visually-hidden">Профили в соцсетях</h2>
         <ul class="socials__list">
           <li class="socials__item">
@@ -148,7 +148,7 @@
           </li>
         </ul>
       </section>
-      <a class="page-footer__dev academy" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="footer__dev academy" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="academy__title" lang="en">HTML Academy</span>
         <svg class="academy__icon" width="27" height="34" role="img"
           aria-label="Логотип HTML Academy, гербовый щит с академической шапочкой">

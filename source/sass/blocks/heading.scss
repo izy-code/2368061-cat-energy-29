@@ -1,14 +1,13 @@
-@use "../common/mixins" as *;
-@use "../common/variables" as *;
+@use "../common/forward" as *;
 
 .heading {
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
-  color: var(--color-font-second);
 
-  &--background {
-    color: var(--color-font-bgnd);
+  @media (width >= $width-tablet) {
+    font-size: 60px;
+    line-height: 60px;
   }
 
   &--subhead {

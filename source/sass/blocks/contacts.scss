@@ -1,8 +1,14 @@
-@use "../common/mixins" as *;
-@use "../common/variables" as *;
+@use "../common/forward" as *;
+
+$height-map-phone: 362px;
+$height-map-tablet-desktop: 400px;
 
 .contacts {
   background-color: var(--color-bgnd-second);
+
+  &--light {
+    background-color: var(--color-bgnd-basic);
+  }
 }
 
 .contacts__header {
@@ -11,10 +17,6 @@
   align-items: center;
   padding-top: 26px;
   padding-bottom: 26px;
-
-  &--light {
-    background-color: var(--color-bgnd-basic);
-  }
 }
 
 .contacts__intro {
@@ -30,7 +32,7 @@
 .contacts__list {
   min-width: 50%;
 
-  @media (min-width: 400px) and (max-width: $width-tablet - 1px) {
+  @media (400px <= width < $width-desktop) {
     text-align: end;
   }
 }
@@ -45,5 +47,10 @@
 }
 
 .contacts__map {
-  width: 100%;
+  height: #{lin-interp($width-phone, $height-map-phone, $width-tablet,
+      $height-map-tablet-desktop, 100vw)};
+
+  @media (width >= $width-tablet) {
+    height: $height-map-tablet-desktop;
+  }
 }

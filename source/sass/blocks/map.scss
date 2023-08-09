@@ -1,21 +1,12 @@
-@use "../common/mixins" as *;
-@use "../common/variables" as *;
-
-.map {
-  display: grid;
-  justify-content: center;
-}
+@use "../common/forward" as *;
 
 .map__responsive {
   display: none;
-}
-
-.map__link {
-  max-width: max-content;
 }
 
 .map__fallback {
   display: block;
   object-fit: cover;
   width: 100%;
+  height: 100%;
 }

@@ -1,5 +1,4 @@
-@use "../common/mixins" as *;
-@use "../common/variables" as *;
+@use "../common/forward" as *;
 
 .checkbox__text {
   font-size: 16px;

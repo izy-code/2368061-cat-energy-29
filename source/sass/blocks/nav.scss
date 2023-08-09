@@ -1,30 +1,71 @@
-@use "../common/mixins" as *;
-@use "../common/variables" as *;
+@use "../common/forward" as *;
+@use "sass:math";
 
-.nav__toggle {
-  display: none;
-}
+$thickness-underline: 2px;
 
 .nav__list {
   @include list-reset;
-  justify-self: center;
+  background-color: var(--color-bgnd-basic);
 }
 
 .nav__item {
   text-align: center;
+  box-shadow: inset 0 1px var(--color-brdr-header), 0 1px var(--color-brdr-header);
 }
 
 .nav__link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding-block: 23px;
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-font-basic);
+  color: var(--color-font-second);
 }
 
-@media (min-width: $width-tablet) {
+@media (width >= $width-tablet) {
   .nav__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 33px;
+    column-gap: 33px;
+    padding-top: 16px;
+  }
+
+  .nav__item {
+    box-shadow: none;
+  }
+
+  .nav__link {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .nav__link--current::after {
+    content: "";
+    display: block;
+    width: calc(100% - $thickness-underline);
+    margin: 0 auto;
+    box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-brdr-link);
+  }
+}
+
+@media (width >= $width-desktop) {
+  .nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 33px;
+    padding-top: 48px;
+    background-color: transparent;
+  }
+
+  .nav__link {
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-font-bgnd);
+  }
+
+  .nav__link--current::after {
+    box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-brdr-bgnd);
   }
 }

@@ -1,6 +1,15 @@
-@use "../common/mixins" as *;
-@use "../common/variables" as *;
+@use "../common/forward" as *;
 
 .main-index__details {
   margin-bottom: 29px;
+}
+
+@media (width >= $width-desktop) {
+  .main-index {
+    display: contents;
+
+    &::after {
+      content: "";
+    }
+  }
 }

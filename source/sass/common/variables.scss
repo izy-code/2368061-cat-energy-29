@@ -1,8 +1,10 @@
 @use "sass:color";
+@use "mixins" as *;
 
 $width-phone: 320px;
 $width-tablet: 768px;
 $width-desktop: 1440px;
+$width-max: 1680px;
 
 $padding-page-phone: 20px;
 $padding-page-tablet: 30px;
@@ -21,6 +23,7 @@ $padding-page-desktop: 110px;
   --color-bgnd-basic: #ffffff;
   --color-bgnd-second: #f2f2f2;
   --color-bgnd-image: #68b738;
+  --color-bgnd-image-trans: #{transparentize(#68b738, 0.15)};
   --color-bgnd-example: #eaeaea;
 
   --color-btn-basic: #68b738;
@@ -31,16 +34,24 @@ $padding-page-desktop: 110px;
   --color-brdr-input: #e7e7e7;
   --color-brdr-header: #e6e6e6;
   --color-brdr-card: #ebebeb;
+  --color-brdr-link: #68b738;
+  --color-brdr-bgnd: #ffffff;
 
   --color-academy-basic: #666666;
 
-  --padding-page: #{$padding-page-phone};
+  --padding-page: #{lin-interp($width-phone, $padding-page-phone,
+     $width-tablet, $padding-page-tablet, 100vw)};
 
-  @media (min-width: $width-tablet) {
-    --padding-page: #{$padding-page-tablet};
+  @media (width >= $width-tablet) {
+    --padding-page: #{lin-interp($width-tablet, $padding-page-tablet,
+       $width-desktop, $padding-page-desktop, 100vw)};
   }
 
-  @media (min-width: $width-desktop) {
+  @media (width >= $width-desktop) {
     --padding-page: #{$padding-page-desktop};
+  }
+
+  @media (width >= $width-max) {
+    --padding-page: calc(50vw - #{0.5 * $width-max - $padding-page-desktop});
   }
 }

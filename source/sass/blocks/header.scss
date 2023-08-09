@@ -1,0 +1,124 @@
+@use "../common/forward" as *;
+
+.header {
+  position: relative;
+  display: block;
+
+  @media (width < $width-tablet) {
+    &--js-menu_closed {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & .header__wordmark {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      & .header__nav {
+        display: none;
+      }
+
+      & .header__toggle {
+        display: inline-flex;
+      }
+    }
+
+    &--js-menu_opened {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      & .header__wordmark {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      & .header__nav {
+        width: 100%;
+      }
+
+      & .header__list {
+        position: absolute;
+        right: 0;
+        left: 0;
+      }
+
+      & .header__toggle {
+        display: inline-flex;
+      }
+    }
+  }
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px $padding-page-phone 14px;
+}
+
+.header__wordmark {
+  position: absolute;
+  right: var(--padding-page);
+  height: fit-content;
+  padding-block: 23px;
+}
+
+.header__toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  margin-right: $padding-page-phone;
+  cursor: pointer;
+}
+
+@media (width >= $width-tablet) {
+  .header {
+    @include page-content-paddings;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .header__logo {
+    gap: 13px;
+    justify-content: start;
+    margin-right: 33px;
+    padding-inline: 0;
+    padding-block: 25px;
+  }
+
+  .header__icon {
+    width: 60px;
+    height: 50px;
+  }
+
+  .header__wordmark {
+    position: static;
+    padding: 0;
+  }
+}
+
+@media (width >= $width-desktop) {
+  .header {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .header__logo {
+    gap: 14px;
+    margin-top: 47px;
+    margin-right: 40px;
+    padding-block: 8px;
+  }
+
+  .header__icon {
+    width: 70px;
+    height: 59px;
+  }
+
+  .header__wordmark {
+    width: 118px;
+    height: 21px;
+  }
+}
