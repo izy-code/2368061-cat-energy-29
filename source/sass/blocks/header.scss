@@ -1,27 +1,43 @@
 @use "../common/forward" as *;
 
 .header {
+  $color-bgnd-right: #62a53a;
   position: relative;
   display: block;
+
+  @media (width >= $width-tablet) {
+    @include page-content-paddings;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: flex-start;
+    padding-top: 25px;
+  }
+
+  @media (width >= $width-desktop) {
+    grid-template-columns: 50% 50%;
+    padding: 0;
+
+    &::before {
+      content: "";
+      z-index: -1;
+      display: block;
+      grid-area: 1 / 2 / 3 / 3;
+      width: 100%;
+      height: 100%;
+      background-color: $color-bgnd-right;
+      background-image: url("../img/background-header.jpg");
+      background-position: 0 center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 
   @media (width < $width-tablet) {
     &--js-menu_closed {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-
-      & .header__wordmark {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      & .header__nav {
-        display: none;
-      }
-
-      & .header__toggle {
-        display: inline-flex;
-      }
     }
 
     &--js-menu_opened {
@@ -29,25 +45,6 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-
-      & .header__wordmark {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      & .header__nav {
-        width: 100%;
-      }
-
-      & .header__list {
-        position: absolute;
-        right: 0;
-        left: 0;
-      }
-
-      & .header__toggle {
-        display: inline-flex;
-      }
     }
   }
 }
@@ -55,7 +52,23 @@
 .header__logo {
   display: inline-flex;
   align-items: center;
-  padding: 13px $padding-page-phone 14px;
+  padding: 13px $padding-page-phone 15px;
+
+  @media (width >= $width-tablet) {
+    gap: 13px;
+    justify-content: start;
+    margin-right: 32px;
+    padding: 0;
+  }
+
+  @media (width >= $width-desktop) {
+    grid-area: 1 / 1 / 2 / 2;
+    gap: 14px;
+    width: fit-content;
+    margin: 0;
+    margin-top: 55px;
+    margin-left: var(--padding-page);
+  }
 }
 
 .header__wordmark {
@@ -63,6 +76,19 @@
   right: var(--padding-page);
   height: fit-content;
   padding-block: 23px;
+
+  @media (width >= $width-tablet) {
+    position: static;
+    padding: 0;
+  }
+
+  @media (width < $width-tablet) {
+    .header--js-menu_closed &,
+    .header--js-menu_opened & {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .header__toggle {
@@ -71,54 +97,52 @@
   height: 44px;
   margin-right: $padding-page-phone;
   cursor: pointer;
-}
 
-@media (width >= $width-tablet) {
-  .header {
-    @include page-content-paddings;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .header__logo {
-    gap: 13px;
-    justify-content: start;
-    margin-right: 33px;
-    padding-inline: 0;
-    padding-block: 25px;
-  }
-
-  .header__icon {
-    width: 60px;
-    height: 50px;
-  }
-
-  .header__wordmark {
-    position: static;
-    padding: 0;
+  @media (width < $width-tablet) {
+    .header--js-menu_closed &,
+    .header--js-menu_opened & {
+      display: inline-flex;
+    }
   }
 }
 
-@media (width >= $width-desktop) {
-  .header {
-    grid-area: 1 / 1 / 2 / 2;
+.header__nav {
+  @media (width >= $width-tablet) {
+    justify-self: end;
   }
 
-  .header__logo {
-    gap: 14px;
-    margin-top: 47px;
-    margin-right: 40px;
-    padding-block: 8px;
+  @media (width >= $width-desktop) {
+    grid-area: 1 / 2 / 2 / 3;
+    padding-inline: 33px var(--padding-page);
+    padding-top: 55px;
   }
 
-  .header__icon {
-    width: 70px;
-    height: 59px;
-  }
+  @media (width < $width-tablet) {
+    .header--js-menu_closed & {
+      display: none;
+    }
 
-  .header__wordmark {
-    width: 118px;
-    height: 21px;
+    .header--js-menu_opened & {
+      width: 100%;
+    }
   }
 }
+
+.header__list {
+  @media (width < $width-tablet) {
+    .header--js-menu_opened & {
+      position: absolute;
+      right: 0;
+      left: 0;
+    }
+  }
+}
+
+.header__intro {
+  width: 100%;
+
+  @media (width >= $width-tablet) {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+}
+

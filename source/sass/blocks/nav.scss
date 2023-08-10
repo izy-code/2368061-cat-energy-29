@@ -1,71 +1,68 @@
 @use "../common/forward" as *;
 @use "sass:math";
 
-$thickness-underline: 2px;
-
 .nav__list {
   @include list-reset;
   background-color: var(--color-bgnd-basic);
+
+  @media (width >= $width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 33px;
+    margin-bottom: 65px;
+  }
+
+  @media (width >= $width-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 33px;
+    margin: 0;
+    background-color: transparent;
+  }
 }
 
 .nav__item {
   text-align: center;
-  box-shadow: inset 0 1px var(--color-brdr-header), 0 1px var(--color-brdr-header);
+  box-shadow: 0 -1px var(--color-brdr-header), inset 0 -1px var(--color-brdr-header);
+
+  @media (width >= $width-tablet) {
+    box-shadow: none;
+  }
 }
 
 .nav__link {
+  $thickness-underline: 2px;
   display: block;
   width: fit-content;
   margin: 0 auto;
-  padding-block: 23px;
+  padding-block: 22px 24px;
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--color-font-second);
-}
 
-@media (width >= $width-tablet) {
-  .nav__list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 33px;
-    padding-top: 16px;
-  }
-
-  .nav__item {
-    box-shadow: none;
-  }
-
-  .nav__link {
+  @media (width >= $width-tablet) {
+    padding-block: 13px;
     font-size: 18px;
     line-height: 24px;
+
+    &--current::after {
+      content: "";
+      display: block;
+      width: calc(100% - $thickness-underline);
+      margin: 0 auto;
+      box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-brdr-link);
+    }
   }
 
-  .nav__link--current::after {
-    content: "";
-    display: block;
-    width: calc(100% - $thickness-underline);
-    margin: 0 auto;
-    box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-brdr-link);
-  }
-}
-
-@media (width >= $width-desktop) {
-  .nav__list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 33px;
-    padding-top: 48px;
-    background-color: transparent;
-  }
-
-  .nav__link {
+  @media (width >= $width-desktop) {
+    padding-block: 16px;
     font-size: 20px;
     line-height: 30px;
     color: var(--color-font-bgnd);
-  }
 
-  .nav__link--current::after {
-    box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-brdr-bgnd);
+    &--current::after {
+      box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-brdr-bgnd);
+    }
   }
 }

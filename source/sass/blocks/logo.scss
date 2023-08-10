@@ -1,5 +1,29 @@
 @use "../common/forward" as *;
+@use "sass:math";
 
 .logo {
   text-decoration: none;
+}
+
+.logo__icon {
+  @media (width >= $width-tablet) {
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (width >= $width-desktop) {
+    width: 70px;
+    height: 59px;
+  }
+}
+
+.logo__wordmark {
+  @media (width >= $width-tablet) {
+    filter: invert(math.div(51, 221));
+  }
+
+  @media (width >= $width-desktop) {
+    width: 118px;
+    height: 21px;
+  }
 }

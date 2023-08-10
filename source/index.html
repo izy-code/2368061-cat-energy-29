@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html class="page-index" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page-index__body">
+  <body>
     <header class="header">
       <a class="header__logo logo" href="index.html" aria-current="page">
         <img class="header__icon logo__icon" src="img/logo-cat-icon.svg" width="33" height="38"
@@ -17,6 +17,7 @@
       <button class="header__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
+
       <nav class="header__nav nav">
         <ul class="header__list nav__list">
           <li class="nav__item">
@@ -30,19 +31,18 @@
           </li>
         </ul>
       </nav>
+
+      <section class="header__intro intro">
+        <h1 class="intro__title heading">
+          Функциональное питание для&nbsp;котов <span class="visually-hidden" lang="en">Cat Energy</span>
+        </h1>
+        <p class="intro__slogan">Занялся собой? Займись котом!</p>
+        <img class="intro__image" src="img/product-promo.png" width="280" height="270" alt="Cat Energy PRO со вкусом курицы.">
+        <a class="intro__link button button--font_intro" href="form.html">Подобрать программу</a>
+      </section>
     </header>
 
     <main class="main-index">
-      <section class="hero">
-        <h1 class="hero__title heading">
-          Функциональное питание для&nbsp;котов <span class="visually-hidden" lang="en">Cat Energy</span>
-        </h1>
-        <p class="hero__slogan">Занялся собой? Займись котом!</p>
-        <img class="hero__image" src="img/product-promo.png" width="280" height="270"
-          alt="Cat Energy PRO со вкусом курицы.">
-        <a class="hero__link button button--font_hero" href="form.html">Подобрать программу</a>
-      </section>
-
       <section class="product-series container">
         <h2 class="visually-hidden">Серии кормов</h2>
         <ul class="product-series__list">
@@ -156,5 +156,6 @@
         </svg>
       </a>
     </footer>
+    <script src="js/header-menu.js"></script>
   </body>
 </html>
