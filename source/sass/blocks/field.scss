@@ -2,17 +2,16 @@
 
 .field {
   display: flex;
-  gap: 13px;
+  row-gap: 13px;
+  column-gap: 13px;
   align-items: center;
-  font-size: 16px;
-  line-height: 18px;
   text-transform: uppercase;
 
   &--textarea {
     display: block;
     width: 100%;
     padding: 14px 14px 14px 15px;
-    font-family: inherit;
+    font-family: var(--font-primary);
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;

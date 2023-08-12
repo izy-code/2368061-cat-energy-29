@@ -16,5 +16,4 @@ menuToggle.onclick = () => {
   else {
     console.log("Ошибка классов кнопки меню в header");
   }
-  //menuToggle.style.backgroundImage = 'url("../img/cross.svg")';
 };

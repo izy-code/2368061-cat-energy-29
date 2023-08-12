@@ -32,4 +32,16 @@
     color: var(--color-font-basic);
     background-color: var(--color-btn-more);
   }
+
+  &:hover,
+  &:focus-visible {
+    @media (hover: hover) {
+      background-color: var(--color-btn-basic-hover);
+    }
+  }
+
+  &:active {
+    color: var(--color-font-bgnd-active);
+    background-color: var(--color-btn-basic-hover);
+  }
 }

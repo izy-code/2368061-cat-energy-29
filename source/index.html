@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header header--index">
       <a class="header__logo logo" href="index.html" aria-current="page">
         <img class="header__icon logo__icon" src="img/logo-cat-icon.svg" width="33" height="38"
           alt="Фирменный знак Cat Energy, бело-оранжевый кот-супергерой.">
-        <img class="header__wordmark logo__wordmark" src="img/logo-cat-wordmark.svg" width="101" height="18"
-          alt="Шрифтовое начертание логотипа Cat Energy.">
+        <svg class="header__wordmark logo__wordmark logo__wordmark--light" width="101" height="18" role="img"
+          aria-label="Шрифтовое начертание логотипа Cat Energy.">
+          <use href="img/logo-cat-wordmark.svg#word" aria-hidden="true" />
+        </svg>
       </a>
       <button class="header__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -37,7 +39,8 @@
           Функциональное питание для&nbsp;котов <span class="visually-hidden" lang="en">Cat Energy</span>
         </h1>
         <p class="intro__slogan">Занялся собой? Займись котом!</p>
-        <img class="intro__image" src="img/product-promo.png" width="280" height="270" alt="Cat Energy PRO со вкусом курицы.">
+        <img class="intro__image" src="img/product-promo.png" width="280" height="270"
+          alt="Cat Energy PRO со вкусом курицы.">
         <a class="intro__link button button--font_intro" href="form.html">Подобрать программу</a>
       </section>
     </header>
@@ -64,14 +67,18 @@
       <section class="main-index__details details container">
         <h2 class="details__title heading">Как это работает</h2>
         <ul class="details__list">
-          <li class="details__item details__item--icon_leaf">Функциональное питание содержит только полезные питательные
-            вещества.</li>
-          <li class="details__item details__item--icon_cook">Выпускается в виде порошка, который нужно лишь залить
-            кипятком и готово.</li>
-          <li class="details__item details__item--icon_meal">Замените один-два приема обычной еды на наше функциональное
-            питание.</li>
-          <li class="details__item details__item--icon_time">Уже через месяц наслаждайтесь изменениями к лучшему вашего
-            питомца!</li>
+          <li class="details__item details__item--icon_leaf">
+            <span class="details__text">Функциональное питание содержит только полезные питательные вещества.</span>
+          </li>
+          <li class="details__item details__item--icon_cook">
+            <span class="details__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</span>
+          </li>
+          <li class="details__item details__item--icon_meal">
+            <span class="details__text">Замените один-два приема обычной еды на наше функциональное питание.</span>
+          </li>
+          <li class="details__item details__item--icon_time">
+            <span class="details__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</span>
+          </li>
         </ul>
       </section>
 
@@ -156,6 +163,6 @@
         </svg>
       </a>
     </footer>
-    <script src="js/header-menu.js"></script>
+    <script src="js/header.js"></script>
   </body>
 </html>

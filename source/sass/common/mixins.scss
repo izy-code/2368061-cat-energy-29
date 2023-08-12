@@ -34,11 +34,3 @@
     @content;
   }
 }
-
-@mixin hover-non-touch {
-  @media (hover: hover), screen and (min-width: 0\0) {
-    &:hover {
-      @content;
-    }
-  }
-}

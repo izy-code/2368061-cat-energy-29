@@ -10,15 +10,23 @@ $padding-page-phone: 20px;
 $padding-page-tablet: 30px;
 $padding-page-desktop: 110px;
 
+$color-default-black: #000000;
+$color-default-white: #ffffff;
+
 :root {
   --font-primary: "Oswald", "Arial", sans-serif;
   --font-secondary: "Lato", "Arial", sans-serif;
 
   --color-font-basic: #444444;
-  --color-font-second: #000000;
-  --color-font-contacts: #111111;
+  --color-font-second: #{$color-default-black};
+  --color-font-second-hover: #{transparentize($color-default-black, 0.4)};
+  --color-font-second-active: #{transparentize($color-default-black, 0.7)};
+  --color-font-third: #111111;
   --color-font-card: #222222;
-  --color-font-bgnd: #ffffff;
+  --color-font-bgnd: #{$color-default-white};
+  --color-font-bgnd-hover: #{transparentize($color-default-white, 0.4)};
+  --color-font-bgnd-active: #{transparentize($color-default-white, 0.7)};
+  --color-font-counter: #f2f2f2;
 
   --color-bgnd-basic: #ffffff;
   --color-bgnd-second: #f2f2f2;
@@ -26,6 +34,7 @@ $padding-page-desktop: 110px;
   --color-bgnd-example: #eaeaea;
 
   --color-btn-basic: #68b738;
+  --color-btn-basic-hover: #5eaa2f;
   --color-btn-more: #f2f2f2;
 
   --color-brdr-basic: #d9d9d9;
@@ -35,6 +44,8 @@ $padding-page-desktop: 110px;
   --color-brdr-card: #ebebeb;
   --color-brdr-link: #68b738;
   --color-brdr-bgnd: #ffffff;
+
+  --color-icon-basic: #000000;
 
   --color-academy-basic: #666666;
 
