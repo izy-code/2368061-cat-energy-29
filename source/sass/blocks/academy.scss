@@ -8,8 +8,27 @@
   font-family: var(--font-secondary);
   line-height: 20px;
   color: var(--color-font-basic);
+  pointer-events: auto;
+
+  .academy:active & {
+    opacity: 0.3;
+  }
 }
 
 .academy__icon {
-  fill: var(--color-academy-basic);
+  flex-shrink: 0;
+  pointer-events: auto;
+  fill: var(--color-icon-second);
+
+  .academy:hover &,
+  .academy:focus-visible & {
+    @media (hover: hover) {
+      fill: var(--color-icon-hover);
+    }
+  }
+
+  .academy:active & {
+    opacity: 0.3;
+    fill: var(--color-icon-hover);
+  }
 }

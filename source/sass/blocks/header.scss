@@ -23,7 +23,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--color-brdr-header);
+      border-bottom: 1px solid var(--color-brdr-third);
 
       &.header--index {
         border-bottom: none;
@@ -42,9 +42,11 @@
 
   &--index {
     $color-bgnd-right: #62a53a;
+    margin: 0;
 
     @media (width >= $width-desktop) {
       grid-template-columns: 50% 50%;
+      margin-bottom: 82px;
 
       &::before {
         content: "";

@@ -1,9 +1,61 @@
 @use "../common/forward" as *;
 
 .socials__list {
+  @include list-reset;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 24px;
-  column-gap: 24px;
-  justify-content: center;
+  row-gap: 8px;
+  column-gap: 8px;
+  width: fit-content;
+  max-width: 262px;
+  margin: 0 auto;
+  padding-block: 7px 6px;
+
+  @media (width >= $width-tablet) {
+    padding: 0;
+  }
+}
+
+.socials__link {
+  display: flex;
+  width: 46px;
+  height: 48px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    margin: auto;
+    background-color: var(--color-icon-second);
+    -webkit-mask: center / contain no-repeat;
+    mask: center / contain no-repeat;
+  }
+
+  &--icon_vk::before {
+    -webkit-mask-image: url("../img/socials-vk.svg");
+    mask-image: url("../img/socials-vk.svg");
+  }
+
+  &--icon_yt::before {
+    -webkit-mask-image: url("../img/socials-yt.svg");
+    mask-image: url("../img/socials-yt.svg");
+  }
+
+  &--icon_tg::before {
+    -webkit-mask-image: url("../img/socials-tg.svg");
+    mask-image: url("../img/socials-tg.svg");
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    @media (hover: hover) {
+      background-color: var(--color-icon-hover);
+    }
+  }
+
+  &:active::before {
+    background-color: var(--color-icon-hover);
+    opacity: 0.3;
+  }
 }

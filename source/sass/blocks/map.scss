@@ -1,7 +1,21 @@
 @use "../common/forward" as *;
 
+.map {
+  display: grid;
+}
+
 .map__responsive {
-  display: none;
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: inherit;
+  border: none;
+}
+
+.map__link {
+  z-index: -1;
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: inherit;
 }
 
 .map__fallback {

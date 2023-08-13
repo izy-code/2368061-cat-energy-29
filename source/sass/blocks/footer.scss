@@ -1,24 +1,68 @@
 @use "../common/forward" as *;
 
 .footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-block: 40px;
   text-align: center;
   background-color: var(--color-bgnd-second);
+
+  @media (width >= $width-tablet) {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 35px;
+    align-items: center;
+    padding-block: 52px 51px;
+  }
+
+  @media (width >= $width-desktop) {
+    column-gap: 40px;
+    padding-block: 63px 62px;
+  }
 }
 
 .footer__logo {
   display: block;
-  margin-bottom: 19px;
+  width: fit-content;
+  margin: 0 auto 19px;
+  fill: var(--color-font-third);
+
+  @media (width >= $width-tablet) {
+    margin: 0;
+  }
+
+  &:hover .footer__wordmark,
+  &:focus-visible .footer__wordmark {
+    @media (hover: hover) {
+      fill: var(--color-font-third-hover);
+    }
+  }
+
+  &:active .footer__wordmark {
+    fill: var(--color-font-third-active);
+  }
 }
 
 .footer__socials {
   margin-bottom: 20px;
   border-block: 1px solid var(--color-brdr-basic);
+
+  @media (width >= $width-tablet) {
+    margin: 0;
+    border: none;
+  }
 }
 
 .footer__dev {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 37px;
+  pointer-events: none;
+
+  @media (width >= $width-tablet) {
+    column-gap: 23px;
+    justify-content: end;
+    justify-self: right;
+    width: fit-content;
+    pointer-events: auto;
+  }
 }

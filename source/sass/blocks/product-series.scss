@@ -2,12 +2,6 @@
 
 $column-gap-desktop: 80px;
 
-.product-series {
-  @media (width >= $width-desktop) {
-    padding-top: 82px;
-  }
-}
-
 .product-series__list {
   @include list-reset;
   display: flex;
@@ -222,6 +216,7 @@ $column-gap-desktop: 80px;
     color: var(--color-font-second-active);
 
     &::after {
+      background-image: url("../img/arrow-long.svg");
       opacity: 0.3;
     }
   }

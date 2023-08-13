@@ -2,15 +2,6 @@
 
 $width-breakpoint: 1280px;
 
-.details {
-  padding-block: 20px;
-
-  @media (width >= $width-tablet) {
-    padding-top: 45px;
-    padding-bottom: 46px;
-  }
-}
-
 .details__title {
   margin: 0;
   margin-bottom: 40px;

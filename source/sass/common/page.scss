@@ -1,6 +1,12 @@
 @use "../common/forward" as *;
 
-html {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page {
   height: 100%;
   font-family: var(--font-primary);
   font-size: 16px;
@@ -8,7 +14,7 @@ html {
   color: var(--color-font-basic);
 }
 
-body {
+.page__body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   min-width: $width-phone;
@@ -17,8 +23,14 @@ body {
   background-color: var(--color-bgnd-basic);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.page__header {
+  margin-bottom: 27px;
+
+  @media (width >= $width-tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (width >= $width-tablet) {
+    margin-bottom: 19px;
+  }
 }
