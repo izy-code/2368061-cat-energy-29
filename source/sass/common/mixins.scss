@@ -22,7 +22,7 @@
 
 @mixin page-content-width {
   width: calc(100vw - 2 * var(--padding-page));
-  margin: 0 auto;
+  margin-inline: auto;
 }
 
 @function lin-interp($x1, $y1, $x2, $y2, $x-input) {

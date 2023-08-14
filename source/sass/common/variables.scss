@@ -8,10 +8,12 @@ $width-max: 1680px;
 
 $padding-page-phone: 20px;
 $padding-page-tablet: 30px;
+$padding-form-tablet: calc(var(--padding-page) + 40px);
 $padding-page-desktop: 110px;
 
 $color-default-black: #000000;
 $color-default-white: #ffffff;
+$color-brdr-radio: #bababa;
 
 :root {
   --font-primary: "Oswald", "Arial", sans-serif;
@@ -46,10 +48,16 @@ $color-default-white: #ffffff;
   --color-brdr-card: #ebebeb;
   --color-brdr-link: #68b738;
   --color-brdr-bgnd: #ffffff;
+  --color-brdr-input-focus: #444444;
+  --color-brdr-input-error: #ff8282;
+  --color-brdr-radio-hover: #{$color-brdr-radio};
+  --color-brdr-radio-hover-opacity: #{transparentize($color-brdr-radio, 0.7)};
 
   --color-icon-basic: #000000;
   --color-icon-second: #666666;
   --color-icon-hover: #68b738;
+
+  --color-radio-marker: #68b738;
 
   --padding-page: #{lin-interp($width-phone, $padding-page-phone,
      $width-tablet, $padding-page-tablet, 100vw)};

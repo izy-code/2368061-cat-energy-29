@@ -31,6 +31,13 @@
   &--more {
     color: var(--color-font-basic);
     background-color: var(--color-btn-more);
+
+    &:disabled {
+      color: var(--color-font-basic);
+      background-color: var(--color-btn-more);
+      opacity: 0.3;
+      cursor: initial;
+    }
   }
 
   &:hover,
@@ -43,5 +50,12 @@
   &:active {
     color: var(--color-font-bgnd-active);
     background-color: var(--color-btn-basic-hover);
+  }
+
+  &:disabled {
+    color: var(--color-font-bgnd);
+    background-color: var(--color-btn-basic);
+    opacity: 0.3;
+    cursor: initial;
   }
 }

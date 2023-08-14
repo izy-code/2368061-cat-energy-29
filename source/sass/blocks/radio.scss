@@ -1,5 +1,79 @@
 @use "../common/forward" as *;
 
+.radio {
+  display: flex;
+  align-items: center;
+  margin: -4px;
+  padding: 4px;
+}
+
+.radio__input {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  margin-right: 15px;
+
+  background-color: var(--color-bgnd-basic);
+  border: 1px solid var(--color-brdr-second);
+  border-radius: 50%;
+  -webkit-appearance: none;
+  appearance: none;
+
+  @media (width >= $width-tablet) {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  .radio:hover &:not(:disabled) {
+    @media (hover: hover) {
+      border-color: var(--color-brdr-radio-hover);
+    }
+  }
+
+  &:focus {
+    border-color: var(--color-brdr-radio-hover);
+  }
+
+  .radio:active &:not(:disabled) {
+    border-color: var(--color-brdr-radio-hover-opacity);
+
+    &::before {
+      opacity: 0.3;
+    }
+
+    & + .radio__text {
+      opacity: 0.3;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    & + .radio__text {
+      opacity: 0.3;
+    }
+  }
+
+  &:checked::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    margin-top: 50%;
+    margin-left: 50%;
+    background-color: var(--color-radio-marker);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (width >= $width-tablet) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
 .radio__text {
   text-transform: uppercase;
 }

@@ -35,14 +35,12 @@
   display: block;
   fill: var(--color-font-third);
 
+  @media (width >= $width-tablet) {
+    fill: var(--color-font-basic);
+  }
+
   @media (width >= $width-desktop) {
     width: 118px;
     height: 21px;
-  }
-
-  &--light {
-    @media (width >= $width-tablet) {
-      fill: var(--color-font-basic);
-    }
   }
 }

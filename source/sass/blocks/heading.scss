@@ -11,8 +11,34 @@
   }
 
   &--subhead {
-    padding-left: var(--padding-page);
+    position: relative;
+    margin-right: var(--padding-page);
+    padding-inline: var(--padding-page) 20px;
     font-size: 24px;
     line-height: 26px;
+    background-color: var(--color-bgnd-basic);
+
+    @media (width >= $width-tablet) {
+      margin-inline: var(--padding-page);
+      padding-inline: 40px;
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+      height: 2px;
+      background-color: var(--color-bgnd-image);
+
+      @media (width >= $width-tablet) {
+        top: 22px;
+        left: calc(40px - var(--padding-page));
+      }
+    }
   }
 }
