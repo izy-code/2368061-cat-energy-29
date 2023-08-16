@@ -3,6 +3,7 @@
 .checkbox {
   display: flex;
   align-items: center;
+  width: fit-content;
   margin: -4px;
   padding: 4px;
 }
@@ -14,23 +15,29 @@
   margin: 0;
   margin-right: 15px;
 
-  background-color: var(--color-bgnd-basic);
-  border: 1px solid var(--color-brdr-second);
+  background-color: var(--color-bg-basic);
+  border: 1px solid var(--color-bd-second);
   -webkit-appearance: none;
   appearance: none;
 
+  @media (width >= $width-tablet) {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
   .checkbox:hover &:not(:disabled) {
     @media (hover: hover) {
-      border-color: var(--color-brdr-radio-hover);
+      border-color: var(--color-bd-radio-hover);
     }
   }
 
   &:focus {
-    border-color: var(--color-brdr-radio-hover);
+    border-color: var(--color-bd-radio-hover);
   }
 
   .checkbox:active &:not(:disabled) {
-    border-color: var(--color-brdr-radio-hover-opacity);
+    border-color: var(--color-bd-radio-hover-opacity);
 
     &::before {
       opacity: 0.3;
@@ -63,4 +70,9 @@
 
 .checkbox__text {
   text-transform: uppercase;
+
+  @media (width >= $width-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

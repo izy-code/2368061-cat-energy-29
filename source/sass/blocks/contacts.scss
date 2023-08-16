@@ -4,14 +4,14 @@ $height-map-phone: 362px;
 $height-map-tablet: 400px;
 
 .contacts {
-  background-color: var(--color-bgnd-second);
+  background-color: var(--color-bg-second);
 
   @media (width >= $width-desktop) {
     display: grid;
   }
 
   &--light {
-    background-color: var(--color-bgnd-basic);
+    background-color: var(--color-bg-basic);
   }
 }
 
@@ -26,14 +26,15 @@ $height-map-tablet: 400px;
   }
 
   @media (width >= $width-desktop) {
-    z-index: 1;
+    z-index: 2;
     grid-area: 1 / 1 / 2 / 2;
     width: 565px;
     height: fit-content;
     margin-top: 95px;
+    margin-bottom: 106px;
     margin-left: 110px;
     padding: 60px 78px 60px 80px;
-    background-color: var(--color-bgnd-basic);
+    background-color: var(--color-bg-basic);
   }
 }
 
@@ -111,5 +112,7 @@ $height-map-tablet: 400px;
 
   @media (width >= $width-desktop) {
     grid-area: 1 / 1 / 2 / 2;
+    height: inherit;
+    min-height: $height-map-tablet;
   }
 }

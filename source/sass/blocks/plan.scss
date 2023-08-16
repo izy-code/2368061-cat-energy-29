@@ -6,9 +6,14 @@
   @media (width >= $width-tablet) {
     padding: 0 $padding-form-tablet 60px;
   }
+
+  @media (width >= $width-desktop) {
+    padding: 0 var(--padding-page) 80px;
+  }
 }
 
 .plan__title {
+  @include page-content-paddings;
   margin: 0;
   margin-bottom: 37px;
 
@@ -16,9 +21,14 @@
     margin-bottom: 54px;
     padding-inline: 0;
   }
+
+  @media (width >= $width-desktop) {
+    margin-bottom: 55px;
+  }
 }
 
 .plan__desc {
+  @include page-content-paddings;
   margin: 0;
   margin-bottom: 39px;
   font-size: 14px;

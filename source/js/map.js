@@ -6,5 +6,5 @@ const mapResponsive = new
     myOptions);
 
 google.maps.event.addListenerOnce(mapResponsive, 'idle', function () {
-  mapResponsive.style.zIndex = 2;
+  mapResponsive.style.zIndex = 1;
 });

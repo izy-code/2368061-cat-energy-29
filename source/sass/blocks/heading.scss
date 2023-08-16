@@ -12,14 +12,12 @@
 
   &--subhead {
     position: relative;
-    margin-right: var(--padding-page);
     padding-inline: var(--padding-page) 20px;
     font-size: 24px;
     line-height: 26px;
-    background-color: var(--color-bgnd-basic);
+    background-color: var(--color-bg-basic);
 
     @media (width >= $width-tablet) {
-      margin-inline: var(--padding-page);
       padding-inline: 40px;
       font-size: 36px;
       line-height: 36px;
@@ -28,16 +26,19 @@
     &::before {
       content: "";
       position: absolute;
-      top: 16px;
       left: 0;
       z-index: -1;
       width: 100vw;
-      height: 2px;
-      background-color: var(--color-bgnd-image);
+      box-shadow: 0 16px 0 1px var(--color-bd-link);
 
       @media (width >= $width-tablet) {
-        top: 22px;
-        left: calc(40px - var(--padding-page));
+        left: calc(-1 * $padding-form-tablet + 40px);
+        box-shadow: 0 22px 0 1px var(--color-bd-link);
+      }
+
+      @media (width >= $width-desktop) {
+        left: calc(-1 * var(--padding-page) + 40px);
+        box-shadow: 0 22px 0 1px var(--color-bd-link);
       }
     }
   }

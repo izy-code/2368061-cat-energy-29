@@ -30,7 +30,7 @@ $column-gap-desktop: 80px;
   column-gap: 20px;
   align-items: center;
   padding: 24px 20px 18px;
-  background-color: var(--color-bgnd-second);
+  background-color: var(--color-bg-second);
 
   @media (width >= $width-tablet) {
     grid-template-columns: 1fr 200px;
@@ -50,7 +50,7 @@ $column-gap-desktop: 80px;
     grid-area: 1 / 1 / 2 / 2;
     width: $diameter-image-phone;
     height: $diameter-image-phone;
-    background-color: var(--color-bgnd-image);
+    background-color: var(--color-bg-image);
     border-radius: 50%;
 
     @media (width >= $width-tablet) {
@@ -157,7 +157,7 @@ $column-gap-desktop: 80px;
   padding-block: 22px;
   font-family: var(--font-secondary);
   font-size: 14px;
-  border-bottom: 1px solid var(--color-brdr-basic);
+  border-bottom: 1px solid var(--color-bd-basic);
 
   @media (width >= $width-tablet) {
     grid-column: 1 / 2;
@@ -202,13 +202,13 @@ $column-gap-desktop: 80px;
     width: 32px;
     height: 12px;
     margin-left: 15px;
-    background-image: url("../img/arrow.svg");
+    background-image: url("../img/icons-arrow.svg");
   }
 
   &:hover::after,
   &:focus-visible::after {
     @media (hover: hover) {
-      background-image: url("../img/arrow-long.svg");
+      background-image: url("../img/icons-arrow-long.svg");
     }
   }
 
@@ -216,7 +216,7 @@ $column-gap-desktop: 80px;
     color: var(--color-font-second-active);
 
     &::after {
-      background-image: url("../img/arrow-long.svg");
+      background-image: url("../img/icons-arrow-long.svg");
       opacity: 0.3;
     }
   }

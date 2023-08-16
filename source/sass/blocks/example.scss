@@ -3,22 +3,22 @@
 .example {
   @include page-content-paddings;
   padding-block: 25px 40px;
-  background-color: var(--color-bgnd-example);
+  background-color: var(--color-bg-example);
 
   @media (width >= $width-tablet) {
     display: grid;
     grid-template-columns: 70% 1fr;
     padding-block: 45px 0;
     background-color: unset;
-    background-image: linear-gradient(to top, var(--color-bgnd-example) 462px, var(--color-bgnd-basic) 462px);
-    border-top: 1px solid var(--color-brdr-third);
+    background-image: linear-gradient(to top, var(--color-bg-example) 462px, var(--color-bg-basic) 462px);
+    border-top: 1px solid var(--color-bd-third);
   }
 
   @media (width >= $width-desktop) {
     grid-template-columns: 1fr min-content;
     column-gap: 100px;
     padding: 0;
-    background-color: var(--color-bgnd-second);
+    background-color: var(--color-bg-second);
     background-image: none;
     border-top: none;
 
@@ -27,7 +27,7 @@
       grid-area: 1 / 1 / 2 / 3;
       width: 100%;
       height: 100%;
-      background-color: var(--color-bgnd-basic);
+      background-color: var(--color-bg-basic);
     }
   }
 }
@@ -76,6 +76,7 @@
   row-gap: 10px;
   column-gap: 24px;
   justify-content: space-between;
+  align-items: center;
   max-width: 600px;
   margin: 0 auto;
   margin-bottom: 10px;
@@ -100,7 +101,7 @@
 
 .example__item {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   text-align: center;
 }
@@ -109,16 +110,15 @@
   position: relative;
   bottom: 10px;
   z-index: 1;
-  order: 1;
   width: 70%;
-  min-width: 88px;
+  min-width: 87px;
   max-width: 200px;
   padding-inline: 8px;
 
   font-family: var(--font-secondary);
   font-size: 12px;
   line-height: 1;
-  background-color: var(--color-bgnd-example);
+  background-color: var(--color-bg-example);
 
   @media (width >= $width-tablet) {
     bottom: 9px;
@@ -127,32 +127,30 @@
     margin-inline: 9px;
     padding-inline: 9px;
     font-size: 14px;
-    background-color: var(--color-bgnd-basic);
+    background-color: var(--color-bg-basic);
   }
 
   @media (width >= $width-desktop) {
-    background-color: var(--color-bgnd-second);
+    background-color: var(--color-bg-second);
   }
 }
 
 .example__value {
   width: 100%;
   min-width: 124px;
-  min-height: 56px;
   margin: 0;
-  padding: 14px;
+  padding: 13px 14px 17px;
 
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
   color: var(--color-font-second);
-  border: 1px solid var(--color-brdr-second);
+  border: 1px solid var(--color-bd-second);
   border-radius: 3px;
 
   @media (width >= $width-tablet) {
     min-width: 162px;
-    min-height: 72px;
-    padding: 15px;
+    padding: 14px 15px 19px;
 
     font-size: 30px;
     line-height: 37px;
