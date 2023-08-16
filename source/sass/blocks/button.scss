@@ -39,13 +39,6 @@
   &--more {
     color: var(--color-font-basic);
     background-color: var(--color-btn-more);
-
-    &:disabled {
-      color: var(--color-font-basic);
-      background-color: var(--color-btn-more);
-      opacity: 0.3;
-      cursor: initial;
-    }
   }
 
   &:hover,

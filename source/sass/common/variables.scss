@@ -21,6 +21,7 @@ $color-grey-102: #666666;
 $color-grey-107: #6b6b6b;
 $color-grey-186: #bababa;
 $color-grey-205: #cdcdcd;
+$color-grey-211: #d3d3d3;
 $color-grey-217: #d9d9d9;
 $color-white-230: #e6e6e6;
 $color-white-231: #e7e7e7;
@@ -74,6 +75,7 @@ $color-green-hover: #5eaa2f;
   --color-icon-second: #{$color-grey-102};
   --color-icon-hover: #{$color-green-basic};
   --color-icon-error: #{$color-red-error};
+  --color-icon-plus: #{$color-grey-211};
 
   --color-radio-marker: #{$color-green-basic};
 

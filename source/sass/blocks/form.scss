@@ -210,7 +210,6 @@
 }
 
 .form__notify {
-  align-self: start;
   order: 1;
   margin: 0;
   font-family: var(--font-secondary);
@@ -220,6 +219,7 @@
   color: var(--color-font-second);
 
   @media (width >= $width-tablet) {
+    align-self: start;
     padding-top: 15px;
     font-size: 16px;
     text-align: start;
