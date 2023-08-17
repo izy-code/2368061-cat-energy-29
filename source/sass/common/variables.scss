@@ -38,6 +38,7 @@ $color-green-hover: #5eaa2f;
   --font-secondary: "Lato", "Arial", sans-serif;
 
   --color-font-basic: #{$color-grey-68};
+  --color-font-basic-active: #{transparentize($color-grey-68, 0.7)};
   --color-font-second: #{$color-black-default};
   --color-font-second-hover: #{transparentize($color-black-default, 0.4)};
   --color-font-second-active: #{transparentize($color-black-default, 0.7)};
@@ -45,9 +46,9 @@ $color-green-hover: #5eaa2f;
   --color-font-third-hover: #{$color-grey-62};
   --color-font-third-active: #{$color-grey-107};
   --color-font-card: #{$color-black-34};
-  --color-font-bgnd: #{$color-white-default};
-  --color-font-bgnd-hover: #{transparentize($color-white-default, 0.4)};
-  --color-font-bgnd-active: #{transparentize($color-white-default, 0.7)};
+  --color-font-bg: #{$color-white-default};
+  --color-font-bg-hover: #{transparentize($color-white-default, 0.4)};
+  --color-font-bg-active: #{transparentize($color-white-default, 0.7)};
   --color-font-counter: #{$color-white-242};
 
   --color-bg-basic: #{$color-white-default};
@@ -58,14 +59,16 @@ $color-green-hover: #5eaa2f;
   --color-btn-basic: #{$color-green-basic};
   --color-btn-basic-hover: #{$color-green-hover};
   --color-btn-more: #{$color-white-242};
+  --color-btn-more-hover: #{$color-white-235};
 
   --color-bd-basic: #{$color-grey-217};
   --color-bd-second: #{$color-grey-205};
   --color-bd-third: #{$color-white-230};
   --color-bd-input: #{$color-white-231};
   --color-bd-card: #{$color-white-235};
+  --color-bd-card-active: #{transparentize($color-white-235, 0.7)};
   --color-bd-link: #{$color-green-basic};
-  --color-bd-bgnd: #{$color-white-default};
+  --color-bd-bg: #{$color-white-default};
   --color-bd-input-focus: #{$color-grey-68};
   --color-bd-input-error: #{$color-red-error};
   --color-bd-radio-hover: #{$color-grey-186};

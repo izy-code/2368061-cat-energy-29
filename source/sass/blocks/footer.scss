@@ -56,6 +56,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 37px;
+  text-align: start;
   pointer-events: none;
 
   @media (width >= $width-tablet) {
@@ -63,6 +64,7 @@
     justify-content: end;
     justify-self: right;
     width: fit-content;
+    text-align: end;
     pointer-events: auto;
   }
 }

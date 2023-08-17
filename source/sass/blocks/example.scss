@@ -76,10 +76,10 @@
   row-gap: 10px;
   column-gap: 24px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   max-width: 600px;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   @media (width >= $width-tablet) {
     row-gap: 15px;
@@ -87,14 +87,14 @@
     justify-content: start;
     max-width: none;
     margin: 0;
-    margin-bottom: 90px;
+    margin-bottom: 99px;
   }
 
   @media (width >= $width-desktop) {
     row-gap: 15px;
     column-gap: 42px;
     margin: 0;
-    margin-bottom: 46px;
+    margin-bottom: 55px;
     padding-left: var(--padding-page);
   }
 }
@@ -107,12 +107,9 @@
 }
 
 .example__property {
-  position: relative;
-  bottom: 10px;
   z-index: 1;
-  width: 70%;
-  min-width: 87px;
-  max-width: 200px;
+  width: 87px;
+  margin-top: -9px;
   padding-inline: 8px;
 
   font-family: var(--font-secondary);
@@ -121,11 +118,8 @@
   background-color: var(--color-bg-example);
 
   @media (width >= $width-tablet) {
-    bottom: 9px;
     width: unset;
-    min-width: unset;
-    margin-inline: 9px;
-    padding-inline: 9px;
+    max-width: 142px;
     font-size: 14px;
     background-color: var(--color-bg-basic);
   }
@@ -136,8 +130,7 @@
 }
 
 .example__value {
-  width: 100%;
-  min-width: 124px;
+  width: 124px;
   margin: 0;
   padding: 13px 14px 17px;
 
@@ -149,7 +142,7 @@
   border-radius: 3px;
 
   @media (width >= $width-tablet) {
-    min-width: 162px;
+    width: 162px;
     padding: 14px 15px 19px;
 
     font-size: 30px;

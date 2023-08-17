@@ -70,21 +70,21 @@
 
 
     .header--index & {
-      color: var(--color-font-bgnd);
+      color: var(--color-font-bg);
 
       &:not(span):hover,
       &:not(span):focus-visible {
         @media (hover: hover) {
-          color: var(--color-font-bgnd-hover);
+          color: var(--color-font-bg-hover);
         }
       }
 
       &:not(span):active {
-        color: var(--color-font-bgnd-active);
+        color: var(--color-font-bg-active);
       }
 
       &--current::after {
-        box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-bd-bgnd);
+        box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-bd-bg);
       }
     }
   }

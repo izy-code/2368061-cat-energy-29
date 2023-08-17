@@ -199,6 +199,7 @@ $column-gap-desktop: 80px;
 
   &::after {
     content: "";
+    flex-shrink: 0;
     width: 32px;
     height: 12px;
     margin-left: 15px;

@@ -112,7 +112,6 @@ $height-map-tablet: 400px;
 
   @media (width >= $width-desktop) {
     grid-area: 1 / 1 / 2 / 2;
-    height: inherit;
-    min-height: $height-map-tablet;
+    height: 100%;
   }
 }

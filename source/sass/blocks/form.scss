@@ -1,11 +1,16 @@
 @use "../common/forward" as *;
 
 .form {
-  @media (width >= $width-desktop) {
-    display: grid;
+  display: grid;
+
+  @media (width >= $width-tablet) {
     grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
+    column-gap: 64px;
     align-items: start;
+  }
+
+  @media (width >= $width-desktop) {
+    column-gap: 80px;
   }
 }
 
@@ -78,30 +83,6 @@
       margin-bottom: 61px;
     }
   }
-
-  &--ending {
-    @include page-content-paddings;
-    display: flex;
-    flex-direction: column;
-    row-gap: 21px;
-    align-items: center;
-    margin-bottom: 0;
-    text-align: center;
-
-    @media (width >= $width-tablet) {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
-      row-gap: 32px;
-      column-gap: 64px;
-      padding: 0;
-    }
-
-    @media (width >= $width-desktop) {
-      grid-template-columns: 1fr 1fr;
-      row-gap: 40px;
-      column-gap: 80px;
-    }
-  }
 }
 
 .form__list {
@@ -140,6 +121,7 @@
       grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
       row-gap: 32px;
       column-gap: 60px;
+      align-items: center;
     }
 
     @media (width >= $width-desktop) {
@@ -201,15 +183,22 @@
 }
 
 .form__button {
+  @include page-content-width;
+  grid-column: span 2;
   width: 100%;
   max-width: 400px;
+  margin-bottom: 21px;
 
   @media (width >= $width-tablet) {
+    grid-column: span 1;
     max-width: unset;
+    margin-bottom: 32px;
   }
 }
 
 .form__notify {
+  @include page-content-paddings;
+  grid-column: span 2;
   order: 1;
   margin: 0;
   font-family: var(--font-secondary);
@@ -219,7 +208,9 @@
   color: var(--color-font-second);
 
   @media (width >= $width-tablet) {
-    align-self: start;
+    grid-column: span 1;
+    margin-bottom: 32px;
+    padding: 0;
     padding-top: 15px;
     font-size: 16px;
     text-align: start;

@@ -26,18 +26,12 @@
     &::before {
       content: "";
       position: absolute;
-      left: 0;
+      left: -100vw;
       z-index: -1;
-      width: 100vw;
+      width: 200vw;
       box-shadow: 0 16px 0 1px var(--color-bd-link);
 
       @media (width >= $width-tablet) {
-        left: calc(-1 * $padding-form-tablet + 40px);
-        box-shadow: 0 22px 0 1px var(--color-bd-link);
-      }
-
-      @media (width >= $width-desktop) {
-        left: calc(-1 * var(--padding-page) + 40px);
         box-shadow: 0 22px 0 1px var(--color-bd-link);
       }
     }

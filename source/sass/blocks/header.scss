@@ -1,7 +1,7 @@
 @use "../common/forward" as *;
 
 .header {
-  $color-bgnd-right: #62a53a;
+  $color-bg-right: #62a53a;
   position: relative;
   display: block;
 
@@ -41,7 +41,7 @@
   }
 
   &--index {
-    $color-bgnd-right: #62a53a;
+    $color-bg-right: #62a53a;
     margin: 0;
 
     @media (width >= $width-desktop) {
@@ -55,7 +55,7 @@
         grid-area: 1 / 2 / 3 / 3;
         width: 100%;
         height: 100%;
-        background-color: $color-bgnd-right;
+        background-color: $color-bg-right;
         background-image: url("../img/background-header.jpg");
         background-position: left center;
         background-size: cover;

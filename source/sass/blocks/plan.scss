@@ -4,11 +4,11 @@
   padding-bottom: 32px;
 
   @media (width >= $width-tablet) {
-    padding: 0 $padding-form-tablet 60px;
+    padding: 0 $padding-form-tablet 28px;
   }
 
   @media (width >= $width-desktop) {
-    padding: 0 var(--padding-page) 80px;
+    padding: 0 var(--padding-page) 48px;
   }
 }
 

@@ -11,10 +11,29 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-font-bgnd);
+  color: var(--color-font-bg);
   background-color: var(--color-btn-basic);
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    @media (hover: hover) {
+      background-color: var(--color-btn-basic-hover);
+    }
+  }
+
+  &:active {
+    color: var(--color-font-bg-active);
+    background-color: var(--color-btn-basic-hover);
+  }
+
+  &:disabled {
+    color: var(--color-font-bg);
+    background-color: var(--color-btn-basic);
+    opacity: 0.3;
+    cursor: initial;
+  }
 
   &--intro {
     padding: 11px 10px;
@@ -39,24 +58,17 @@
   &--more {
     color: var(--color-font-basic);
     background-color: var(--color-btn-more);
-  }
 
-  &:hover,
-  &:focus-visible {
-    @media (hover: hover) {
-      background-color: var(--color-btn-basic-hover);
+    &:hover,
+    &:focus-visible {
+      @media (hover: hover) {
+        background-color: var(--color-btn-more-hover);
+      }
     }
-  }
 
-  &:active {
-    color: var(--color-font-bgnd-active);
-    background-color: var(--color-btn-basic-hover);
-  }
-
-  &:disabled {
-    color: var(--color-font-bgnd);
-    background-color: var(--color-btn-basic);
-    opacity: 0.3;
-    cursor: initial;
+    &:active {
+      color: var(--color-font-basic-active);
+      background-color: var(--color-btn-more-hover);
+    }
   }
 }
