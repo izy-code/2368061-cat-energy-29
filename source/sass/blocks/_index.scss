@@ -1,9 +1,9 @@
-@use "page-header";
+@use "header";
 @use "container";
 @use "logo";
 @use "nav";
 @use "main-index";
-@use "hero";
+@use "intro";
 @use "heading";
 @use "button";
 @use "product-series";
@@ -12,7 +12,7 @@
 @use "compare-slider";
 @use "contacts";
 @use "map";
-@use "page-footer";
+@use "footer";
 @use "socials";
 @use "academy";
 @use "main-form";
@@ -22,6 +22,5 @@
 @use "radio";
 @use "checkbox";
 @use "main-catalog";
-@use "catalog";
-@use "products-layout";
+@use "products";
 @use "card";

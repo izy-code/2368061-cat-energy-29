@@ -1,17 +1,39 @@
-@use "../common/mixins" as *;
+@use "../common/forward" as *;
 
 .heading {
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
-  color: var(--color-font-second);
 
-  &--background {
-    color: var(--color-font-bgnd);
+  @media (width >= $width-tablet) {
+    font-size: 60px;
+    line-height: 60px;
   }
 
   &--subhead {
+    position: relative;
+    padding-inline: var(--padding-page) 20px;
     font-size: 24px;
     line-height: 26px;
+    background-color: var(--color-bg-basic);
+
+    @media (width >= $width-tablet) {
+      padding-inline: 40px;
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -100vw;
+      z-index: -1;
+      width: 200vw;
+      box-shadow: 0 16px 0 1px var(--color-bd-link);
+
+      @media (width >= $width-tablet) {
+        box-shadow: 0 22px 0 1px var(--color-bd-link);
+      }
+    }
   }
 }

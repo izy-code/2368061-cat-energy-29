@@ -1,22 +1,36 @@
-html {
-  height: 100%;
-}
-
-body {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  min-width: var(--width-phone);
-  min-height: 100%;
-  margin: 0;
-  font-family: var(--font-primary);
-  font-size: 20px;
-  line-height: 30px;
-  color: var(--color-font-basic);
-  background-color: var(--color-bgnd-basic);
-}
+@use "../common/forward" as *;
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-font-basic);
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-width: $width-phone;
+  min-height: 100%;
+  margin: 0;
+  background-color: var(--color-bg-basic);
+}
+
+.page__header {
+  margin-bottom: 27px;
+
+  @media (width >= $width-tablet) {
+    margin-bottom: 65px;
+  }
+
+  @media (width >= $width-desktop) {
+    margin-bottom: 74px;
+  }
 }

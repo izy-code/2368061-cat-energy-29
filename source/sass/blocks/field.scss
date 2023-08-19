@@ -1,43 +1,194 @@
-@use "../common/mixins" as *;
+@use "../common/forward" as *;
 
 .field {
-  display: flex;
-  gap: 13px;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 13px;
   align-items: center;
-  font-size: 16px;
-  line-height: 18px;
   text-transform: uppercase;
+
+  @media (width >= $width-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &--textarea {
     display: block;
-    width: 100%;
     padding: 14px 14px 14px 15px;
-    font-family: inherit;
+
+    font-family: var(--font-primary);
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
-    border: 1px solid var(--color-brdr-input);
-    border-radius: none;
+    border: 1px solid var(--color-bd-input);
+    resize: vertical;
+
+    @media (width >= $width-tablet) {
+      padding: 10px 19px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @media (width >= $width-desktop) {
+      padding-top: 8px;
+    }
 
     &::placeholder {
       color: var(--color-font-basic);
       opacity: 0.5;
     }
+
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-bd-second);
+      }
+    }
+
+    &:focus {
+      border-color: var(--color-bd-input-focus);
+      box-shadow: inset 0 0 0 1px var(--color-bd-input-focus);
+      outline: none;
+    }
+
+    &:disabled {
+      border: 1px solid var(--color-bd-input);
+      opacity: 0.3;
+    }
   }
 }
 
-.field__control {
-  flex-grow: 1;
-  padding: 14px 15px 13px;
-  font-family: inherit;
+.field__input {
+  grid-area: 1 / 2 / 2 / 3;
+  width: 100%;
+  min-width: 80px;
+  padding: 13px 14px 12px;
+
+  font-family: var(--font-primary);
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: inherit;
-  border: 1px solid var(--color-brdr-input);
+  border: 1px solid var(--color-bd-input);
+
+  @media (width >= $width-tablet) {
+    padding: 10px 19px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &::placeholder {
     color: var(--color-font-basic);
     opacity: 0.5;
+  }
+
+  .field:hover & {
+    @media (hover: hover) {
+      border-color: var(--color-bd-second);
+    }
+  }
+
+  &:focus:not(:invalid) {
+    border-color: var(--color-bd-input-focus);
+    box-shadow: inset 0 0 0 1px var(--color-bd-input-focus);
+    outline: none;
+
+    & + .field__label::after {
+      background-color: var(--color-icon-hover);
+    }
+  }
+
+  .field--icon_mail &,
+  .field--icon_phone & {
+    min-width: 200px;
+    padding-right: 44px;
+
+    @media (width >= $width-tablet) {
+      min-width: 240px;
+      padding-right: 60px;
+    }
+  }
+
+  .field--icon_mail & {
+    min-width: 217px;
+
+    @media (width >= $width-tablet) {
+      min-width: 280px;
+      padding-right: 60px;
+    }
+  }
+
+  &--error,
+  &:invalid {
+    border-color: var(--color-bd-input-error);
+    box-shadow: inset 0 0 0 1px var(--color-bd-input-error);
+    outline: none;
+
+    & + .field__label::after {
+      background-color: var(--color-icon-error);
+    }
+  }
+
+  &:disabled {
+    border: 1px solid var(--color-bd-second);
+    opacity: 0.3;
+
+    & + .field__label {
+      opacity: 0.3;
+    }
+  }
+
+  &[type="number"] {
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      margin: 0;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.field__label {
+  display: flex;
+  align-items: center;
+
+  .field--icon_mail &::after,
+  .field--icon_phone &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-icon-basic);
+    -webkit-mask: center / contain no-repeat;
+    mask: center / contain no-repeat;
+  }
+
+  .field--icon_mail &::after {
+    right: 12px;
+    -webkit-mask-image: url("../img/icons-mail.svg");
+    mask-image: url("../img/icons-mail.svg");
+
+    @media (width >= $width-tablet) {
+      right: 14px;
+    }
+
+    @media (width >= $width-desktop) {
+      right: 16px;
+    }
+  }
+
+  .field--icon_phone &::after {
+    right: 13px;
+    -webkit-mask-image: url("../img/icons-phone.svg");
+    mask-image: url("../img/icons-phone.svg");
+
+    @media (width >= $width-tablet) {
+      right: 14px;
+    }
+
+    @media (width >= $width-desktop) {
+      right: 16px;
+    }
   }
 }

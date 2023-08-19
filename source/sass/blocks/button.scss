@@ -1,29 +1,74 @@
-@use "../common/mixins" as *;
+@use "../common/forward" as *;
 
 .button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  font-family: inherit;
+  font-family: var(--font-primary);
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-font-bgnd);
+  color: var(--color-font-bg);
   background-color: var(--color-btn-basic);
   border: none;
   cursor: pointer;
 
-  &--font_small {
+  &:hover,
+  &:focus-visible {
+    @media (hover: hover) {
+      background-color: var(--color-btn-basic-hover);
+    }
+  }
+
+  &:active {
+    color: var(--color-font-bg-active);
+    background-color: var(--color-btn-basic-hover);
+  }
+
+  &:disabled {
+    color: var(--color-font-bg);
+    background-color: var(--color-btn-basic);
+    opacity: 0.3;
+    cursor: initial;
+  }
+
+  &--intro {
     padding: 11px 10px;
     font-size: 14px;
     line-height: 18px;
+
+    @media (width >= $width-tablet) {
+      padding: 17px 26px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &--form {
+    @media (width >= $width-tablet) {
+      padding: 16px 26px;
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
   &--more {
     color: var(--color-font-basic);
     background-color: var(--color-btn-more);
+
+    &:hover,
+    &:focus-visible {
+      @media (hover: hover) {
+        background-color: var(--color-btn-more-hover);
+      }
+    }
+
+    &:active {
+      color: var(--color-font-basic-active);
+      background-color: var(--color-btn-more-hover);
+    }
   }
 }

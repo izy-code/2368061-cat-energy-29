@@ -1,21 +1,102 @@
-@use "../common/mixins" as *;
-
-.nav__toggle {
-  display: none;
-}
+@use "../common/forward" as *;
+@use "sass:math";
 
 .nav__list {
   @include list-reset;
-  justify-self: center;
+  background-color: var(--color-bg-basic);
+  border-top: 1px solid var(--color-bd-third);
+
+  @media (width >= $width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 33px;
+    border-top: none;
+  }
+
+  @media (width >= $width-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 33px;
+    background-color: transparent;
+  }
+
+  .header--index & {
+    @media ($width-tablet <= width < $width-desktop) {
+      margin-bottom: 65px;
+    }
+  }
 }
 
 .nav__item {
   text-align: center;
+  border-bottom: 1px solid var(--color-bd-third);
+
+  @media (width >= $width-tablet) {
+    border-bottom: none;
+  }
 }
 
 .nav__link {
+  $thickness-underline: 2px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding-block: 22px 23px;
+
+  font-size: 20px;
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-font-basic);
+  color: var(--color-font-second);
+
+  @media (width >= $width-tablet) {
+    padding-block: 13px;
+    font-size: 18px;
+    line-height: 24px;
+
+    &--current::after {
+      content: "";
+      display: block;
+      width: calc(100% - $thickness-underline);
+      margin: 0 auto;
+      box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-bd-link);
+    }
+  }
+
+  @media (width >= $width-desktop) {
+    padding-block: 16px;
+    font-size: 20px;
+    line-height: 30px;
+
+
+    .header--index & {
+      color: var(--color-font-bg);
+
+      &:not(span):hover,
+      &:not(span):focus-visible {
+        @media (hover: hover) {
+          color: var(--color-font-bg-hover);
+        }
+      }
+
+      &:not(span):active {
+        color: var(--color-font-bg-active);
+      }
+
+      &--current::after {
+        box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-bd-bg);
+      }
+    }
+  }
+
+  &:not(span):hover,
+  &:not(span):focus-visible {
+    @media (hover: hover) {
+      color: var(--color-font-second-hover);
+    }
+  }
+
+  &:not(span):active {
+    color: var(--color-font-second-active);
+  }
 }

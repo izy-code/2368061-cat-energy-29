@@ -1,21 +1,44 @@
-@use "../common/mixins" as *;
+@use "../common/forward" as *;
 
 .plan {
-  padding-top: 27px;
   padding-bottom: 32px;
+
+  @media (width >= $width-tablet) {
+    padding: 0 $padding-form-tablet 28px;
+  }
+
+  @media (width >= $width-desktop) {
+    padding: 0 var(--padding-page) 48px;
+  }
 }
 
 .plan__title {
+  @include page-content-paddings;
   margin: 0;
   margin-bottom: 37px;
+
+  @media (width >= $width-tablet) {
+    margin-bottom: 54px;
+    padding-inline: 0;
+  }
+
+  @media (width >= $width-desktop) {
+    margin-bottom: 55px;
+  }
 }
 
 .plan__desc {
-  width: calc(226 / 280 * 100%);
+  @include page-content-paddings;
   margin: 0;
   margin-bottom: 39px;
   font-size: 14px;
-  line-height: 18px;
   text-transform: uppercase;
   color: var(--color-font-second);
+
+  @media (width >= $width-tablet) {
+    margin-bottom: 66px;
+    padding-inline: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

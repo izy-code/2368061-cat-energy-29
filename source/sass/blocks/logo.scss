@@ -1,5 +1,46 @@
-@use "../common/mixins" as *;
+@use "../common/forward" as *;
+@use "sass:math";
 
 .logo {
   text-decoration: none;
+
+  &:hover .logo__icon,
+  &:hover .logo__wordmark,
+  &:focus-visible .logo__icon,
+  &:focus-visible .logo__wordmark {
+    @media (hover: hover) {
+      opacity: 0.8;
+    }
+  }
+
+  &:active .logo__icon,
+  &:active .logo__wordmark {
+    opacity: 0.6;
+  }
+}
+
+.logo__icon {
+  @media (width >= $width-tablet) {
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (width >= $width-desktop) {
+    width: 70px;
+    height: 59px;
+  }
+}
+
+.logo__wordmark {
+  display: block;
+  fill: var(--color-font-third);
+
+  @media (width >= $width-tablet) {
+    fill: var(--color-font-basic);
+  }
+
+  @media (width >= $width-desktop) {
+    width: 118px;
+    height: 21px;
+  }
 }

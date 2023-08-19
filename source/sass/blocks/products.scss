@@ -1,0 +1,136 @@
+@use "../common/forward" as *;
+
+.products {
+  @media (width >= $width-tablet) {
+    @include page-content-paddings;
+  }
+}
+
+.products--with-extra {
+  padding-bottom: 35px;
+
+  @media (width >= $width-tablet) {
+    padding-bottom: 75px;
+  }
+
+  @media (width >= $width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    column-gap: 80px;
+    padding-bottom: 87px;
+  }
+}
+
+.products__title {
+  width: fit-content;
+  margin: 0;
+  margin-bottom: 35px;
+
+  @media (width >= $width-tablet) {
+    margin-bottom: 80px;
+  }
+
+  @media (width >= $width-desktop) {
+    grid-column: span 2;
+  }
+}
+
+.products__list {
+  @include list-reset;
+  border-top: 1px solid var(--color-bd-card);
+
+  @media (width >= $width-tablet) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
+    gap: 60px;
+    border: none;
+  }
+
+  @media (width >= $width-desktop) {
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    row-gap: 63px;
+    column-gap: 80px;
+  }
+
+  .products--with-extra & {
+    @include page-content-width;
+    margin-bottom: 35px;
+    border-top: 1px solid var(--color-bd-second);
+
+    @media (width >= $width-tablet) {
+      display: block;
+      width: unset;
+      margin-bottom: 70px;
+      border: 1px solid var(--color-bd-second);
+    }
+
+    @media (width >= $width-desktop) {
+      width: 100%;
+      margin-bottom: 0;
+      border: none;
+      border-top: 1px solid var(--color-bd-second);
+    }
+  }
+}
+
+.products__extra {
+  @include page-content-width;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 290px;
+  margin-block: 0;
+  padding: 43px 59px;
+
+  font-family: var(--font-secondary);
+  line-height: 20px;
+  text-align: center;
+  color: var(--color-font-bg);
+
+  background-color: var(--color-bg-image);
+  background-image: url("../img/products-extra.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (width >= $width-tablet) {
+    position: relative;
+    justify-content: flex-start;
+    width: unset;
+    min-height: 200px;
+    margin: 0;
+    padding: 71px #{115 / 708 * 100%} 60px #{421 / 708 * 100%};
+    text-align: start;
+  }
+
+  @media (width >= $width-desktop) {
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 288px;
+    padding: 56px 40px 43px;
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    width: 78px;
+    height: 80px;
+    margin-bottom: 48px;
+    background-image: url("../img/icons-gift.svg");
+
+    @media (width >= $width-tablet) {
+      position: absolute;
+      top: #{57 / 200 * 100%};
+      left: #{77 / 708 * 100%};
+      width: 80px;
+      height: 83px;
+      margin: 0;
+    }
+
+    @media (width >= $width-desktop) {
+      position: static;
+      margin-bottom: auto;
+    }
+  }
+}

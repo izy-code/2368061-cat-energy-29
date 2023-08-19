@@ -1,10 +1,22 @@
-@use "../common/mixins" as *;
-
-.main-catalog {
-  padding-top: 27px;
-}
+@use "../common/forward" as *;
 
 .main-catalog__title {
   margin: 0;
   margin-bottom: 40px;
+
+  @media (width >= $width-tablet) {
+    margin-bottom: 84px;
+  }
+}
+
+.main-catalog__products {
+  margin-bottom: 25px;
+
+  @media (width >= $width-tablet) {
+    margin-bottom: 70px;
+  }
+
+  @media (width >= $width-desktop) {
+    margin-bottom: 76px;
+  }
 }

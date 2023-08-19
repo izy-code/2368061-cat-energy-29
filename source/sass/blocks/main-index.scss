@@ -1,5 +1,25 @@
-@use "../common/mixins" as *;
+@use "../common/forward" as *;
+
+.main-index__product-series {
+  margin-bottom: 20px;
+
+  @media (width >= $width-tablet) {
+    margin-bottom: 45px;
+  }
+
+  @media (width >= $width-desktop) {
+    margin-bottom: 71px;
+  }
+}
 
 .main-index__details {
   margin-bottom: 29px;
+
+  @media (width >= $width-tablet) {
+    margin-bottom: 46px;
+  }
+
+  @media (width >= $width-tablet) {
+    margin-bottom: 69px;
+  }
 }
