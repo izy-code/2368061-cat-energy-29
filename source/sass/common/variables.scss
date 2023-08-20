@@ -58,6 +58,7 @@ $color-green-hover: #5eaa2f;
 
   --color-btn-basic: #{$color-green-basic};
   --color-btn-basic-hover: #{$color-green-hover};
+  --color-btn-basic-active: #{transparentize($color-green-hover, 0.4)};
   --color-btn-more: #{$color-white-242};
   --color-btn-more-hover: #{$color-white-235};
 

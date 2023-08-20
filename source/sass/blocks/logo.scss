@@ -32,11 +32,12 @@
 }
 
 .logo__wordmark {
+  --cat-color: var(--color-font-third);
+  --energy-color: var(--color-font-third);
   display: block;
-  fill: var(--color-font-third);
 
   @media (width >= $width-tablet) {
-    fill: var(--color-font-basic);
+    --energy-color: var(--color-font-basic);
   }
 
   @media (width >= $width-desktop) {

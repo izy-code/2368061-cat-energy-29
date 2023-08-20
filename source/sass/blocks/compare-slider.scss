@@ -1,1 +1,83 @@
 @use "../common/forward" as *;
+
+.compare-slider {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.compare-slider__container {
+  overflow: hidden;
+  width: 100%;
+
+  &--left {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  &--right {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: end;
+
+    & .compare-slider__image {
+      object-fit: cover;
+      object-position: right 0;
+      width: 100%;
+    }
+  }
+}
+
+.compare-slider__image {
+  display: block;
+}
+
+.compare-slider__thumb {
+  z-index: 1;
+  display: grid;
+  grid-area: 1 / 1 / 2 / 3;
+  justify-content: center;
+  place-items: center;
+  width: 40px;
+  height: 100%;
+  background: radial-gradient(circle, var(--color-icon-second) 20px, transparent 21px);
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    grid-area: 1 / 1 / 2 / 2;
+    width: 4px;
+    height: 100%;
+    background-color: var(--color-icon-second);
+    border-radius: 2px;
+  }
+
+  &::after {
+    content: "";
+    grid-area: 1 / 1 / 2 / 2;
+    width: 36px;
+    height: 36px;
+    background-color: var(--color-bg-basic);
+    border-radius: 50%;
+    -webkit-mask: center / contain no-repeat url("../img/compare-arrows.svg");
+    mask: center / contain no-repeat url("../img/compare-arrows.svg");
+  }
+
+  &:hover,
+  &:focus-visible {
+    @media (hover: hover) {
+      background: radial-gradient(circle, var(--color-btn-basic) 20px, transparent 21px);
+
+      &::before {
+        background-color: var(--color-btn-basic);
+      }
+    }
+  }
+
+  &:active {
+    background: radial-gradient(circle, var(--color-btn-basic-active) 20px, transparent 21px);
+
+    &::before {
+      background-color: var(--color-btn-basic-active);
+    }
+  }
+}
