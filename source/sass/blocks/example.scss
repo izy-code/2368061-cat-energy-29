@@ -221,6 +221,7 @@
 
   @media (width >= $width-desktop) {
     grid-area: 1 / 2 / 5 / 3;
+    margin-right: var(--padding-page);
     margin-bottom: 85px;
   }
 }

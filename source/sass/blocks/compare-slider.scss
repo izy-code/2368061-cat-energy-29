@@ -9,9 +9,20 @@
 .compare-slider__container {
   overflow: hidden;
   width: 100%;
+  height: 100%;
+
+  & .compare-slider__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 
   &--left {
     grid-area: 1 / 1 / 2 / 2;
+
+    & .compare-slider__image {
+      object-position: left 0;
+    }
   }
 
   &--right {
@@ -19,9 +30,7 @@
     justify-self: end;
 
     & .compare-slider__image {
-      object-fit: cover;
       object-position: right 0;
-      width: 100%;
     }
   }
 }
@@ -38,7 +47,7 @@
   place-items: center;
   width: 40px;
   height: 100%;
-  background: radial-gradient(circle, var(--color-icon-second) 20px, transparent 21px);
+  background: radial-gradient(circle at center, var(--color-icon-second) 20px, transparent 20px);
   border: none;
   cursor: pointer;
 
@@ -65,7 +74,7 @@
   &:hover,
   &:focus-visible {
     @media (hover: hover) {
-      background: radial-gradient(circle, var(--color-btn-basic) 20px, transparent 21px);
+      background: radial-gradient(circle, var(--color-btn-basic) 20px, transparent 20px);
 
       &::before {
         background-color: var(--color-btn-basic);
@@ -74,7 +83,7 @@
   }
 
   &:active {
-    background: radial-gradient(circle, var(--color-btn-basic-active) 20px, transparent 21px);
+    background: radial-gradient(circle, var(--color-btn-basic-active) 20px, transparent 20px);
 
     &::before {
       background-color: var(--color-btn-basic-active);
