@@ -34,14 +34,22 @@
         </ul>
       </nav>
 
-      <section class="header__intro intro">
-        <h1 class="intro__title heading">
+      <section class="header__promo promo">
+        <h1 class="promo__title heading">
           Функциональное питание для&nbsp;котов <span class="visually-hidden" lang="en">Cat Energy</span>
         </h1>
-        <p class="intro__slogan">Занялся собой? Займись котом!</p>
-        <img class="intro__image" src="img/product-promo.png" width="280" height="270"
-          alt="Cat Energy PRO со вкусом курицы.">
-        <a class="intro__link button button--intro" href="form.html">Подобрать программу</a>
+        <p class="promo__slogan">Занялся собой? Займись котом!</p>
+        <div class="promo__image-wrapper">
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/promo-product-desktop.png, img/promo-product-desktop@2x.png 2x" width="552" height="499">
+            <source media="(min-width: 768px)" srcset="img/promo-product-tablet.jpg, img/promo-product-tablet@2x.jpg 2x"
+              width="709" height="609">
+            <img class="promo__image" src="img/promo-product-phone.png" srcset="img/promo-product-phone@2x.png 2x"
+              width="280" height="270" alt="Cat Energy PRO со вкусом курицы.">
+          </picture>
+        </div>
+        <a class="promo__link button button--promo" href="form.html">Подобрать программу</a>
       </section>
     </header>
 
@@ -106,11 +114,20 @@
 
         <div class="example__compare compare-slider">
           <div class="compare-slider__container compare-slider__container--left">
-            <img class="compare-slider__image" src="img/compare-left.png" width="280" height="256" alt="Пухлый кот до диеты.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/compare-left-tablet.png, img/compare-left-tablet@2x.png 2x"
+                width="560" height="512">
+              <img class="compare-slider__image" src="img/compare-left-phone.png"
+                srcset="img/compare-left-phone@2x.png 2x" width="280" height="256" alt="Пухлый кот до диеты.">
+            </picture>
           </div>
           <div class="compare-slider__container compare-slider__container--right">
-            <img class="compare-slider__image" src="img/compare-right.png" width="280" height="256"
-              alt="Похудевший кот после диеты.">
+            <picture>
+              <source media="(min-width: 768px)"
+                srcset="img/compare-right-tablet.png, img/compare-right-tablet@2x.png 2x" width="560" height="512">
+              <img class="compare-slider__image" src="img/compare-right-phone.png"
+                srcset="img/compare-right-phone@2x.png 2x" width="280" height="256" alt="Похудевший кот после диеты.">
+            </picture>
           </div>
           <button class="compare-slider__thumb" type="button">
             <span class="visually-hidden">Ползунок сравнения картинок</span>
@@ -121,7 +138,7 @@
       <section class="contacts contacts--light">
         <h2 class="visually-hidden">Контактные данные</h2>
         <header class="contacts__header">
-          <p class="contacts__intro">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <p class="contacts__promo">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <address class="contacts__list">
             <p class="contacts__item">
               <span class="contacts__text">ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8</span>
@@ -135,8 +152,14 @@
             width="320" height="362" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             title="Google Карты"></iframe>
           <a class="map__link" href="https://goo.gl/maps/o98341UsPtmcUAxH7">
-            <img class="map__fallback" src="img/map.png" width="362" height="362"
-              alt="Наше местоположение, переход на Google Карты.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/map-desktop.png, img/map-desktop@2x.png 2x" width="1440"
+                height="400">
+              <source media="(min-width: 450px)" srcset="img/map-tablet.png, img/map-tablet@2x.png 2x" width="768"
+                height="400">
+              <img class="map__fallback" src="img/map-phone.png" srcset="img/map-phone@2x.png 2x" width="320"
+                height="362" alt="Наше местоположение, переход на Google Карты.">
+            </picture>
           </a>
         </div>
       </section>

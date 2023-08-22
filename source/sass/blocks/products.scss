@@ -99,10 +99,14 @@
   color: var(--color-font-bg);
 
   background-color: var(--color-bg-image);
-  background-image: url("../img/products-extra.jpg");
+  background-image: url("../img/products-extra-bg-phone.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/products-extra-bg-phone@2x.jpg");
+  }
 
   @media (width >= $width-tablet) {
     position: relative;
@@ -112,6 +116,11 @@
     margin: 0;
     padding: 71px #{math.div(115, 708) * 100%} 60px #{math.div(421, 708) * 100%};
     text-align: start;
+    background-image: url("../img/products-extra-bg-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/products-extra-bg-tablet@2x.jpg");
+    }
   }
 
   @media (width >= $width-desktop) {
@@ -120,6 +129,12 @@
     min-height: 288px;
     padding: 56px 40px 43px;
     text-align: center;
+    background-image: url("../img/products-extra-bg-desktop.jpg");
+    background-position: left center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/products-extra-bg-desktop@2x.jpg");
+    }
   }
 
   &::before {
