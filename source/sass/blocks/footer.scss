@@ -20,10 +20,11 @@
 }
 
 .footer__logo {
+  --cat-color: var(--color-font-third);
+  --energy-color: var(--color-font-third);
   display: block;
   width: fit-content;
   margin: 0 auto 19px;
-  fill: var(--color-font-third);
 
   @media (width >= $width-tablet) {
     margin: 0;
@@ -32,12 +33,14 @@
   &:hover .footer__wordmark,
   &:focus-visible .footer__wordmark {
     @media (hover: hover) {
-      fill: var(--color-font-third-hover);
+      --cat-color: var(--color-font-third-hover);
+      --energy-color: var(--color-font-third-hover);
     }
   }
 
   &:active .footer__wordmark {
-    fill: var(--color-font-third-active);
+    --cat-color: var(--color-font-third-active);
+    --energy-color: var(--color-font-third-active);
   }
 }
 

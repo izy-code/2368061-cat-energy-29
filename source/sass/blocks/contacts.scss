@@ -32,7 +32,7 @@ $height-map-tablet: 400px;
     height: fit-content;
     margin-top: 95px;
     margin-bottom: 106px;
-    margin-left: 110px;
+    margin-left: var(--padding-page);
     padding: 60px 78px 60px 80px;
     background-color: var(--color-bg-basic);
   }

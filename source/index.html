@@ -13,7 +13,7 @@
           alt="Фирменный знак Cat Energy, бело-оранжевый кот-супергерой.">
         <svg class="header__wordmark logo__wordmark" width="101" height="18" role="img"
           aria-label="Шрифтовое начертание логотипа Cat Energy.">
-          <use href="img/logo-cat-wordmark.svg#word-grey" aria-hidden="true" />
+          <use href="img/logo-cat-wordmark.svg#word" aria-hidden="true" />
         </svg>
       </a>
       <button class="header__toggle" type="button">
@@ -105,10 +105,13 @@
         </div>
 
         <div class="example__compare compare-slider">
-          <img class="compare-slider__image-left" src="img/compare-left.png" width="280" height="256"
-            alt="Пухлый кот до диеты.">
-          <img class="compare-slider__image-right" src="img/compare-right.png" width="280" height="256"
-            alt="Похудевший кот после диеты.">
+          <div class="compare-slider__container compare-slider__container--left">
+            <img class="compare-slider__image" src="img/compare-left.png" width="280" height="256" alt="Пухлый кот до диеты.">
+          </div>
+          <div class="compare-slider__container compare-slider__container--right">
+            <img class="compare-slider__image" src="img/compare-right.png" width="280" height="256"
+              alt="Похудевший кот после диеты.">
+          </div>
           <button class="compare-slider__thumb" type="button">
             <span class="visually-hidden">Ползунок сравнения картинок</span>
           </button>
@@ -143,7 +146,7 @@
       <a class="footer__logo" href="index.html" aria-current="page">
         <svg class="footer__wordmark" width="128" height="24" role="img"
           aria-label="Шрифтовое начертание логотипа Cat Energy.">
-          <use href="img/logo-cat-wordmark.svg#word-black" aria-hidden="true" />
+          <use href="img/logo-cat-wordmark.svg#word" aria-hidden="true" />
         </svg>
       </a>
       <section class="footer__socials socials">
@@ -175,5 +178,6 @@
       </a>
     </footer>
     <script src="js/header.js"></script>
+    <script src="js/compare-slider.js"></script>
   </body>
 </html>

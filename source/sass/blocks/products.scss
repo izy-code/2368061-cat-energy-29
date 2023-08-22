@@ -1,6 +1,9 @@
 @use "../common/forward" as *;
+@use "sass:math";
 
 .products {
+  --margin-top-card: 81px;
+
   @media (width >= $width-tablet) {
     @include page-content-paddings;
   }
@@ -62,6 +65,7 @@
       width: unset;
       margin-bottom: 70px;
       border: 1px solid var(--color-bd-second);
+      border-bottom: none;
     }
 
     @media (width >= $width-desktop) {
@@ -70,6 +74,12 @@
       border: none;
       border-top: 1px solid var(--color-bd-second);
     }
+  }
+}
+
+.products__more {
+  @media (width >= $width-tablet) {
+    margin-top: var(--margin-top-card);
   }
 }
 
@@ -100,7 +110,7 @@
     width: unset;
     min-height: 200px;
     margin: 0;
-    padding: 71px #{115 / 708 * 100%} 60px #{421 / 708 * 100%};
+    padding: 71px #{math.div(115, 708) * 100%} 60px #{math.div(421, 708) * 100%};
     text-align: start;
   }
 
@@ -121,8 +131,8 @@
 
     @media (width >= $width-tablet) {
       position: absolute;
-      top: #{57 / 200 * 100%};
-      left: #{77 / 708 * 100%};
+      top: #{math.div(57, 200) * 100%};
+      left: #{math.div(77, 708) * 100%};
       width: 80px;
       height: 83px;
       margin: 0;
