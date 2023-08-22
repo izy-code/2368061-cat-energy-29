@@ -1,58 +1,50 @@
 @use "../common/forward" as *;
 
 .compare-slider {
+  position: relative;
+  z-index: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
 }
 
 .compare-slider__container {
+  z-index: -1;
+  display: flex;
   overflow: hidden;
   width: 100%;
   height: 100%;
 
-  & .compare-slider__image {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
   &--left {
     grid-area: 1 / 1 / 2 / 2;
-
-    & .compare-slider__image {
-      object-position: left 0;
-    }
   }
 
   &--right {
     grid-area: 1 / 2 / 2 / 3;
-    justify-self: end;
-
-    & .compare-slider__image {
-      object-position: right 0;
-    }
+    justify-content: end;
   }
 }
 
 .compare-slider__image {
-  display: block;
+  width: auto;
+  max-width: unset;
+  height: 100%;
 }
 
 .compare-slider__thumb {
-  z-index: 1;
   display: grid;
   grid-area: 1 / 1 / 2 / 3;
   justify-content: center;
   place-items: center;
   width: 40px;
   height: 100%;
-  background: radial-gradient(circle at center, var(--color-icon-second) 20px, transparent 20px);
+  background: radial-gradient(circle, var(--color-bg-basic) 18px, transparent 19px);
   border: none;
   cursor: pointer;
 
   &::before {
     content: "";
+    z-index: -1;
     grid-area: 1 / 1 / 2 / 2;
     width: 4px;
     height: 100%;
@@ -63,30 +55,24 @@
   &::after {
     content: "";
     grid-area: 1 / 1 / 2 / 2;
-    width: 36px;
-    height: 36px;
-    background-color: var(--color-bg-basic);
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-icon-second);
     -webkit-mask: center / contain no-repeat url("../img/compare-arrows.svg");
     mask: center / contain no-repeat url("../img/compare-arrows.svg");
   }
 
-  &:hover,
-  &:focus-visible {
+  &:hover::before,
+  &:focus-visible::before,
+  &:hover::after,
+  &:focus-visible::after {
     @media (hover: hover) {
-      background: radial-gradient(circle, var(--color-btn-basic) 20px, transparent 20px);
-
-      &::before {
-        background-color: var(--color-btn-basic);
-      }
+      background-color: var(--color-btn-basic);
     }
   }
 
-  &:active {
-    background: radial-gradient(circle, var(--color-btn-basic-active) 20px, transparent 20px);
-
-    &::before {
-      background-color: var(--color-btn-basic-active);
-    }
+  &:active::before,
+  &:active::after {
+    background-color: var(--color-btn-basic-active);
   }
 }

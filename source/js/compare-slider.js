@@ -8,14 +8,15 @@ let pressed = false;
 const resizeObserver = new ResizeObserver(updateSliderWidth);
 resizeObserver.observe(compareSlider);
 
-thumb.addEventListener('mousedown', thumbPressed);
+compareSlider.addEventListener('mousedown', thumbPressed);
 window.addEventListener('mouseup', thumbReleased);
-thumb.addEventListener('touchstart', thumbPressed);
+compareSlider.addEventListener('touchstart', thumbPressed);
 window.addEventListener('touchend', thumbReleased);
 
 function thumbPressed(e) {
   e.preventDefault();
   pressed = true;
+  thumbMoved(e);
   window.addEventListener('mousemove', thumbMoved);
   window.addEventListener('touchmove', thumbMoved);
 }

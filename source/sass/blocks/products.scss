@@ -2,6 +2,8 @@
 @use "sass:math";
 
 .products {
+  --margin-top-card: 81px;
+
   @media (width >= $width-tablet) {
     @include page-content-paddings;
   }
@@ -72,6 +74,12 @@
       border: none;
       border-top: 1px solid var(--color-bd-second);
     }
+  }
+}
+
+.products__more {
+  @media (width >= $width-tablet) {
+    margin-top: var(--margin-top-card);
   }
 }
 
