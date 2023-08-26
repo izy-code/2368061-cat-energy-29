@@ -105,6 +105,7 @@ $height-map-tablet: 400px;
 .contacts__map {
   height: #{lin-interp($width-phone, $height-map-phone, $width-tablet,
       $height-map-tablet, 100vw)};
+  background-color: var(--color-bg-second);
 
   @media (width >= $width-tablet) {
     height: $height-map-tablet;

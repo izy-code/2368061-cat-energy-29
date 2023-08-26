@@ -43,16 +43,18 @@
   border-top: 1px solid var(--color-bd-card);
 
   @media (width >= $width-tablet) {
+    --column-gap: 60px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
-    gap: 60px;
+    row-gap: 60px;
+    column-gap: var(--column-gap);
     border: none;
   }
 
   @media (width >= $width-desktop) {
+    --column-gap: 80px;
     grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
     row-gap: 63px;
-    column-gap: 80px;
   }
 
   .products--with-extra & {
@@ -155,6 +157,7 @@
 
     @media (width >= $width-desktop) {
       position: static;
+      inset: auto;
       margin-bottom: auto;
     }
   }

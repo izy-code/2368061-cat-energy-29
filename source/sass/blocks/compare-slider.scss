@@ -32,6 +32,7 @@
 }
 
 .compare-slider__thumb {
+  --color: var(--color-icon-second);
   display: grid;
   grid-area: 1 / 1 / 2 / 3;
   justify-content: center;
@@ -40,7 +41,7 @@
   height: 100%;
   background: radial-gradient(circle, var(--color-bg-basic) 18px, transparent 19px);
   border: none;
-  cursor: pointer;
+  cursor: col-resize;
 
   &::before {
     content: "";
@@ -48,7 +49,7 @@
     grid-area: 1 / 1 / 2 / 2;
     width: 4px;
     height: 100%;
-    background-color: var(--color-icon-second);
+    background-color: var(--color);
     border-radius: 2px;
   }
 
@@ -57,22 +58,19 @@
     grid-area: 1 / 1 / 2 / 2;
     width: 40px;
     height: 40px;
-    background-color: var(--color-icon-second);
+    background-color: var(--color);
     -webkit-mask: center / contain no-repeat url("../img/compare-arrows.svg");
     mask: center / contain no-repeat url("../img/compare-arrows.svg");
   }
 
-  &:hover::before,
-  &:focus-visible::before,
-  &:hover::after,
-  &:focus-visible::after {
+  &:hover,
+  &:focus-visible {
     @media (hover: hover) {
-      background-color: var(--color-btn-basic);
+      --color: var(--color-btn-basic);
     }
   }
 
-  &:active::before,
-  &:active::after {
-    background-color: var(--color-btn-basic-active);
+  &:active {
+    --color: var(--color-btn-basic-active);
   }
 }

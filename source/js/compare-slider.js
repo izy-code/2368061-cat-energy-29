@@ -2,31 +2,33 @@ const compareSlider = document.querySelector('.compare-slider');
 const thumb = compareSlider.querySelector('.compare-slider__thumb');
 let sliderWidth = compareSlider.offsetWidth;
 /* Состояние нажатия на ползунок */
-let pressed = false;
+let thumbPressed = false;
 
 /* Обновляем положение элементов слайдера после изменения его размеров */
 const resizeObserver = new ResizeObserver(updateSliderWidth);
 resizeObserver.observe(compareSlider);
 
-compareSlider.addEventListener('mousedown', thumbPressed);
-window.addEventListener('mouseup', thumbReleased);
-compareSlider.addEventListener('touchstart', thumbPressed);
-window.addEventListener('touchend', thumbReleased);
+compareSlider.addEventListener('mousedown', handleThumbPress);
+compareSlider.addEventListener('touchstart', handleThumbPress);
+window.addEventListener('mouseup', handleThumbRelease);
+window.addEventListener('touchend', handleThumbRelease);
 
-function thumbPressed(e) {
-  e.preventDefault();
-  pressed = true;
-  thumbMoved(e);
-  window.addEventListener('mousemove', thumbMoved);
-  window.addEventListener('touchmove', thumbMoved);
+function handleThumbPress(e) {
+  thumbPressed = true;
+  window.addEventListener('mousemove', handleThumbMove);
+  window.addEventListener('touchmove', handleThumbMove);
+  /* Добавляем возможность сдвига ползунка нажатием не только на ползунке, но и слайдере */
+  handleThumbMove(e);
 }
 
-function thumbReleased() {
-  pressed = false;
+function handleThumbRelease() {
+  thumbPressed = false;
+  window.removeEventListener('mousemove', handleThumbMove);
+  window.removeEventListener('touchmove', handleThumbMove);
 }
 
-function thumbMoved(e) {
-  if (!pressed) {
+function handleThumbMove(e) {
+  if (!thumbPressed) {
     return false;
   }
   /* Получаем координату x указателя относительно слайдера */
@@ -57,7 +59,7 @@ function rearrangeSlider(pointerX) {
   compareSlider.style.gridTemplateColumns = `${pointerX}px ${sliderWidth - pointerX}px`;
   /* Смещаем ползунок с учётом его ширины */
   thumb.style.justifySelf = 'start';
-  thumb.style.marginLeft = `${pointerX - 20}px`;
+  thumb.style.marginLeft = `${pointerX - thumb.offsetWidth / 2}px`;
 }
 
 function updateSliderWidth() {
