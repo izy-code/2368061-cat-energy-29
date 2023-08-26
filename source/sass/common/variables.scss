@@ -95,7 +95,7 @@ $color-green-hover: #5eaa2f;
     --padding-page: #{$padding-page-desktop};
   }
 
-  @media (width >= $width-max) {
-    --padding-page: calc(50vw - #{0.5 * $width-max - $padding-page-desktop});
+  @media (width >= #{$width-max + 2 * $padding-page-desktop}) {
+    --padding-page: calc(50vw - #{0.5 * $width-max});
   }
 }

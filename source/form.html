@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Подбор программы Cat Energy</title>
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png"> <!-- 180×180 -->
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -150,7 +154,7 @@
       <section class="contacts">
         <h2 class="visually-hidden">Контактные данные</h2>
         <header class="contacts__header">
-          <p class="contacts__intro">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <p class="contacts__promo">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <address class="contacts__list">
             <p class="contacts__item">
               <span class="contacts__text">ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8</span>
@@ -164,8 +168,14 @@
             width="320" height="362" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             title="Google Карты"></iframe>
           <a class="map__link" href="https://goo.gl/maps/o98341UsPtmcUAxH7">
-            <img class="map__fallback" src="img/map.png" width="362" height="362"
-              alt="Наше местоположение, переход на Google Карты.">
+            <picture>
+              <source media="(min-width: 1100px)" srcset="img/map-desktop.png, img/map-desktop@2x.png 2x" width="1440"
+                height="400">
+              <source media="(min-width: 450px)" srcset="img/map-tablet.png, img/map-tablet@2x.png 2x" width="768"
+                height="400">
+              <img class="map__fallback" src="img/map-phone.png" srcset="img/map-phone@2x.png 2x" width="320"
+                height="362" alt="Наше местоположение, переход на Google Карты.">
+            </picture>
           </a>
         </div>
       </section>

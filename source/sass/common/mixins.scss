@@ -21,7 +21,7 @@
 }
 
 @mixin page-content-width {
-  width: calc(100vw - 2 * var(--padding-page));
+  width: calc(100% - 2 * var(--padding-page));
   margin-inline: auto;
 }
 

@@ -1,5 +1,8 @@
 @use "../common/forward" as *;
 
+$tablet-breakpoint: 450px;
+$desktop-breakpoint: 1100px;
+
 .map {
   display: grid;
 }
@@ -15,6 +18,24 @@
 .map__link {
   position: relative;
   grid-area: 1 / 1 / 2 / 2;
+  place-self: center;
+  width: 100%;
+  max-width: 362px;
+  height: 100%;
+
+  @media (width >= $tablet-breakpoint) {
+    max-width: $width-tablet;
+  }
+
+  @media (width >= $desktop-breakpoint) {
+    max-width: $width-desktop;
+  }
+
+  @media (width >= #{$width-desktop + 2 * $padding-page-desktop}) {
+    @include page-content-width;
+    justify-self: start;
+    max-width: $width-max;
+  }
 }
 
 .map__fallback {
