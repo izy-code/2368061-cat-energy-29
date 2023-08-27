@@ -16,6 +16,7 @@
 }
 
 .academy__icon {
+  display: block;
   flex-shrink: 0;
   pointer-events: auto;
   fill: var(--color-icon-second);

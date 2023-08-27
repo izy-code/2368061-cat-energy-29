@@ -22,7 +22,7 @@ $bg-right: calc(50vw + 30px);
   @media (width >= $width-desktop) {
     grid-template-rows: min-content min-content 1fr;
     grid-template-columns: 1fr 1fr;
-    padding: 26px var(--padding-page) 52px;
+    padding: 24px var(--padding-page) 52px;
   }
 
   &::before {
@@ -139,6 +139,7 @@ $bg-right: calc(50vw + 30px);
   @media (width >= $width-tablet) {
     grid-area: 3 / 1 / 4 / 2;
     width: auto;
+    min-width: 244px;
     max-width: (0.5 * $width-tablet - $padding-page-tablet - 90px);
     margin: 29px 0 0 90px;
   }

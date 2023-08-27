@@ -10,12 +10,12 @@
     grid-template-columns: 1fr max-content 1fr;
     column-gap: 35px;
     align-items: center;
-    padding-block: 52px 51px;
+    padding-block: 49px 50px;
   }
 
   @media (width >= $width-desktop) {
     column-gap: 40px;
-    padding-block: 63px 62px;
+    padding-block: 61px 60px;
   }
 }
 
@@ -44,6 +44,10 @@
   }
 }
 
+.footer__wordmark {
+  display: block;
+}
+
 .footer__socials {
   margin-bottom: 20px;
   border-block: 1px solid var(--color-bd-basic);
@@ -58,7 +62,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 37px;
   text-align: start;
   pointer-events: none;
 
@@ -67,6 +70,7 @@
     justify-content: end;
     justify-self: right;
     width: fit-content;
+    min-height: 37px;
     text-align: end;
     pointer-events: auto;
   }

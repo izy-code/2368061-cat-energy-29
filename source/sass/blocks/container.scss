@@ -1,6 +1,5 @@
 @use "../common/forward" as *;
 
 .container {
-  padding-right: var(--padding-page);
-  padding-left: var(--padding-page);
+  padding-inline: var(--padding-page);
 }

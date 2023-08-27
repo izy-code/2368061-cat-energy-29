@@ -5,7 +5,7 @@
 
   @media (width >= $width-tablet) {
     grid-template-columns: 1fr 1fr;
-    column-gap: 64px;
+    column-gap: 60px;
     align-items: start;
   }
 
@@ -40,13 +40,13 @@
     @media (width >= $width-tablet) {
       margin-bottom: 65px;
       padding: 22px 26px 26px;
-      border: 1px solid var(--color-bd-basic);
+      border: 1px solid var(--color-bd-input);
     }
 
     @media (width >= $width-desktop) {
       grid-column: span 1;
       margin-bottom: 70px;
-      padding: 29px 27px 24px;
+      padding: 24px 27px 24px;
     }
   }
 
@@ -73,14 +73,14 @@
   }
 
   &--extra {
-    margin-bottom: 34px;
+    margin-bottom: 32px;
 
     @media (width >= $width-tablet) {
-      margin-bottom: 54px;
+      margin-bottom: 52px;
     }
 
     @media (width >= $width-desktop) {
-      margin-bottom: 61px;
+      margin-bottom: 60px;
     }
   }
 }
@@ -118,14 +118,14 @@
   .form__field-group--extra & {
     @media (width >= $width-tablet) {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
       row-gap: 32px;
       column-gap: 60px;
       align-items: center;
     }
 
     @media (width >= $width-desktop) {
-      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       row-gap: 40px;
       column-gap: 80px;
     }
@@ -163,10 +163,6 @@
 
   .form__field-group--extra & {
     @media (width >= $width-tablet) {
-      margin-bottom: 51px;
-    }
-
-    @media (width >= $width-desktop) {
       margin-bottom: 57px;
     }
   }
@@ -185,12 +181,12 @@
 .form__button {
   @include page-content-width;
   grid-column: span 2;
-  width: 100%;
   max-width: 400px;
   margin-bottom: 21px;
 
   @media (width >= $width-tablet) {
     grid-column: span 1;
+    width: 100%;
     max-width: unset;
     margin-bottom: 32px;
   }
@@ -211,13 +207,13 @@
     grid-column: span 1;
     margin-bottom: 32px;
     padding: 0;
-    padding-top: 15px;
+    padding-top: 17px;
     font-size: 16px;
     text-align: start;
   }
 
   @media (width >= $width-desktop) {
-    padding-top: 17px;
+    padding-top: 18px;
   }
 }
 

@@ -2,12 +2,19 @@
 
 $width-breakpoint: 1280px;
 
+.details {
+  @include page-content-width;
+}
+
 .details__title {
   margin: 0;
   margin-bottom: 40px;
+  line-height: 40px;
+  color: var(--color-font-second);
 
   @media (width >= $width-tablet) {
-    margin-bottom: 72px;
+    margin-bottom: 32px;
+    line-height: 60px;
   }
 }
 
@@ -22,13 +29,12 @@ $width-breakpoint: 1280px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 37px;
-    column-gap: 134px;
+    column-gap: 136px;
     margin-right: 74px;
   }
 
   @media (width >= $width-desktop) {
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 37px;
     column-gap: 80px;
     margin-right: 0;
   }
@@ -104,13 +110,13 @@ $width-breakpoint: 1280px;
       }
 
       &::after {
-        margin-right: 20px;
+        margin-right: 23px;
       }
     }
 
     @media (width >= $width-desktop) {
       &::after {
-        margin-right: 15px;
+        margin-right: 21px;
       }
     }
   }
@@ -156,7 +162,7 @@ $width-breakpoint: 1280px;
 
     @media (width >= $width-desktop) {
       &::after {
-        margin-right: -2px;
+        margin-right: -3px;
       }
     }
   }

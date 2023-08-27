@@ -9,7 +9,7 @@ $width-max: 1680px;
 $padding-page-phone: 20px;
 $padding-page-tablet: 30px;
 $padding-page-desktop: 110px;
-$padding-form-tablet: #{lin-interp($width-tablet, 70px, $width-desktop,
+$padding-form-tablet: #{linterp($width-tablet, 70px, $width-desktop,
   $padding-page-desktop, 100vw)};
 
 $color-black-default: #000000;
@@ -83,11 +83,11 @@ $color-green-hover: #5eaa2f;
 
   --color-radio-marker: #{$color-green-basic};
 
-  --padding-page: #{lin-interp($width-phone, $padding-page-phone,
+  --padding-page: #{linterp($width-phone, $padding-page-phone,
     $width-tablet, $padding-page-tablet, 100vw)};
 
   @media (width >= $width-tablet) {
-    --padding-page: #{lin-interp($width-tablet, $padding-page-tablet,
+    --padding-page: #{linterp($width-tablet, $padding-page-tablet,
       $width-desktop, $padding-page-desktop, 100vw)};
   }
 

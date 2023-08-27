@@ -13,8 +13,13 @@
   <body class="page__body">
     <header class="page__header header">
       <a class="header__logo logo" href="index.html">
-        <img class="header__icon logo__icon" src="img/logo-cat-icon.svg" width="33" height="38"
-          alt="Фирменный знак Cat Energy, бело-оранжевый кот-супергерой.">
+        <span class="visually-hidden">На главную страницу</span>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-cat-icon-desktop.svg" width="70" height="59">
+          <source media="(min-width: 768px)" srcset="img/logo-cat-icon-tablet.svg" width="60" height="50">
+          <img class="logo__icon" src="img/logo-cat-icon-phone.svg" width="33" height="38"
+            alt="Фирменный знак Cat Energy, бело-оранжевый кот-супергерой.">
+        </picture>
         <svg class="header__wordmark logo__wordmark" width="101" height="18" role="img"
           aria-label="Шрифтовое начертание логотипа Cat Energy.">
           <use href="img/logo-cat-wordmark.svg#word" aria-hidden="true" />
@@ -183,6 +188,7 @@
 
     <footer class="footer container">
       <a class="footer__logo" href="index.html">
+        <span class="visually-hidden">На главную страницу</span>
         <svg class="footer__wordmark" width="128" height="24" role="img"
           aria-label="Шрифтовое начертание логотипа Cat Energy.">
           <use href="img/logo-cat-wordmark.svg#word" aria-hidden="true" />
@@ -208,7 +214,7 @@
           </li>
         </ul>
       </section>
-      <a class="footer__dev academy" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="footer__dev academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
         <span class="academy__title" lang="en">HTML Academy</span>
         <svg class="academy__icon" width="27" height="34" role="img"
           aria-label="Логотип HTML Academy, гербовый щит с академической шапочкой">

@@ -16,13 +16,13 @@ $height-map-tablet: 400px;
 }
 
 .contacts__header {
-  @include page-content-paddings;
+  @include page-content-width;
   display: flex;
   align-items: center;
   padding-block: 26px;
 
   @media (width >= $width-tablet) {
-    padding: 60px calc(40px + var(--padding-page));
+    padding: 60px 40px;
   }
 
   @media (width >= $width-desktop) {
@@ -33,7 +33,7 @@ $height-map-tablet: 400px;
     margin-top: 95px;
     margin-bottom: 106px;
     margin-left: var(--padding-page);
-    padding: 60px 78px 60px 80px;
+    padding: 60px 70px 60px 80px;
     background-color: var(--color-bg-basic);
   }
 }
@@ -103,7 +103,7 @@ $height-map-tablet: 400px;
 }
 
 .contacts__map {
-  height: #{lin-interp($width-phone, $height-map-phone, $width-tablet,
+  height: #{linterp($width-phone, $height-map-phone, $width-tablet,
       $height-map-tablet, 100vw)};
   background-color: var(--color-bg-second);
 

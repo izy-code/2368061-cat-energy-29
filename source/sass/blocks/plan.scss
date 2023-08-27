@@ -8,7 +8,7 @@
   }
 
   @media (width >= $width-desktop) {
-    padding: 0 var(--padding-page) 48px;
+    padding: 0 var(--padding-page) 47px;
   }
 }
 
@@ -16,6 +16,7 @@
   @include page-content-paddings;
   margin: 0;
   margin-bottom: 37px;
+  color: var(--color-font-second);
 
   @media (width >= $width-tablet) {
     margin-bottom: 54px;

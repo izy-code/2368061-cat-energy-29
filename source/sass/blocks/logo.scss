@@ -20,6 +20,8 @@
 }
 
 .logo__icon {
+  display: block;
+
   @media (width >= $width-tablet) {
     width: 60px;
     height: 50px;
