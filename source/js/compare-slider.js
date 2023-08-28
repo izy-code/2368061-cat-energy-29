@@ -5,8 +5,8 @@ let sliderWidth = compareSlider.offsetWidth;
 let thumbPressed = false;
 
 /* Обновляем положение элементов слайдера после изменения его размеров */
-const resizeObserver = new ResizeObserver(updateSliderWidth);
-resizeObserver.observe(compareSlider);
+const sliderObserver = new ResizeObserver(updateSliderWidth);
+sliderObserver.observe(compareSlider);
 
 compareSlider.addEventListener('mousedown', handleThumbPress);
 compareSlider.addEventListener('touchstart', handleThumbPress);
