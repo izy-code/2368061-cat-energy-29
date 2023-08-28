@@ -17,7 +17,8 @@
     padding: 0;
   }
 
-  &--js-menu_closed {
+  &--js-menu_closed,
+  &--js-menu_opened {
     @media (width < $width-tablet) {
       display: flex;
       flex-wrap: wrap;
@@ -28,15 +29,6 @@
       &.header--index {
         border-bottom: none;
       }
-    }
-  }
-
-  &--js-menu_opened {
-    @media (width < $width-tablet) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
     }
   }
 
