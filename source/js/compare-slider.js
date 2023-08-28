@@ -56,7 +56,7 @@ function getPointerX(e) {
 
 function rearrangeSlider(pointerX) {
   /* Изменяем размер контейнеров изображений с использованием grid-template-column */
-  compareSlider.style.gridTemplateColumns = `${pointerX}px ${sliderWidth - pointerX}px`;
+  compareSlider.style.gridTemplateColumns = `${pointerX}px 1fr`;
   /* Смещаем ползунок с учётом его ширины */
   thumb.style.justifySelf = 'start';
   thumb.style.marginLeft = `${pointerX - thumb.offsetWidth / 2}px`;

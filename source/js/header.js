@@ -14,6 +14,6 @@ menuToggle.onclick = () => {
     menuToggleText.textContent = 'Открыть меню';
   }
   else {
-    console.log("Ошибка классов кнопки меню в header");
+    console.log('Ошибка классов кнопки меню в header');
   }
 };
