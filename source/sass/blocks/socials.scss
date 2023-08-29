@@ -28,22 +28,18 @@
     height: 22px;
     margin: auto;
     background-color: var(--color-icon-second);
-    -webkit-mask: center / contain no-repeat;
     mask: center / contain no-repeat;
   }
 
   &--icon_vk::before {
-    -webkit-mask-image: url("../img/socials-vk.svg");
     mask-image: url("../img/socials-vk.svg");
   }
 
   &--icon_yt::before {
-    -webkit-mask-image: url("../img/socials-yt.svg");
     mask-image: url("../img/socials-yt.svg");
   }
 
   &--icon_tg::before {
-    -webkit-mask-image: url("../img/socials-tg.svg");
     mask-image: url("../img/socials-tg.svg");
   }
 
