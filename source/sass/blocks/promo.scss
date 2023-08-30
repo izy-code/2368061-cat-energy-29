@@ -38,9 +38,19 @@ $bg-right: calc(50vw + 30px);
     background-size: auto 100%;
     background-repeat: no-repeat;
 
+    .webp & {
+      background-image: url("../img/background-promo-phone.webp"),
+        linear-gradient(to right, $color-bg-left $bg-left, $color-bg-right $bg-right);
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background-promo-phone@2x.jpg"),
         linear-gradient(to right, $color-bg-left $bg-left, $color-bg-right $bg-right);
+
+      .webp & {
+        background-image: url("../img/background-promo-phone@2x.webp"),
+          linear-gradient(to right, $color-bg-left $bg-left, $color-bg-right $bg-right);
+      }
     }
 
     @media (width >= $width-tablet) {

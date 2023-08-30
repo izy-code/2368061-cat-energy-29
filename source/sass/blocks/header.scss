@@ -53,8 +53,16 @@
         background-size: cover;
         background-repeat: no-repeat;
 
+        .webp & {
+          background-image: url("../img/background-promo-desktop.webp");
+        }
+
         @media (min-resolution: 2dppx) {
           background-image: url("../img/background-promo-desktop@2x.jpg");
+
+          .webp & {
+            background-image: url("../img/background-promo-desktop@2x.webp");
+          }
         }
       }
     }

@@ -113,8 +113,16 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  .webp & {
+    background-image: url("../img/products-extra-bg-phone.webp");
+  }
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/products-extra-bg-phone@2x.jpg");
+
+    .webp & {
+      background-image: url("../img/products-extra-bg-phone@2x.webp");
+    }
   }
 
   @media (width >= $width-tablet) {
@@ -127,8 +135,16 @@
     text-align: start;
     background-image: url("../img/products-extra-bg-tablet.jpg");
 
+    .webp & {
+      background-image: url("../img/products-extra-bg-tablet.webp");
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/products-extra-bg-tablet@2x.jpg");
+
+      .webp & {
+        background-image: url("../img/products-extra-bg-tablet@2x.webp");
+      }
     }
   }
 
@@ -141,8 +157,16 @@
     background-image: url("../img/products-extra-bg-desktop.jpg");
     background-position: left center;
 
+    .webp & {
+      background-image: url("../img/products-extra-bg-desktop.webp");
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/products-extra-bg-desktop@2x.jpg");
+
+      .webp & {
+        background-image: url("../img/products-extra-bg-desktop@2x.webp");
+      }
     }
   }
 
