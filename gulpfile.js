@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
+import minmax from 'postcss-media-minmax';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
@@ -19,6 +20,7 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
+      minmax(),
       autoprefixer(),
       csso()
     ]))
@@ -67,9 +69,23 @@ const createWebp = () => {
 
 // SVG
 
-const svg = () =>
+export const svg = () =>
   gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
-    .pipe(svgo())
+    .pipe(svgo({
+      plugins: [
+        {
+          name: 'removeViewBox',
+          active: false,
+        },
+        'removeDimensions',
+        {
+          name: 'cleanupIds',
+          params: {
+            remove: false,
+          }
+        },
+      ],
+    }))
     .pipe(gulp.dest('build/img'));
 
 const sprite = () => {
@@ -82,9 +98,9 @@ const sprite = () => {
 
 // Copy
 
-const copy = (done) => {
+export const copy = (done) => {
   gulp.src([
-    'source/fonts/*.{woff2,woff}',
+    'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
   ], {

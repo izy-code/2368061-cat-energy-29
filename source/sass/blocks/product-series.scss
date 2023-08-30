@@ -91,7 +91,7 @@ $column-gap-desktop: 80px;
     width: 36px;
     height: 50px;
     margin-inline: auto;
-    background-image: url("../img/product-series-slim.svg");
+    background-image: url("../img/sprite.svg#product-series-slim");
 
     @media (width >= $width-tablet) {
       bottom: 14px;
@@ -119,7 +119,7 @@ $column-gap-desktop: 80px;
     left: -9px;
     height: 28px;
     margin-right: $diameter-image-phone - $width-image;
-    background-image: url("../img/product-series-pro.svg");
+    background-image: url("../img/sprite.svg#product-series-pro");
 
     @media (width >= $width-tablet) {
       $width-image: 268px;
@@ -219,13 +219,13 @@ $column-gap-desktop: 80px;
     flex-shrink: 0;
     width: 32px;
     height: 12px;
-    background-image: url("../img/icons-arrow.svg");
+    background-image: url("../img/sprite.svg#product-series-arrow");
   }
 
   &:hover::after,
   &:focus-visible::after {
     @media (hover: hover) {
-      background-image: url("../img/icons-arrow-long.svg");
+      background-image: url("../img/sprite.svg#product-series-arrow-long");
     }
   }
 
@@ -233,7 +233,7 @@ $column-gap-desktop: 80px;
     color: var(--color-font-second-active);
 
     &::after {
-      background-image: url("../img/icons-arrow-long.svg");
+      background-image: url("../img/sprite.svg#product-series-arrow-long");
       opacity: 0.3;
     }
   }
