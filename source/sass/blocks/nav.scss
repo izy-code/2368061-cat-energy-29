@@ -9,6 +9,7 @@
   @media (width >= $width-tablet) {
     display: flex;
     flex-wrap: wrap;
+    row-gap: 8px;
     column-gap: 33px;
     border-top: none;
   }
@@ -18,12 +19,6 @@
     flex-wrap: wrap;
     column-gap: 33px;
     background-color: transparent;
-  }
-
-  .header--index & {
-    @media ($width-tablet <= width < $width-desktop) {
-      margin-bottom: 65px;
-    }
   }
 }
 
@@ -41,7 +36,7 @@
   display: block;
   width: fit-content;
   margin: 0 auto;
-  padding-block: 22px 23px;
+  padding: 22px 20px 23px;
 
   font-size: 20px;
   line-height: 20px;
@@ -50,21 +45,26 @@
   color: var(--color-font-second);
 
   @media (width >= $width-tablet) {
-    padding-block: 13px;
+    padding: 15px 0;
     font-size: 18px;
     line-height: 24px;
+    text-align: start;
 
     &--current::after {
       content: "";
       display: block;
       width: calc(100% - $thickness-underline);
       margin: 0 auto;
-      box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-bd-link);
+      box-shadow: 0 6px 0 math.div($thickness-underline, 2) var(--color-bd-link);
+
+      .header--index & {
+        box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-bd-link);
+      }
     }
   }
 
   @media (width >= $width-desktop) {
-    padding-block: 16px;
+    padding-block: 17px;
     font-size: 20px;
     line-height: 30px;
 
@@ -84,7 +84,7 @@
       }
 
       &--current::after {
-        box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-bd-bg);
+        box-shadow: 0 6px 0 math.div($thickness-underline, 2) var(--color-bd-bg);
       }
     }
   }

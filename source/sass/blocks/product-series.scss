@@ -39,6 +39,7 @@ $column-gap-desktop: 80px;
   }
 
   @media (width >= $width-desktop) {
+    grid-template-rows: min-content 1fr;
     grid-template-columns: min-content 1fr;
     column-gap: 62px;
     width: calc(50% - 0.5 * $column-gap-desktop);
@@ -57,12 +58,14 @@ $column-gap-desktop: 80px;
       grid-area: 1 / 2 / 4 / 3;
       width: $diameter-image-tablet;
       height: $diameter-image-tablet;
+      margin-top: 11px;
     }
 
     @media (width >= $width-desktop) {
       grid-area: 1 / 1 / 2 / 2;
       width: $diameter-image-desktop;
       height: $diameter-image-desktop;
+      margin-top: 0;
     }
   }
 
@@ -94,12 +97,20 @@ $column-gap-desktop: 80px;
       bottom: 14px;
       width: 140px;
       height: 194px;
+      margin-top: 11px;
     }
 
     @media (width >= $width-desktop) {
       bottom: 8px;
       width: 70px;
       height: 97px;
+      margin-top: 0;
+    }
+  }
+
+  &--icon_pro::before {
+    @media ($width-tablet <= width < $width-desktop) {
+      margin-top: 10px;
     }
   }
 
@@ -115,6 +126,7 @@ $column-gap-desktop: 80px;
       left: -34px;
       width: $width-image;
       height: 112px;
+      margin-top: 10px;
       margin-right: $diameter-image-tablet - $width-image;
     }
 
@@ -124,6 +136,7 @@ $column-gap-desktop: 80px;
       left: -19px;
       width: $width-image;
       height: 56px;
+      margin-top: 0;
       margin-right: $diameter-image-desktop - $width-image;
     }
   }
@@ -146,7 +159,7 @@ $column-gap-desktop: 80px;
 
   @media (width >= $width-desktop) {
     grid-column: auto;
-    margin: 0;
+    margin-block: 0 5px;
   }
 }
 
@@ -165,11 +178,13 @@ $column-gap-desktop: 80px;
     padding: 0;
     font-size: 16px;
     line-height: 24px;
+    color: var(--color-font-second);
     border: none;
   }
 
   @media (width >= $width-desktop) {
     grid-column: span 2;
+    align-self: start;
     margin-bottom: 23px;
     padding-top: 39px;
   }
@@ -178,6 +193,7 @@ $column-gap-desktop: 80px;
 .product-series__link {
   display: flex;
   grid-column: span 2;
+  column-gap: 16px;
   align-items: center;
   width: fit-content;
   padding: 4px 0;
@@ -189,6 +205,7 @@ $column-gap-desktop: 80px;
 
   @media (width >= $width-tablet) {
     grid-column: 1 / 2;
+    column-gap: 27px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -202,7 +219,6 @@ $column-gap-desktop: 80px;
     flex-shrink: 0;
     width: 32px;
     height: 12px;
-    margin-left: 15px;
     background-image: url("../img/icons-arrow.svg");
   }
 

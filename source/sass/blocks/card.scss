@@ -1,27 +1,28 @@
 @use "../common/forward" as *;
-@use "sass:math";
+
+$card-list-width: 316px;
 
 .card {
   @include page-content-paddings;
   display: grid;
   grid-template-rows: min-content 1fr;
   grid-template-columns: min-content 1fr;
-  padding-block: 20px 24px;
+  padding-block: 21px 24px;
   border-bottom: 1px solid var(--color-bd-card);
 
   @media (width >= $width-tablet) {
     display: flex;
     flex-direction: column;
-    row-gap: 16px;
+    row-gap: 14px;
     align-items: center;
     max-width: calc(50vw - var(--padding-page) - 0.5 * var(--column-gap));
     padding: 10px 37px 40px;
-    background-image: linear-gradient(to bottom, var(--color-bg-basic) var(--margin-top-card, 81px), var(--color-bg-second) var(--margin-top-card, 81px));
+    background-image: linear-gradient(to bottom, var(--color-bg-basic) var(--margin-top-card, 81px), var(--color-bg-second) var(--margin-top-card, 82px));
     border-bottom: none;
   }
 
   @media (width >= $width-desktop) {
-    row-gap: 7px;
+    row-gap: 4px;
     align-items: center;
     padding-inline: 38px;
   }
@@ -32,13 +33,13 @@
     row-gap: 3px;
     justify-content: center;
     place-items: center;
-    padding-block: 25px;
+    padding-block: 25px 24px;
     text-align: center;
 
     @media (width >= $width-tablet) {
       display: grid;
-      grid-template-rows: 60px;
-      row-gap: 18px;
+      grid-template-rows: 60px max-content 1fr;
+      row-gap: 16px;
       padding-block: 51px 40px;
       background-image: none;
       box-shadow: inset 0 0 0 2px var(--color-bg-second);
@@ -73,18 +74,18 @@
 
     @media (width >= $width-tablet) {
       display: grid;
-      grid-template-columns: 1fr;
-      row-gap: 23px;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 20px;
       column-gap: 55px;
       align-items: baseline;
       max-width: none;
-      padding: 25px 37px 27px;
+      padding: 20px 37px 27px;
       background-image: none;
     }
 
     @media (width >= $width-desktop) {
       display: grid;
-      grid-template-columns: 1fr #{math.div(316, 895) * 100%} 244px;
+      grid-template-columns: 1fr 1fr 244px;
       row-gap: 0;
       column-gap: 10px;
       align-items: baseline;
@@ -103,19 +104,18 @@
 
   @media (width >= $width-tablet) {
     flex-grow: 1;
-    margin-inline: 50px;
-    margin-top: 0;
+    margin: 4px 50px 0;
     text-align: center;
   }
 
   @media (width >= $width-desktop) {
     margin-inline: 15px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .card--more & {
     grid-column: 1 / 2;
-    margin-top: 15px;
+    margin-block: 15px 1px;
     margin-right: 0;
 
     @media (width >= $width-tablet) {
@@ -124,7 +124,7 @@
     }
 
     @media (width >= $width-desktop) {
-      margin-top: 14px;
+      margin-block: 14px 0;
       margin-right: 15px;
     }
   }
@@ -132,7 +132,7 @@
   .card--compact & {
     display: block;
     margin-right: 0;
-    margin-bottom: 13px;
+    margin-bottom: 8px;
 
     @media (width >= $width-tablet) {
       grid-column: unset;
@@ -157,6 +157,11 @@
 
   .card--compact & {
     line-height: 16px;
+
+    @media (width >= $width-tablet) {
+      line-height: 20px;
+      text-align: start;
+    }
   }
 
   .card__title-link:hover &,
@@ -183,12 +188,10 @@
     order: -1;
     width: 200px;
     height: 210px;
-    margin-bottom: 6px;
   }
 
   @media (width >= $width-desktop) {
     width: 169px;
-    margin-bottom: 0;
   }
 
   &:hover {
@@ -203,12 +206,13 @@
 }
 
 .card__image {
+  display: block;
   object-fit: scale-down;
 }
 
 .card__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-column: 2 / 3;
   margin: 0;
   margin-bottom: 4px;
@@ -216,12 +220,12 @@
   @media (width >= $width-tablet) {
     row-gap: 7px;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
 
   @media (width >= $width-desktop) {
     row-gap: 8px;
-    margin-bottom: 26px;
+    margin-bottom: 29px;
   }
 
   .card--more & {
@@ -232,8 +236,9 @@
     margin-bottom: 15px;
 
     @media (width >= $width-tablet) {
-      grid-template-columns: 1fr #{math.div(72, 316) * 100%};
+      grid-template-columns: 1fr 23%;
       column-gap: 20px;
+      min-width: $card-list-width;
       margin-bottom: 0;
     }
   }
@@ -253,7 +258,7 @@
 
   .card--compact & {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 14px;
     border: none;
 
     @media (width >= $width-tablet) {
@@ -297,11 +302,11 @@
 
 .card__text {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 17px;
 
   @media (width >= $width-tablet) {
     margin-inline: 40px;
-    margin-bottom: 64px;
+    margin-bottom: 65px;
     font-size: 16px;
     line-height: 18px;
   }
@@ -315,7 +320,7 @@
 .card__button {
   grid-column: span 2;
   width: 100%;
-  margin-top: 17px;
+  margin-top: 16px;
 
   @media (width >= $width-tablet) {
     margin-top: 0;

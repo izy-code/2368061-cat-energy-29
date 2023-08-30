@@ -16,8 +16,7 @@
 }
 
 @mixin page-content-paddings {
-  padding-right: var(--padding-page);
-  padding-left: var(--padding-page);
+  padding-inline: var(--padding-page);
 }
 
 @mixin page-content-width {
@@ -25,12 +24,7 @@
   margin-inline: auto;
 }
 
-@function lin-interp($x1, $y1, $x2, $y2, $x-input) {
+// Линейная интерполяция
+@function linterp($x1, $y1, $x2, $y2, $x-input) {
   @return calc($y1 + ($y2 - $y1) / ($x2 - $x1) * ($x-input - $x1));
-}
-
-@mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
-  }
 }

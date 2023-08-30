@@ -15,8 +15,9 @@
   }
 
   @media (width >= $width-desktop) {
+    grid-template-rows: min-content 1fr;
     grid-template-columns: 1fr min-content;
-    column-gap: 100px;
+    column-gap: 224px;
     padding: 0;
     background-color: var(--color-bg-second);
     background-image: none;
@@ -35,10 +36,13 @@
 .example__title {
   margin: 0;
   margin-bottom: 40px;
+  line-height: 40px;
+  color: var(--color-font-second);
 
   @media (width >= $width-tablet) {
     grid-column: span 2;
     margin-bottom: 60px;
+    line-height: 60px;
   }
 
   @media (width >= $width-desktop) {
@@ -151,7 +155,7 @@
 }
 
 .example__desc-list {
-  margin-bottom: 5px;
+  margin-bottom: 19px;
 
   @media (width >= $width-tablet) {
     grid-column: 2 / 3;
@@ -161,7 +165,7 @@
 
   @media (width >= $width-desktop) {
     grid-column: 1 / 2;
-    margin-bottom: 60px;
+    margin-bottom: 51px;
     padding-top: 0;
     padding-left: var(--padding-page);
   }
@@ -185,7 +189,7 @@
 
   @media (width >= $width-desktop) {
     flex-direction: row;
-    column-gap: 63px;
+    column-gap: 66px;
     justify-content: flex-start;
     align-items: start;
     margin-bottom: 15px;
@@ -221,7 +225,7 @@
 
   @media (width >= $width-desktop) {
     grid-area: 1 / 2 / 5 / 3;
+    margin-block: 1px 84px;
     margin-right: var(--padding-page);
-    margin-bottom: 85px;
   }
 }

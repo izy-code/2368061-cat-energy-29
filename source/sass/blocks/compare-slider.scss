@@ -39,6 +39,7 @@
   place-items: center;
   width: 40px;
   height: 100%;
+  padding: 0;
   background: radial-gradient(circle, var(--color-bg-basic) 18px, transparent 19px);
   border: none;
   cursor: col-resize;
@@ -59,7 +60,6 @@
     width: 40px;
     height: 40px;
     background-color: var(--color);
-    -webkit-mask: center / contain no-repeat url("../img/compare-arrows.svg");
     mask: center / contain no-repeat url("../img/compare-arrows.svg");
   }
 

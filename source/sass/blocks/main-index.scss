@@ -13,13 +13,13 @@
 }
 
 .main-index__details {
-  margin-bottom: 29px;
+  margin-bottom: 49px;
 
   @media (width >= $width-tablet) {
     margin-bottom: 46px;
   }
 
-  @media (width >= $width-tablet) {
+  @media (width >= $width-desktop) {
     margin-bottom: 69px;
   }
 }

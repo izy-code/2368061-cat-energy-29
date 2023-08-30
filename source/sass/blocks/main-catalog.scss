@@ -3,6 +3,7 @@
 .main-catalog__title {
   margin: 0;
   margin-bottom: 40px;
+  color: var(--color-font-second);
 
   @media (width >= $width-tablet) {
     margin-bottom: 84px;

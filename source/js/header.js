@@ -1,5 +1,5 @@
 const header = document.querySelector('.header');
-const menuToggle = document.querySelector('.header__toggle');
+const menuToggle = header.querySelector('.header__toggle');
 const menuToggleText = menuToggle.querySelector('.visually-hidden');
 
 header.classList.add('header--js-menu_closed');
@@ -14,6 +14,6 @@ menuToggle.onclick = () => {
     menuToggleText.textContent = 'Открыть меню';
   }
   else {
-    console.log("Ошибка классов кнопки меню в header");
+    console.log('Ошибка классов кнопки меню в header');
   }
 };
