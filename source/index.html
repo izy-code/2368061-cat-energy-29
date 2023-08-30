@@ -130,6 +130,11 @@
         <div class="example__compare compare-slider">
           <div class="compare-slider__container compare-slider__container--left">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/compare-left-tablet.webp, img/compare-left-tablet@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="img/compare-left-phone.webp, img/compare-left-phone@2x.webp 2x"
+                width="280" height="256">
+
               <source media="(min-width: 768px)" srcset="img/compare-left-tablet.png, img/compare-left-tablet@2x.png 2x"
                 width="560" height="512">
               <img class="compare-slider__image" src="img/compare-left-phone.png"
@@ -138,6 +143,11 @@
           </div>
           <div class="compare-slider__container compare-slider__container--right">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/compare-right-tablet.webp, img/compare-right-tablet@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="img/compare-right-phone.webp, img/compare-right-phone@2x.webp 2x"
+                width="280" height="256">
+
               <source media="(min-width: 768px)"
                 srcset="img/compare-right-tablet.png, img/compare-right-tablet@2x.png 2x" width="560" height="512">
               <img class="compare-slider__image" src="img/compare-right-phone.png"
@@ -168,6 +178,12 @@
             title="Google Карты"></iframe>
           <a class="map__link" href="https://goo.gl/maps/o98341UsPtmcUAxH7">
             <picture>
+              <source type="image/webp" media="(min-width: 1100px)"
+                srcset="img/map-desktop.webp, img/map-desktop@2x.webp 2x" width="1440" height="400">
+              <source type="image/webp" media="(min-width: 450px)"
+                srcset="img/map-tablet.webp, img/map-tablet@2x.webp 2x" width="768" height="400">
+              <source type="image/webp" srcset="img/map-phone.webp, img/map-phone@2x.webp 2x" width="320" height="362">
+
               <source media="(min-width: 1100px)" srcset="img/map-desktop.png, img/map-desktop@2x.png 2x" width="1440"
                 height="400">
               <source media="(min-width: 450px)" srcset="img/map-tablet.png, img/map-tablet@2x.png 2x" width="768"
@@ -211,7 +227,7 @@
         <span class="academy__title" lang="en">HTML Academy</span>
         <svg class="academy__icon" width="27" height="34" role="img"
           aria-label="Логотип HTML Academy, гербовый щит с академической шапочкой">
-          <use href="img/logo-htmlacademy.svg" aria-hidden="true" />
+          <use href="img/logo-htmlacademy.svg#icon" aria-hidden="true" />
         </svg>
       </a>
     </footer>

@@ -60,7 +60,7 @@ const copyImages = () => {
 // WebP
 
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{png,jpg}', '!source/img/favicons')
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicons/*'])
   .pipe(squoosh({
     webp: {}
   }))
@@ -73,17 +73,14 @@ export const svg = () =>
   gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgo({
       plugins: [
-        {
-          name: 'removeViewBox',
-          active: false,
-        },
+        'preset-default',
         'removeDimensions',
         {
-          name: 'cleanupIds',
-          params: {
-            remove: false,
-          }
+          removeViewBox: false,
         },
+        {
+          cleanupIDs: false,
+        }
       ],
     }))
     .pipe(gulp.dest('build/img'));
