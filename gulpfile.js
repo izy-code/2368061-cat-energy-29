@@ -176,3 +176,11 @@ export default gulp.series(
     server,
     watcher
   ));
+
+// Restart
+
+export const restart = gulp.series(
+  gulp.series(
+    server,
+    watcher
+  ));
