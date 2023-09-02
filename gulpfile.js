@@ -7,16 +7,18 @@ import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import terser from 'gulp-terser';
+import concat from 'gulp-concat';
 import squoosh from 'gulp-libsquoosh';
 import { stacksvg } from 'gulp-stacksvg';
 import svgo from 'gulp-svgmin';
+import htmlmin from 'gulp-htmlmin';
 import del from 'del';
 import browser from 'browser-sync';
 
 // Styles
 
 export const styles = () => {
-  return gulp.src('source/sass/style.scss', { sourcemaps: true })
+  return gulp.src('source/sass/*.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -24,7 +26,7 @@ export const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename('style.min.css'))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
@@ -33,38 +35,52 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }));
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('build'));
 }
 
 // Scripts
 
-const scripts = () => {
-  return gulp.src('source/js/*.js')
+const earlyLoadScripts = () => {
+  return gulp.src('source/js/early/*.js')
+    .pipe(concat('early-scripts.js'))
+    .pipe(terser())
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
+
+const lateLoadScripts = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(concat('late-scripts.js'))
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
+}
+
+export const scripts = gulp.parallel(earlyLoadScripts, lateLoadScripts);
 
 // Images
 
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
-  .pipe(squoosh())
-  .pipe(gulp.dest('build/img'))
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
 }
 
 const copyImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
-  .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
 const createWebp = () => {
   return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicons/*'])
-  .pipe(squoosh({
-    webp: {}
-  }))
-  .pipe(gulp.dest('build/img'))
+    .pipe(squoosh({
+      webp: {}
+    }))
+    .pipe(gulp.dest('build/img'))
 }
 
 // SVG
@@ -155,7 +171,7 @@ export const build = gulp.series(
     svg,
     sprite,
     createWebp
-  ),
+  )
 );
 
 // Default
@@ -175,7 +191,8 @@ export default gulp.series(
   gulp.series(
     server,
     watcher
-  ));
+  )
+);
 
 // Restart
 
@@ -183,4 +200,5 @@ export const restart = gulp.series(
   gulp.series(
     server,
     watcher
-  ));
+  )
+);
