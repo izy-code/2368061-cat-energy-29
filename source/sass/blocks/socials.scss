@@ -32,15 +32,15 @@
   }
 
   &--icon_vk::before {
-    mask-image: url("../img/socials-vk.svg");
+    mask-image: url("../img/sprite.svg#socials-vk");
   }
 
   &--icon_yt::before {
-    mask-image: url("../img/socials-yt.svg");
+    mask-image: url("../img/sprite.svg#socials-yt");
   }
 
   &--icon_tg::before {
-    mask-image: url("../img/socials-tg.svg");
+    mask-image: url("../img/sprite.svg#socials-tg");
   }
 
   &:hover::before,

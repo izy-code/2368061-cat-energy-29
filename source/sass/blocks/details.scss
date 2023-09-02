@@ -52,19 +52,23 @@ $width-breakpoint: 1280px;
   }
 
   &--icon_leaf::before {
-    background-image: url("../img/details-leaf.svg");
+    background-image: url("../img/sprite.svg#details-leaf");
+    background-size: 27px 29px;
   }
 
   &--icon_cook::before {
-    background-image: url("../img/details-cook.svg");
+    background-image: url("../img/sprite.svg#details-cook");
+    background-size: 30px 32px;
   }
 
   &--icon_meal::before {
-    background-image: url("../img/details-meal.svg");
+    background-image: url("../img/sprite.svg#details-meal");
+    background-size: 26px 30px;
   }
 
   &--icon_time::before {
-    background-image: url("../img/details-time.svg");
+    background-image: url("../img/sprite.svg#details-time");
+    background-size: 27px 31px;
   }
 
   &::before {

@@ -60,7 +60,7 @@
     width: 40px;
     height: 40px;
     background-color: var(--color);
-    mask: center / contain no-repeat url("../img/compare-arrows.svg");
+    mask: center / contain no-repeat url("../img/sprite.svg#compare-slider-arrows");
   }
 
   &:hover,

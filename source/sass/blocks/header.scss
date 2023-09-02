@@ -48,13 +48,26 @@
         width: 100%;
         height: 100%;
         background-color: $color-bg-right;
-        background-image: url("../img/background-promo-desktop.jpg");
         background-position: left center;
         background-size: cover;
         background-repeat: no-repeat;
 
+        .no-webp & {
+          background-image: url("../img/background-promo-desktop.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/background-promo-desktop.webp");
+        }
+
         @media (min-resolution: 2dppx) {
-          background-image: url("../img/background-promo-desktop@2x.jpg");
+          .no-webp & {
+            background-image: url("../img/background-promo-desktop@2x.jpg");
+          }
+
+          .webp & {
+            background-image: url("../img/background-promo-desktop@2x.webp");
+          }
         }
       }
     }
