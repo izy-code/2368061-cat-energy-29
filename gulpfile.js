@@ -35,8 +35,7 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }));
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
@@ -58,7 +57,7 @@ const lateLoadScripts = () => {
     .pipe(browser.stream());
 }
 
-export const scripts = gulp.parallel(earlyLoadScripts, lateLoadScripts);
+const scripts = gulp.parallel(earlyLoadScripts, lateLoadScripts);
 
 // Images
 
