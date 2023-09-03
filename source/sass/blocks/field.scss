@@ -168,7 +168,7 @@
 
   .field--icon_mail &::after {
     right: 12px;
-    mask-image: url("../img/sprite.svg#field-mail");
+    mask-image: url("../img/sprite-mask.svg#field-mail");
 
     @media (width >= $width-tablet) {
       right: 14px;
@@ -181,7 +181,7 @@
 
   .field--icon_phone &::after {
     right: 13px;
-    mask-image: url("../img/sprite.svg#field-phone");
+    mask-image: url("../img/sprite-mask.svg#field-phone");
 
     @media (width >= $width-tablet) {
       right: 14px;

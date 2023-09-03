@@ -37,7 +37,6 @@ $color-green-hover: #5eaa2f;
   --font-secondary: "Lato", "Arial", sans-serif;
 
   --color-font-basic: #{$color-grey-68};
-  --color-font-basic-active: #{transparentize($color-grey-68, 0.7)};
   --color-font-second: #{$color-black-default};
   --color-font-second-hover: #{transparentize($color-black-default, 0.4)};
   --color-font-second-active: #{transparentize($color-black-default, 0.7)};

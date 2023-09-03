@@ -100,13 +100,24 @@ const svg = () =>
     }))
     .pipe(gulp.dest('build/img'));
 
-const sprite = () => {
+const spriteNoMask = () => {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
     .pipe(stacksvg())
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
 }
+
+// Создаём отдельный спрайт для SVG, используемых в mask-image, чтобы CORS не вызывал вторичное скачивание спрайта
+const spriteMask = () => {
+  return gulp.src('source/img/icons/mask/*.svg')
+    .pipe(svgo())
+    .pipe(stacksvg())
+    .pipe(rename('sprite-mask.svg'))
+    .pipe(gulp.dest('build/img'));
+}
+
+const sprite = gulp.parallel(spriteNoMask, spriteMask);
 
 // Copy
 
