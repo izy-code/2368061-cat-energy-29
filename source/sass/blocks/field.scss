@@ -136,6 +136,7 @@
 
     & + .field__label {
       opacity: 0.3;
+      cursor: initial;
     }
   }
 
@@ -153,6 +154,7 @@
 .field__label {
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   .field--icon_mail &::after,
   .field--icon_phone &::after {

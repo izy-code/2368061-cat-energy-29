@@ -18,6 +18,7 @@
   background-color: var(--color-bg-basic);
   border: 1px solid var(--color-bd-second);
   appearance: none;
+  cursor: pointer;
 
   @media (width >= $width-tablet) {
     width: 40px;
@@ -31,7 +32,7 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
     border-color: var(--color-bd-radio-hover);
   }
 
@@ -49,9 +50,11 @@
 
   &:disabled {
     opacity: 0.3;
+    cursor: initial;
 
     & + .checkbox__text {
       opacity: 0.3;
+      cursor: initial;
     }
   }
 
@@ -69,6 +72,7 @@
 
 .checkbox__text {
   text-transform: uppercase;
+  cursor: pointer;
 
   @media (width >= $width-tablet) {
     font-size: 20px;

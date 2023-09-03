@@ -19,6 +19,7 @@
   border: 1px solid var(--color-bd-second);
   border-radius: 50%;
   appearance: none;
+  cursor: pointer;
 
   @media (width >= $width-tablet) {
     width: 40px;
@@ -32,7 +33,7 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
     border-color: var(--color-bd-radio-hover);
   }
 
@@ -50,9 +51,11 @@
 
   &:disabled {
     opacity: 0.3;
+    cursor: initial;
 
     & + .radio__text {
       opacity: 0.3;
+      cursor: initial;
     }
   }
 
@@ -76,6 +79,7 @@
 
 .radio__text {
   text-transform: uppercase;
+  cursor: pointer;
 
   @media (width >= $width-tablet) {
     font-size: 20px;
