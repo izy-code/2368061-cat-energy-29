@@ -43,7 +43,7 @@ const html = () => {
 
 const earlyLoadScripts = () => {
   return gulp.src('source/js/early/*.js')
-    .pipe(concat('early-scripts.js'))
+    .pipe(concat('early-scripts.min.js'))
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
@@ -51,7 +51,7 @@ const earlyLoadScripts = () => {
 
 const lateLoadScripts = () => {
   return gulp.src('source/js/*.js')
-    .pipe(concat('late-scripts.js'))
+    .pipe(concat('late-scripts.min.js'))
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
