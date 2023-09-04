@@ -17,14 +17,14 @@ import browser from 'browser-sync';
 
 // Styles
 
-const styles = () => {
+export const styles = () => {
   return gulp.src('source/sass/*.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       minmax(),
       autoprefixer(),
-      csso()
+      csso({ restructure: false })
     ]))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))

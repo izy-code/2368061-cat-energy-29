@@ -53,12 +53,12 @@ $width-breakpoint: 1280px;
 
   &--icon_leaf::before {
     background-image: url("../img/sprite.svg#details-leaf");
-    background-size: 27px 29px;
+    background-size: 30px 32px;
   }
 
   &--icon_cook::before {
     background-image: url("../img/sprite.svg#details-cook");
-    background-size: 30px 32px;
+    background-size: 27px 29px;
   }
 
   &--icon_meal::before {
