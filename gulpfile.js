@@ -207,8 +207,6 @@ export default gulp.series(
 // Restart
 
 export const restart = gulp.series(
-  gulp.series(
-    server,
-    watcher
-  )
+  server,
+  watcher
 );

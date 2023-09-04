@@ -32,10 +32,10 @@
   }
 
   &--index {
-    $color-bg-left: #64a73d;
     margin: 0;
 
     @media (width >= $width-desktop) {
+      $color-bg-left: #64a73d;
       grid-template-columns: 50% 50%;
       margin-bottom: 82px;
 
@@ -46,11 +46,7 @@
         grid-area: 1 / 2 / 3 / 3;
         width: 100%;
         height: 100%;
-        background-color: $color-bg-left;
-        background-position: right center;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-        background-image: url("../img/background-promo-desktop.jpg");
+        background: right center / auto 100% no-repeat $color-bg-left url("../img/background-promo-desktop.jpg");
 
         @media (min-resolution: 2dppx) {
           background-image: url("../img/background-promo-desktop@2x.jpg");

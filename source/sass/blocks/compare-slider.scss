@@ -32,7 +32,7 @@
 }
 
 .compare-slider__thumb {
-  --color: var(--color-icon-second);
+  --color-thumb: var(--color-icon-second);
   display: grid;
   grid-area: 1 / 1 / 2 / 3;
   justify-content: center;
@@ -50,7 +50,7 @@
     grid-area: 1 / 1 / 2 / 2;
     width: 4px;
     height: 100%;
-    background-color: var(--color);
+    background-color: var(--color-thumb);
     border-radius: 2px;
   }
 
@@ -59,18 +59,18 @@
     grid-area: 1 / 1 / 2 / 2;
     width: 40px;
     height: 40px;
-    background-color: var(--color);
+    background-color: var(--color-thumb);
     mask: center / contain no-repeat url("../img/sprite-mask.svg#compare-slider-arrows");
   }
 
   &:hover,
   &:focus-visible {
     @media (hover: hover) {
-      --color: var(--color-btn-basic);
+      --color-thumb: var(--color-btn-basic);
     }
   }
 
   &:active {
-    --color: var(--color-btn-basic-active);
+    --color-thumb: var(--color-btn-basic-active);
   }
 }

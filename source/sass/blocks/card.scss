@@ -17,7 +17,8 @@ $card-list-width: 316px;
     align-items: center;
     max-width: calc(50vw - var(--padding-page) - 0.5 * var(--column-gap));
     padding: 10px 37px 40px;
-    background-image: linear-gradient(to bottom, var(--color-bg-basic) var(--margin-top-card, 81px), var(--color-bg-second) var(--margin-top-card, 82px));
+    background-image: linear-gradient(to bottom, var(--color-bg-basic) var(--margin-top-card, 81px),
+      var(--color-bg-second) var(--margin-top-card, 81px));
     border-bottom: none;
   }
 
