@@ -3,7 +3,7 @@
 .field {
   position: relative;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto minmax(50%, 1fr);
   column-gap: 13px;
   align-items: center;
   text-transform: uppercase;
@@ -54,7 +54,9 @@
 
     &:disabled {
       border: 1px solid var(--color-bd-input);
+      background-color: var(--color-bd-bg);
       opacity: 0.3;
+      resize: none;
     }
   }
 }
@@ -62,7 +64,6 @@
 .field__input {
   grid-area: 1 / 2 / 2 / 3;
   width: 100%;
-  min-width: 80px;
   padding: 13px 14px 12px;
 
   font-family: var(--font-primary);
@@ -101,20 +102,15 @@
 
   .field--icon_mail &,
   .field--icon_phone & {
-    min-width: 200px;
     padding-right: 44px;
 
     @media (width >= $width-tablet) {
-      min-width: 240px;
       padding-right: 60px;
     }
   }
 
   .field--icon_mail & {
-    min-width: 217px;
-
     @media (width >= $width-tablet) {
-      min-width: 280px;
       padding-right: 60px;
     }
   }
@@ -132,10 +128,12 @@
 
   &:disabled {
     border: 1px solid var(--color-bd-second);
+    background-color: var(--color-bd-bg);
     opacity: 0.3;
 
     & + .field__label {
       opacity: 0.3;
+      cursor: initial;
     }
   }
 
@@ -153,40 +151,53 @@
 .field__label {
   display: flex;
   align-items: center;
+  cursor: pointer;
 
-  .field--icon_mail &::after,
-  .field--icon_phone &::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--color-icon-basic);
-    mask: center / contain no-repeat;
+  .field--icon_mail & {
+    @media ($width-phone <= width < $width-tablet) {
+      max-width: calc(100vw - 2 * var(--padding-page) - 230px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 12px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-icon-basic);
+      mask: center / contain no-repeat url("../img/sprite-mask.svg#field-mail");
+
+      @media (width >= $width-tablet) {
+        right: 14px;
+      }
+
+      @media (width >= $width-desktop) {
+        right: 16px;
+      }
+    }
   }
 
-  .field--icon_mail &::after {
-    right: 12px;
-    mask-image: url("../img/sprite.svg#field-mail");
-
-    @media (width >= $width-tablet) {
-      right: 14px;
+  .field--icon_phone & {
+    @media ($width-phone <= width < $width-tablet) {
+      max-width: calc(100vw - 2 * var(--padding-page) - 213px);
     }
 
-    @media (width >= $width-desktop) {
-      right: 16px;
-    }
-  }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 13px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-icon-basic);
+      mask: center / contain no-repeat url("../img/sprite-mask.svg#field-phone");
 
-  .field--icon_phone &::after {
-    right: 13px;
-    mask-image: url("../img/sprite.svg#field-phone");
+      @media (width >= $width-tablet) {
+        right: 14px;
+      }
 
-    @media (width >= $width-tablet) {
-      right: 14px;
-    }
-
-    @media (width >= $width-desktop) {
-      right: 16px;
+      @media (width >= $width-desktop) {
+        right: 16px;
+      }
     }
   }
 }

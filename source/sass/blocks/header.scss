@@ -1,7 +1,6 @@
 @use "../common/forward" as *;
 
 .header {
-  $color-bg-right: #62a53a;
   position: relative;
   display: block;
 
@@ -33,10 +32,10 @@
   }
 
   &--index {
-    $color-bg-right: #62a53a;
     margin: 0;
 
     @media (width >= $width-desktop) {
+      $color-bg-left: #64a73d;
       grid-template-columns: 50% 50%;
       margin-bottom: 82px;
 
@@ -47,27 +46,10 @@
         grid-area: 1 / 2 / 3 / 3;
         width: 100%;
         height: 100%;
-        background-color: $color-bg-right;
-        background-position: left center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        .no-webp & {
-          background-image: url("../img/background-promo-desktop.jpg");
-        }
-
-        .webp & {
-          background-image: url("../img/background-promo-desktop.webp");
-        }
+        background: right center / auto 100% no-repeat $color-bg-left url("../img/background-promo-desktop.jpg");
 
         @media (min-resolution: 2dppx) {
-          .no-webp & {
-            background-image: url("../img/background-promo-desktop@2x.jpg");
-          }
-
-          .webp & {
-            background-image: url("../img/background-promo-desktop@2x.webp");
-          }
+          background-image: url("../img/background-promo-desktop@2x.jpg");
         }
       }
     }
@@ -78,14 +60,16 @@
   display: inline-flex;
   align-items: center;
   padding: 13px $padding-page-phone 14px;
+  outline-offset: -1px;
 
   @media (width >= $width-tablet) {
     row-gap: 13px;
     column-gap: 13px;
     justify-content: start;
     width: max-content;
-    margin-right: 32px;
+    margin-right: 50px;
     padding: 0;
+    outline-offset: 0;
   }
 
   @media (width >= $width-desktop) {

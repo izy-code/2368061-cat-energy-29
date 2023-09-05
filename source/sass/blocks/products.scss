@@ -106,11 +106,7 @@
   line-height: 20px;
   text-align: center;
   color: var(--color-font-bg);
-
-  background-color: var(--color-bg-image);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: center / cover no-repeat var(--color-bg-image);
 
   .no-webp & {
     background-image: url("../img/products-extra-bg-phone.jpg");

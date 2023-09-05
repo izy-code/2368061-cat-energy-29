@@ -8,6 +8,7 @@
   @media (width >= $width-tablet) {
     display: grid;
     grid-template-columns: 70% 1fr;
+    align-items: start;
     padding-block: 45px 0;
     background-color: unset;
     background-image: linear-gradient(to top, var(--color-bg-example) 462px, var(--color-bg-basic) 462px);

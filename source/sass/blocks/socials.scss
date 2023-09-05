@@ -8,7 +8,7 @@
   column-gap: 8px;
   width: fit-content;
   max-width: 262px;
-  margin: 0 auto;
+  margin-inline: auto;
   padding-block: 7px 6px;
 
   @media (width >= $width-tablet) {
@@ -32,15 +32,15 @@
   }
 
   &--icon_vk::before {
-    mask-image: url("../img/sprite.svg#socials-vk");
+    mask-image: url("../img/sprite-mask.svg#socials-vk");
   }
 
   &--icon_yt::before {
-    mask-image: url("../img/sprite.svg#socials-yt");
+    mask-image: url("../img/sprite-mask.svg#socials-yt");
   }
 
   &--icon_tg::before {
-    mask-image: url("../img/sprite.svg#socials-tg");
+    mask-image: url("../img/sprite-mask.svg#socials-tg");
   }
 
   &:hover::before,
