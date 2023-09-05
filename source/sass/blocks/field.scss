@@ -3,13 +3,12 @@
 .field {
   position: relative;
   display: grid;
-  grid-template-columns: auto minmax(217px, 1fr);
+  grid-template-columns: auto minmax(50%, 1fr);
   column-gap: 13px;
   align-items: center;
   text-transform: uppercase;
 
   @media (width >= $width-tablet) {
-    grid-template-columns: auto minmax(50%, 1fr);
     font-size: 20px;
     line-height: 30px;
   }
@@ -154,39 +153,51 @@
   align-items: center;
   cursor: pointer;
 
-  .field--icon_mail &::after,
-  .field--icon_phone &::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--color-icon-basic);
-    mask: center / contain no-repeat;
+  .field--icon_mail & {
+    @media (width < $width-tablet) {
+      max-width: calc(100vw - 2 * var(--padding-page) - 230px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 12px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-icon-basic);
+      mask: center / contain no-repeat url("../img/sprite-mask.svg#field-mail");
+
+      @media (width >= $width-tablet) {
+        right: 14px;
+      }
+
+      @media (width >= $width-desktop) {
+        right: 16px;
+      }
+    }
   }
 
-  .field--icon_mail &::after {
-    right: 12px;
-    mask-image: url("../img/sprite-mask.svg#field-mail");
-
-    @media (width >= $width-tablet) {
-      right: 14px;
+  .field--icon_phone & {
+    @media (width < $width-tablet) {
+      max-width: calc(100vw - 2 * var(--padding-page) - 213px);
     }
 
-    @media (width >= $width-desktop) {
-      right: 16px;
-    }
-  }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 13px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-icon-basic);
+      mask: center / contain no-repeat url("../img/sprite-mask.svg#field-phone");
 
-  .field--icon_phone &::after {
-    right: 13px;
-    mask-image: url("../img/sprite-mask.svg#field-phone");
+      @media (width >= $width-tablet) {
+        right: 14px;
+      }
 
-    @media (width >= $width-tablet) {
-      right: 14px;
-    }
-
-    @media (width >= $width-desktop) {
-      right: 16px;
+      @media (width >= $width-desktop) {
+        right: 16px;
+      }
     }
   }
 }
