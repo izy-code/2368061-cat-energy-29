@@ -2,7 +2,7 @@
 Размещён перед <link rel="stylesheet">, чтобы инициализироваться до применения стилей. */
 
 function checkWebP(callback) {
-  let webP = new Image();
+  const webP = new Image();
 
   const event = () => {
     callback(webP.height === 2);
@@ -17,7 +17,7 @@ function checkWebP(callback) {
 }
 
 // Убирает в случае поддержки браузером формата WebP класс no-webp у тега html и добавляет webp
-checkWebP(function (support) {
+checkWebP((support) => {
   if (support) {
     document.documentElement.classList.remove('no-webp');
     document.documentElement.classList.add('webp');

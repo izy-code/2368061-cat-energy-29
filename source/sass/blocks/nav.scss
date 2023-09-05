@@ -45,7 +45,7 @@
   color: var(--color-font-second);
 
   @media (width >= $width-tablet) {
-    padding: 15px 0;
+    padding: 14px 0 16px;
     font-size: 18px;
     line-height: 24px;
     text-align: start;
@@ -55,19 +55,18 @@
       display: block;
       width: calc(100% - $thickness-underline);
       margin: 0 auto;
-      box-shadow: 0 6px 0 math.div($thickness-underline, 2) var(--color-bd-link);
+      box-shadow: 0 7px 0 math.div($thickness-underline, 2) var(--color-bd-link);
 
       .header--index & {
-        box-shadow: 0 8px 0 math.div($thickness-underline, 2) var(--color-bd-link);
+        box-shadow: 0 9px 0 math.div($thickness-underline, 2) var(--color-bd-link);
       }
     }
   }
 
   @media (width >= $width-desktop) {
-    padding-block: 17px;
+    padding-block: 16px 18px;
     font-size: 20px;
     line-height: 30px;
-
 
     .header--index & {
       color: var(--color-font-bg);
