@@ -178,21 +178,15 @@ $card-list-width: 316px;
 }
 
 .card__image-link {
-  --height-link-phone: 107px;
-  --height-link-tablet: 210px;
-
-  display: flex;
   grid-area: 1 / 1 / 3 / 2;
-  justify-content: center;
-  align-items: center;
   align-self: center;
   width: 140px;
-  height: var(--height-link-phone);
+  height: 107px;
 
   @media (width >= $width-tablet) {
     order: -1;
     width: 200px;
-    height: var(--height-link-tablet);
+    height: 210px;
   }
 
   @media (width >= $width-desktop) {
@@ -212,12 +206,9 @@ $card-list-width: 316px;
 
 .card__image {
   display: block;
+  width: 100%;
+  height: 100%;
   object-fit: scale-down;
-  max-height: var(--height-link-phone);
-
-  @media (width >= $width-tablet) {
-    max-height: var(--height-link-tablet);
-  }
 }
 
 .card__list {

@@ -154,7 +154,7 @@
   cursor: pointer;
 
   .field--icon_mail & {
-    @media (width < $width-tablet) {
+    @media ($width-phone <= width < $width-tablet) {
       max-width: calc(100vw - 2 * var(--padding-page) - 230px);
     }
 
@@ -178,7 +178,7 @@
   }
 
   .field--icon_phone & {
-    @media (width < $width-tablet) {
+    @media ($width-phone <= width < $width-tablet) {
       max-width: calc(100vw - 2 * var(--padding-page) - 213px);
     }
 
